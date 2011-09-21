@@ -1,0 +1,76 @@
+<!-- <web-app>
+<servlet>
+<servlet-name>hi</servlet-name>
+<servlet-class>HelloWorld</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>hi</servlet-name>
+<url-pattern>/hello.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hi</servlet-name>
+<url-pattern>*.hello</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hi</servlet-name>
+<url-pattern>/hello/*</url-pattern>
+</servlet-mapping>
+</web-app> -->
+<web-app>
+<servlet>
+<!-- sample servlets -->
+<servlet-name>source</servlet-name>
+<servlet-class>Source</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>target</servlet-name>
+<servlet-class>Target</servlet-class>
+</servlet>
+<!-- END: sample servlets -->
+
+<servlet>
+<servlet-name>register</servlet-name>
+<servlet-class>com.isobar.runkeeper.healthgraph.RegisterUser</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>landing</servlet-name>
+<servlet-class>com.isobar.runkeeper.healthgraph.LandingServlet</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>token</servlet-name>
+<servlet-class>com.isobar.runkeeper.healthgraph.TokenServlet</servlet-class>
+</servlet>
+<servlet>
+<servlet-name>userInfo</servlet-name>
+<servlet-class>com.isobar.runkeeper.healthgraph.UserInfoServlet</servlet-class>
+</servlet>
+
+<!-- sample servlet mappings -->
+<servlet-mapping>
+<servlet-name>source</servlet-name>
+<url-pattern>/source.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>target</servlet-name>
+<url-pattern>/target.html</url-pattern>
+</servlet-mapping>
+<!-- END: sample servlet mappings -->
+
+<servlet-mapping>
+<servlet-name>register</servlet-name>
+<url-pattern>/register.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>landing</servlet-name>
+<url-pattern>/landing.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>token</servlet-name>
+<url-pattern>/token.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>userInfo</servlet-name>
+<url-pattern>/userInfo.html</url-pattern>
+</servlet-mapping>
+
+</web-app>

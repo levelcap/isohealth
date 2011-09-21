@@ -1,0 +1,5 @@
+package com.isobar.runkeeper.healthgraph;
+
+public class LandingServlet {
+
+}
