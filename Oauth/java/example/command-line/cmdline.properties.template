@@ -1,0 +1,15 @@
+# See readme.txt
+#
+# Change values below and save.
+# Please note that this file will be overwritten.
+#
+authorizationUrl=https://api-user.netflix.com/oauth/login
+requestUrl=http://api.netflix.com/oauth/request_token
+accessUrl=http://api.netflix.com/oauth/access_token
+consumerKey=...
+consumerSecret=...
+#
+# For netflix API use, you also need to set 
+# appName=...
+# 
+

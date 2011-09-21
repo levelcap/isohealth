@@ -1,0 +1,33 @@
+<project name="cmdline" default="build" basedir=".">
+
+  <property file="./build.properties"/> 
+
+  <target name="all" depends="clean, build"/>
+
+  <target name="init">
+    <mkdir dir="${classes}"/>
+    <mkdir dir="${out}"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="${classes}"/>
+    <delete dir="${out}"/>
+  </target>
+
+
+  <path id="compile.classpath">
+    <pathelement location="${oauth_jar}"/> 
+  </path>
+
+  <target name="build" depends="init">
+    <javac srcdir="${src}" destdir="${classes}" 
+       debug="on" includeAntRuntime="no" source="1.5">
+      <compilerarg value="-Xlint"/>
+      <classpath refid="compile.classpath"/>
+    </javac>
+    <jar jarfile="${tools_jar}">
+      <fileset dir="${classes}"/>
+    </jar>
+  </target>
+
+</project>

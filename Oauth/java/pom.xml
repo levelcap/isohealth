@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <url>http://oauth.net/code/</url>
+
+  <!-- override these ones -->
+  <groupId>net.oauth</groupId>
+  <artifactId>oauth-parent</artifactId>
+  <version>20100601</version>
+  <packaging>pom</packaging>
+  <name>OAuth::Parent POM</name>
+
+  <modules>
+    <module>core</module>
+    <module>core-old</module>
+    <module>example</module>
+  </modules>
+
+  <build>
+    <defaultGoal>package</defaultGoal>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <optimize>true</optimize>
+            <source>1.5</source>
+            <target>1.5</target>
+          </configuration>
+          <inherited>true</inherited>
+        </plugin>
+        <plugin>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <configuration>
+            <outputDirectory>${project.build.directory}/eclipse-bin</outputDirectory>
+          </configuration>
+          <inherited>true</inherited>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+  </build>
+  <scm>
+    <connection>scm:svn:http://oauth.googlecode.com/svn/code/java/</connection>
+    <developerConnection>scm:svn:https://oauth.googlecode.com/svn/code/java/</developerConnection>
+    <url>http://oauth.googlecode.com/svn/code/java/</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <artifactId>junit</artifactId>
+      <groupId>junit</groupId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
+  <repositories>
+    <repository>
+      <id>oauth-local</id>
+      <name>Local OAuth Repository</name>
+      <url>file:../maven</url>
+    </repository>
+    <repository>
+      <id>oauth</id>
+      <name>OAuth Repository</name>
+      <url>http://oauth.googlecode.com/svn/code/maven</url>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <repository>
+      <id>oauth-local</id>
+      <name>Local OAuth Repository</name>
+      <url>file:../maven</url>
+      <uniqueVersion>true</uniqueVersion>
+    </repository>
+    <downloadUrl>http://oauth.googlecode.com/svn/code/maven</downloadUrl>
+  </distributionManagement>
+</project>

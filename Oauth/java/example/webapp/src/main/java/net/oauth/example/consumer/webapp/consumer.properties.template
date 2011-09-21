@@ -1,0 +1,10 @@
+# Here is an outline of the configuration parameters for the consumers in this web application.
+# Copy this file to 'consumer.properties', and then set your consumerKey and consumerSecret properties.
+
+twitter.serviceProvider.baseURL: http://twitter.com/
+twitter.serviceProvider.requestTokenURL: oauth/request_token
+twitter.serviceProvider.userAuthorizationURL: oauth/authorize
+twitter.serviceProvider.accessTokenURL: oauth/access_token
+twitter.consumerKey: - your key here -
+twitter.consumerSecret: - your secret here -
+# twitter.consumer.oauth_signature_method: PLAINTEXT

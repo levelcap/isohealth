@@ -1,0 +1,10 @@
+Make sure you configure provider.properties with the consumer_key/secret information before you run the server.
+To build the sample OAuth provider use the ant build script in the base dir. Please make sure you build OAuth core before building this provider code.
+To run the sample provider, just deploy the war file in to your app server and configure your consumer with the following 3 oauth end points:
+
+    * http[s]://$yourhost:$port/oauth-provider/request_token
+    * http[s]://$yourhost:$port/oauth-provider/authorize
+    * http[s]://$yourhost:$port/oauth-provider/access_token
+
+
+The Sample OAuth Provider uses HashMaps to store both consumers and tokens during run time. So if you restart your server, you would lose all the tokens that were granted in the previous running session.

@@ -1,0 +1,72 @@
+NAME
+     OAuthHelper -- Use this tool to experience OAuth in a console.
+
+SYNOPSIS
+     OAuthHelper [help | <properties> [<operation> | <url>]]
+
+
+DESCRIPTION
+     This tool lets you: 
+
+     * Request an OAuth token, 
+     * Have the user authorize this request token, 
+     * Exchange an authorized token for an access token
+     * Use the access token to reach protected resources
+
+
+     The following parameters are used:
+
+     help           Nothing much. See this file instead.
+
+     properties     A simple key/value pair file for parameters. This
+     		    file will be both read and written. Initially, it
+		    needs to contain the three oauth URLs as well as
+     		    your the consumer key + secrets:
+      
+		    authorizationUrl=https://api-user.netflix.com/oauth/login
+		    requestUrl=http://api.netflix.com/oauth/request_token
+		    accessUrl=http://api.netflix.com/oauth/access_token
+
+		    consumerKey=...
+		    consumerSecret=...
+
+
+		    After each step, this file will be amended with
+		    properties, such as tokens and token secrets. The
+		    last access step will also add the user id.
+
+		    NOTE  use 'cmdline.properties.template' as a starting point
+		    to set up the property file.
+
+     operation      One of 'request', 'authorize', 'access'. Anything
+     		    else will be parsed as a URL and the resource to
+     		    be retrieved.
+
+CLASSPATH
+
+     cmdline.jar
+     oauth-1.4.jar
+     commons-codec-1.3.jar
+     httpclient-4.0-beta1.jar
+     httpcore-4.0-beta2.jar
+     commons-logging-1.1.jar 
+
+
+EXAMPLES
+
+     $ java net.oauth.example.cmdline.OAuthHelper <prop file> request
+     $ java net.oauth.example.cmdline.OAuthHelper <prop file> authorize
+     $ java net.oauth.example.cmdline.OAuthHelper <prop file> access
+     $ java net.oauth.example.cmdline.OAuthHelper <prop file> 
+       	    http://resource.example.com/
+
+BUGS
+     No input validation, little error checking, so you may get
+     exceptions if you don't follow the rules above.
+
+     If you see 
+     "WARNING: Authentication error: Unable to respond to any of these
+     challenges: {}"
+     that means the underlying OAuth library couldn't complete the
+     request.
+    

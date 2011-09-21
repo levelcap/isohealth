@@ -1,0 +1,3 @@
+#!/bin/sh
+# first execute mvn package
+sh `dirname "$0"`/target/appassembler/bin/mediamatic "$@"

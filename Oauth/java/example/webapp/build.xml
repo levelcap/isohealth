@@ -1,0 +1,78 @@
+<project name="CookieJar" default="compile" basedir=".">
+  <property name="app.name"   value="CookieJar"/>
+  <property name="web.home"   value="${basedir}/src/main/webapp"/>
+  <property file="../../build.properties"/>
+  <property name="build.home"    value="${basedir}/build"/>
+
+  <fileset id="lib.jars" dir="../..">
+    <include name="lib/*.jar"/>
+  </fileset>
+
+  <path id="compile.classpath">
+    <pathelement location="../../core/dist/oauth-${app.version}.jar"/>
+    <fileset refid="lib.jars"/>
+  </path>
+
+  <target name="all"
+          depends="clean,compile"
+          description="Clean build and dist directories, then compile"/>
+
+  <target name="clean"
+          description="Delete old build and dist directories">
+    <delete dir="${build.home}"/>
+    <delete dir="${dist.home}"/>
+  </target>
+
+  <target name="compile"
+          description="Compile Java sources">
+    <!-- Compile Java classes as necessary -->
+    <mkdir dir="${build.home}/WEB-INF/classes"/>
+    <javac destdir="${build.home}/WEB-INF/classes"
+           debug="${compile.debug}"
+           deprecation="${compile.deprecation}"
+           optimize="${compile.optimize}"
+           verbose="${compile.verbose}">
+        <classpath refid="compile.classpath"/>
+        <src path="${src.home}"/>
+    </javac>
+    <!-- Copy application resources -->
+    <copy todir="${build.home}/WEB-INF/classes">
+      <fileset dir="${src.home}" excludes="**/*.java"/>
+    </copy>
+  </target>
+
+  <target name="war"
+          depends="compile"
+          description="Create .war file">
+    <!-- Copy static content (jsp/images/js/etc..) of this web application -->
+    <copy todir="${build.home}">
+        <fileset dir="${web.home}">
+            <exclude name="**/.*"/>
+        </fileset>
+    </copy>
+    <mkdir dir="${dist.home}"/>
+    <war destfile="${dist.home}/${app.name}.war"
+         basedir="${build.home}"
+         webxml="${build.home}/WEB-INF/web.xml">
+      <lib dir="../../lib" excludes="servlet-api.jar" />
+      <lib file="../../core/dist/oauth-${app.version}.jar"/>
+    </war>
+  </target>
+
+  <target name="javadoc"
+          depends="compile"
+          description="Create Javadoc API documentation">
+    <mkdir dir="${docs.home}"/>
+    <javadoc sourcepath="${src.home}"
+             destdir="${docs.home}"
+             packagenames="*">
+      <classpath refid="compile.classpath"/>
+    </javadoc>
+  </target>
+
+  <target name="dist"
+          depends="war,javadoc"
+          description="Create binary distribution">
+  </target>
+
+</project>

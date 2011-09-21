@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>RequestTokenServlet</servlet-name>
+        <servlet-class>net.oauth.example.provider.servlets.RequestTokenServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <servlet-class>net.oauth.example.provider.servlets.AuthorizationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AccessTokenServlet</servlet-name>
+        <servlet-class>net.oauth.example.provider.servlets.AccessTokenServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EchoServlet</servlet-name>
+        <servlet-class>net.oauth.example.provider.servlets.EchoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestTokenServlet</servlet-name>
+        <url-pattern>/request_token</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthorizationServlet</servlet-name>
+        <url-pattern>/authorize</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccessTokenServlet</servlet-name>
+        <url-pattern>/access_token</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EchoServlet</servlet-name>
+        <url-pattern>/echo</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>
