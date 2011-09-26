@@ -8,6 +8,15 @@ public class GraphConstants {
 	public static final String ACCESS_URL = "https://runkeeper.com/apps/token";
 	public static final String REDIRECT_URI = "http://localhost:8080/isohealth/index.html";
 	
+	public static final String REST_URL = "https://api.runkeeper.com";
+	
+	public static final String AUTH_CODE = "75fe669b6c1b4486ae35ffb15768ed43";
+	
+	//Media Types
+	public static final String MEDIA_USER = "application/vnd.com.runkeeper.User+json";
+	public static final String MEDIA_PROFILE = "application/vnd.com.runkeeper.Profile+json";
+	public static final String MEDIA_SETTINGS = "application/vnd.com.runkeeper.Settings+json";
+	
 	public GraphConstants() {
 		
 	}

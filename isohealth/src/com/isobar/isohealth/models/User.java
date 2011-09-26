@@ -124,4 +124,132 @@ public class User {
 	public String getTeam() {
 		return _team;
 	}
+
+	@Override
+	public String toString() {
+		return "User [_userID=" + _userID + ", _profile=" + _profile
+				+ ", _settings=" + _settings + ", _fitness_activities="
+				+ _fitness_activities + ", _strength_training_activities="
+				+ _strength_training_activities + ", _background_activities="
+				+ _background_activities + ", _sleep=" + _sleep
+				+ ", _nutrition=" + _nutrition + ", _weight=" + _weight
+				+ ", _general_measurements=" + _general_measurements
+				+ ", _diabetes=" + _diabetes + ", _records=" + _records
+				+ ", _team=" + _team + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((_background_activities == null) ? 0
+						: _background_activities.hashCode());
+		result = prime * result
+				+ ((_diabetes == null) ? 0 : _diabetes.hashCode());
+		result = prime
+				* result
+				+ ((_fitness_activities == null) ? 0 : _fitness_activities
+						.hashCode());
+		result = prime
+				* result
+				+ ((_general_measurements == null) ? 0 : _general_measurements
+						.hashCode());
+		result = prime * result
+				+ ((_nutrition == null) ? 0 : _nutrition.hashCode());
+		result = prime * result
+				+ ((_profile == null) ? 0 : _profile.hashCode());
+		result = prime * result
+				+ ((_records == null) ? 0 : _records.hashCode());
+		result = prime * result
+				+ ((_settings == null) ? 0 : _settings.hashCode());
+		result = prime * result + ((_sleep == null) ? 0 : _sleep.hashCode());
+		result = prime
+				* result
+				+ ((_strength_training_activities == null) ? 0
+						: _strength_training_activities.hashCode());
+		result = prime * result + ((_team == null) ? 0 : _team.hashCode());
+		result = prime * result + ((_userID == null) ? 0 : _userID.hashCode());
+		result = prime * result + ((_weight == null) ? 0 : _weight.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (_background_activities == null) {
+			if (other._background_activities != null)
+				return false;
+		} else if (!_background_activities.equals(other._background_activities))
+			return false;
+		if (_diabetes == null) {
+			if (other._diabetes != null)
+				return false;
+		} else if (!_diabetes.equals(other._diabetes))
+			return false;
+		if (_fitness_activities == null) {
+			if (other._fitness_activities != null)
+				return false;
+		} else if (!_fitness_activities.equals(other._fitness_activities))
+			return false;
+		if (_general_measurements == null) {
+			if (other._general_measurements != null)
+				return false;
+		} else if (!_general_measurements.equals(other._general_measurements))
+			return false;
+		if (_nutrition == null) {
+			if (other._nutrition != null)
+				return false;
+		} else if (!_nutrition.equals(other._nutrition))
+			return false;
+		if (_profile == null) {
+			if (other._profile != null)
+				return false;
+		} else if (!_profile.equals(other._profile))
+			return false;
+		if (_records == null) {
+			if (other._records != null)
+				return false;
+		} else if (!_records.equals(other._records))
+			return false;
+		if (_settings == null) {
+			if (other._settings != null)
+				return false;
+		} else if (!_settings.equals(other._settings))
+			return false;
+		if (_sleep == null) {
+			if (other._sleep != null)
+				return false;
+		} else if (!_sleep.equals(other._sleep))
+			return false;
+		if (_strength_training_activities == null) {
+			if (other._strength_training_activities != null)
+				return false;
+		} else if (!_strength_training_activities
+				.equals(other._strength_training_activities))
+			return false;
+		if (_team == null) {
+			if (other._team != null)
+				return false;
+		} else if (!_team.equals(other._team))
+			return false;
+		if (_userID == null) {
+			if (other._userID != null)
+				return false;
+		} else if (!_userID.equals(other._userID))
+			return false;
+		if (_weight == null) {
+			if (other._weight != null)
+				return false;
+		} else if (!_weight.equals(other._weight))
+			return false;
+		return true;
+	}
 }
