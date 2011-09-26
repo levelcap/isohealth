@@ -16,6 +16,8 @@ public class GraphConstants {
 	public static final String MEDIA_USER = "application/vnd.com.runkeeper.User+json";
 	public static final String MEDIA_PROFILE = "application/vnd.com.runkeeper.Profile+json";
 	public static final String MEDIA_SETTINGS = "application/vnd.com.runkeeper.Settings+json";
+	public static final String MEDIA_FITNESS_ACTIVITY_FEED = "application/vnd.com.runkeeper.FitnessActivityFeed+json";
+	public static final String MEDIA_FITNESS_ACTIVITY = "application/vnd.com.runkeeper.FitnessActivity+json";
 	
 	public GraphConstants() {
 		

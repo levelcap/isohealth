@@ -11,6 +11,7 @@ public class ServiceTests {
 		suite.addTestSuite(UserServiceTest.class);
 		suite.addTestSuite(SettingsServiceTest.class);
 		suite.addTestSuite(ProfileServiceTest.class);
+		suite.addTestSuite(FitnessActivityFeedServiceTest.class);
 		//$JUnit-END$
 		return suite;
 	}

@@ -16,5 +16,4 @@ public class SettingsServiceTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
-
 }
