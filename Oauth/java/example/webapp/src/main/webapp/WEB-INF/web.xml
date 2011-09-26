@@ -87,4 +87,8 @@
         <servlet-name>YahooConsumer</servlet-name>
         <url-pattern>/Yahoo</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RunkeeperConsumer</servlet-name>
+        <url-pattern>/Runkeeper</url-pattern>
+    </servlet-mapping>    
 </web-app>

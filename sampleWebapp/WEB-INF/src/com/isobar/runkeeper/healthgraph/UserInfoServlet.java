@@ -20,7 +20,7 @@ public class UserInfoServlet extends HttpServlet {
 
 	// URL of target page script.
 //	url = new URL("http://localhost:8086/servlet/Target");
-	url = new URL("http://api.runkeeper.com/user \"Accept: application/vnd.com.runkeeper.User+json\" \"Authorization: Bearer 2558adf5d4e54e92afa7c628f1e45535\"");
+	url = new URL("http://api.runkeeper.com/user?access_token=cff3c5ff3db04fd8928dfd43fa867853");
 	urlConn = url.openConnection();
 
 	urlConn.setDoInput(true);

@@ -44,6 +44,10 @@
 <servlet-name>userInfo</servlet-name>
 <servlet-class>com.isobar.runkeeper.healthgraph.UserInfoServlet</servlet-class>
 </servlet>
+<servlet>
+<servlet-name>runkeeper</servlet-name>
+<servlet-class>com.isobar.runkeeper.healthgraph.RunkeeperConsumer</servlet-class>
+</servlet>
 
 <!-- sample servlet mappings -->
 <servlet-mapping>
@@ -71,6 +75,10 @@
 <servlet-mapping>
 <servlet-name>userInfo</servlet-name>
 <url-pattern>/userInfo.html</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>runkeeper</servlet-name>
+<url-pattern>/runkeeper.html</url-pattern>
 </servlet-mapping>
 
 </web-app>

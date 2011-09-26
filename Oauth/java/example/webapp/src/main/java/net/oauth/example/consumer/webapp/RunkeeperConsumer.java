@@ -46,7 +46,7 @@ public class RunkeeperConsumer extends HttpServlet {
             consumer = CookieConsumer.getConsumer("runkeeper", getServletContext());
             OAuthAccessor accessor = CookieConsumer.getAccessor(request, response, consumer);
             OAuthResponseMessage result = CookieConsumer.CLIENT.access(accessor.newRequestMessage(OAuthMessage.GET,
-                    "http://twitter.com/statuses/friends_timeline.atom", null), ParameterStyle.AUTHORIZATION_HEADER);
+                    "http://api.runkeeper.com/user", null), ParameterStyle.AUTHORIZATION_HEADER);
             int status = result.getHttpResponse().getStatusCode();
             if (status != HttpResponseMessage.STATUS_OK) {
                 OAuthProblemException problem = result.toOAuthProblemException();
