@@ -40,6 +40,23 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 		}
 	}
 	
+	public void testUpdateStrengthTrainingActivity() {
+		try {
+			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
+			for (Item item : strengthTrainingActivityFeed.getItems()) {
+				StrengthTrainingActivity activity = StrengthTrainingActivityService.getStrengthTrainingActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("Original activity: " + activity);
+				activity.setNotes("Updated Notes");
+				StrengthTrainingActivityService.updateStrengthTrainingActivity(activity, GraphConstants.AUTH_CODE);
+				System.out.println("Updated activity: " + activity);
+				break;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}		
+	
 	public void testCreateNewStrengthActivity() {
 		try {
 		  NewStrengthTrainingActivity activity = new NewStrengthTrainingActivity();

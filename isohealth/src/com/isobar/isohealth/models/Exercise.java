@@ -2,6 +2,10 @@ package com.isobar.isohealth.models;
 
 import java.util.Arrays;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class Exercise {
 	public static class Set {
 		private Double weight; //The weight for the set, in kg

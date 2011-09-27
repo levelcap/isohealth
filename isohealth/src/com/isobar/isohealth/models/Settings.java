@@ -1,5 +1,9 @@
 package com.isobar.isohealth.models;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class Settings {
 	private Boolean facebook_connected; //true if the user has connected to his/her Facebook account, false otherwise
 	private Boolean twitter_connected; //true if the user has connected to his/her Twitter account, false otherwise

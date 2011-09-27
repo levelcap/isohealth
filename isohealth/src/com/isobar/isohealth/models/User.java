@@ -1,7 +1,10 @@
 package com.isobar.isohealth.models;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class User {
-	
 	private Integer userID; 	//The unique ID for the user 	N
 	private String profile; // The URI of the user profile resource 	N
 	private String settings; //The URI of the sharing and display settings resource 	N

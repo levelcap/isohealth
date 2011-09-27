@@ -1,5 +1,9 @@
 package com.isobar.isohealth.models;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class Profile {
 	private String name;  //The user's full name (omitted if not yet specified)
 	private String location;  //The user's geographical location (omitted if not yet specified)

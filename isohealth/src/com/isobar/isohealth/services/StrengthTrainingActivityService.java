@@ -62,6 +62,33 @@ public class StrengthTrainingActivityService {
 		return strengthTrainingActivity;
 	}
 
+	public static StrengthTrainingActivity updateStrengthTrainingActivity(StrengthTrainingActivity activity, String code) throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
+		String url = GraphConstants.REST_URL + activity.getUri();
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("PUT");
+		conn.setRequestProperty("Content-Type",
+				GraphConstants.MEDIA_STRENGTH_TRAINING_ACTIVITY);
+		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Content-Length", "nnn");
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
+		conn.setDoOutput(true);;
+
+		mapper.writeValue(conn.getOutputStream(), activity);
+		
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		activity = mapper.readValue(rd, StrengthTrainingActivity.class);
+		conn.disconnect();
+		return activity;
+	}
+	
 	public static void createStrengthTrainingActivity(
 			NewStrengthTrainingActivity activity, String code) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();

@@ -2,6 +2,10 @@ package com.isobar.isohealth.models;
 
 import java.util.Arrays;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class StrengthTrainingActivity {	
 	private String uri; //The URI for this activity
 	private Integer userID; //The unique ID of the user for the activity

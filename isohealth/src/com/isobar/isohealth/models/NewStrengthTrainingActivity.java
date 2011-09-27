@@ -2,6 +2,10 @@ package com.isobar.isohealth.models;
 
 import java.util.Arrays;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class NewStrengthTrainingActivity {
 	private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 	private String notes; //Any notes that the user has associated with the activity (max. 1024 characters; optional)
