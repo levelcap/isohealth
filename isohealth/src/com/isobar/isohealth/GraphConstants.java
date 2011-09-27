@@ -20,6 +20,7 @@ public class GraphConstants {
 	public static final String MEDIA_FITNESS_ACTIVITY = "application/vnd.com.runkeeper.FitnessActivity+json";
 	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY_FEED = "application/vnd.com.runkeeper.StrengthTrainingActivityFeed+json";
 	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.StrengthTrainingActivity+json";
+	public static final String MEDIA_NEW_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.NewStrengthTrainingActivity+json";
 	
 	public GraphConstants() {
 		
