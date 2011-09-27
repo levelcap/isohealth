@@ -9,6 +9,7 @@ import java.net.URL;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.NewStrengthTrainingActivity;
 import com.isobar.isohealth.models.Profile;
 import com.isobar.isohealth.models.User;
 
@@ -32,4 +33,32 @@ public class ProfileService {
 		conn.disconnect();
 		return profile;
 	}
+	
+	public static Profile updateProfile(Profile profile, String code) throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
+		User user = UserService.getUser(code);
+		String url = GraphConstants.REST_URL + user.getProfile();
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("PUT");
+		conn.setRequestProperty("Content-Type",
+				GraphConstants.MEDIA_PROFILE);
+		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Content-Length", "nnn");
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
+		conn.setDoOutput(true);;
+
+		mapper.writeValue(conn.getOutputStream(), profile);
+		
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		profile = mapper.readValue(rd, Profile.class);
+		conn.disconnect();
+		return profile;
+	}	
 }
