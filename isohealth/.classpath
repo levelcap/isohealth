@@ -14,5 +14,11 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="lib/jackson-all-1.7.9.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-client-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-client-sources.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-client.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-common-0.1.jar"/>
+	<classpathentry kind="lib" path="lib/oauth2-common-0.2-20100928.154856-1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

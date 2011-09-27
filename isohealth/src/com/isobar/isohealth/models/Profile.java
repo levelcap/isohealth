@@ -1,128 +1,125 @@
 package com.isobar.isohealth.models;
 
 public class Profile {
-	private String _name;  //The user's full name (omitted if not yet specified)
-	private String _location;  //The user's geographical location (omitted if not yet specified)
-	private String _athlete_type;  //One of the following values: "Athlete", "Runner", "Marathoner", "Ultra Marathoner", "Cyclist", "Tri-Athlete", "Walker", "Hiker", "Skier", "Snowboarder", "Skater", "Swimmer", "Rower" (omitted if not yet specified)
-	private String _goal;  //The user's current fitness goal
-	private String _gender;  //One of the following values: "M", "F" (omitted if not yet specified)
-	private String _birthday;  //The user's birthday (e.g., "Sat, 1 Jan 2011 00:00:00") (omitted if not yet specified)
-	private Boolean _elite;  //true if the user subscribes to RunKeeper Elite, false otherwise
-	private String _profile;  //The URL of the user's public, human-readable profile on the RunKeeper Web site
-	private String _small_picture;  //The URI of the small (50x50) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture) 	
-	private String _normal_picture;  //The URI of the small (100x100) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)
-	private String _medium_picture;  //The URI of the small (200x600) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)
-	private String _large_picture;  //The URI of the small (600x1800) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)	
+	private String name;  //The user's full name (omitted if not yet specified)
+	private String location;  //The user's geographical location (omitted if not yet specified)
+	private String athlete_type;  //One of the following values: "Athlete", "Runner", "Marathoner", "Ultra Marathoner", "Cyclist", "Tri-Athlete", "Walker", "Hiker", "Skier", "Snowboarder", "Skater", "Swimmer", "Rower" (omitted if not yet specified)
+	private String goal;  //The user's current fitness goal
+	private String gender;  //One of the following values: "M", "F" (omitted if not yet specified)
+	private String birthday;  //The user's birthday (e.g., "Sat, 1 Jan 2011 00:00:00") (omitted if not yet specified)
+	private Boolean elite;  //true if the user subscribes to RunKeeper Elite, false otherwise
+	private String profile;  //The URL of the user's public, human-readable profile on the RunKeeper Web site
+	private String small_picture;  //The URI of the small (50x50) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture) 	
+	private String normal_picture;  //The URI of the small (100x100) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)
+	private String medium_picture;  //The URI of the small (200x600) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)
+	private String large_picture;  //The URI of the small (600x1800) version of the user's profile picture on the RunKeeper Web site (omitted if the user has no such picture)	
 	
-	public Profile() {
-	
-	}
 	public void setName(String name) {
-		this._name = name;
+		this.name = name;
 	}
 	public String getName() {
-		return _name;
+		return name;
 	}
 	public void setLocation(String location) {
-		this._location = location;
+		this.location = location;
 	}
 	public String getLocation() {
-		return _location;
+		return location;
 	}
 	public void setAthlete_type(String athlete_type) {
-		this._athlete_type = athlete_type;
+		this.athlete_type = athlete_type;
 	}
 	public String getAthlete_type() {
-		return _athlete_type;
+		return athlete_type;
 	}
 	public void setGoal(String goal) {
-		this._goal = goal;
+		this.goal = goal;
 	}
 	public String getGoal() {
-		return _goal;
+		return goal;
 	}
 	public void setGender(String gender) {
-		this._gender = gender;
+		this.gender = gender;
 	}
 	public String getGender() {
-		return _gender;
+		return gender;
 	}
 	public void setBirthday(String birthday) {
-		this._birthday = birthday;
+		this.birthday = birthday;
 	}
 	public String getBirthday() {
-		return _birthday;
+		return birthday;
 	}
 	public void setElite(Boolean elite) {
-		this._elite = elite;
+		this.elite = elite;
 	}
 	public Boolean getElite() {
-		return _elite;
+		return elite;
 	}
 	public void setProfile(String profile) {
-		this._profile = profile;
+		this.profile = profile;
 	}
 	public String getProfile() {
-		return _profile;
+		return profile;
 	}
 	public void setSmall_picture(String small_picture) {
-		this._small_picture = small_picture;
+		this.small_picture = small_picture;
 	}
 	public String getSmall_picture() {
-		return _small_picture;
+		return small_picture;
 	}
 	public void setNormal_picture(String normal_picture) {
-		this._normal_picture = normal_picture;
+		this.normal_picture = normal_picture;
 	}
 	public String getNormal_picture() {
-		return _normal_picture;
+		return normal_picture;
 	}
 	public void setMedium_picture(String medium_picture) {
-		this._medium_picture = medium_picture;
+		this.medium_picture = medium_picture;
 	}
 	public String getMedium_picture() {
-		return _medium_picture;
+		return medium_picture;
 	}
 	public void setLarge_picture(String large_picture) {
-		this._large_picture = large_picture;
+		this.large_picture = large_picture;
 	}
 	public String getLarge_picture() {
-		return _large_picture;
+		return large_picture;
 	}
 	@Override
 	public String toString() {
-		return "Profile [_name=" + _name + ", _location=" + _location
-				+ ", _athlete_type=" + _athlete_type + ", _goal=" + _goal
-				+ ", _gender=" + _gender + ", _birthday=" + _birthday
-				+ ", _elite=" + _elite + ", _profile=" + _profile
-				+ ", _small_picture=" + _small_picture + ", _normal_picture="
-				+ _normal_picture + ", _medium_picture=" + _medium_picture
-				+ ", _large_picture=" + _large_picture + "]";
+		return "Profile [_name=" + name + ", _location=" + location
+				+ ", _athlete_type=" + athlete_type + ", _goal=" + goal
+				+ ", _gender=" + gender + ", _birthday=" + birthday
+				+ ", _elite=" + elite + ", _profile=" + profile
+				+ ", _small_picture=" + small_picture + ", _normal_picture="
+				+ normal_picture + ", _medium_picture=" + medium_picture
+				+ ", _large_picture=" + large_picture + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((_athlete_type == null) ? 0 : _athlete_type.hashCode());
+				+ ((athlete_type == null) ? 0 : athlete_type.hashCode());
 		result = prime * result
-				+ ((_birthday == null) ? 0 : _birthday.hashCode());
-		result = prime * result + ((_elite == null) ? 0 : _elite.hashCode());
-		result = prime * result + ((_gender == null) ? 0 : _gender.hashCode());
-		result = prime * result + ((_goal == null) ? 0 : _goal.hashCode());
+				+ ((birthday == null) ? 0 : birthday.hashCode());
+		result = prime * result + ((elite == null) ? 0 : elite.hashCode());
+		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
+		result = prime * result + ((goal == null) ? 0 : goal.hashCode());
 		result = prime * result
-				+ ((_large_picture == null) ? 0 : _large_picture.hashCode());
+				+ ((large_picture == null) ? 0 : large_picture.hashCode());
 		result = prime * result
-				+ ((_location == null) ? 0 : _location.hashCode());
+				+ ((location == null) ? 0 : location.hashCode());
 		result = prime * result
-				+ ((_medium_picture == null) ? 0 : _medium_picture.hashCode());
-		result = prime * result + ((_name == null) ? 0 : _name.hashCode());
+				+ ((medium_picture == null) ? 0 : medium_picture.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result
-				+ ((_normal_picture == null) ? 0 : _normal_picture.hashCode());
+				+ ((normal_picture == null) ? 0 : normal_picture.hashCode());
 		result = prime * result
-				+ ((_profile == null) ? 0 : _profile.hashCode());
+				+ ((profile == null) ? 0 : profile.hashCode());
 		result = prime * result
-				+ ((_small_picture == null) ? 0 : _small_picture.hashCode());
+				+ ((small_picture == null) ? 0 : small_picture.hashCode());
 		return result;
 	}
 	@Override
@@ -134,65 +131,65 @@ public class Profile {
 		if (getClass() != obj.getClass())
 			return false;
 		Profile other = (Profile) obj;
-		if (_athlete_type == null) {
-			if (other._athlete_type != null)
+		if (athlete_type == null) {
+			if (other.athlete_type != null)
 				return false;
-		} else if (!_athlete_type.equals(other._athlete_type))
+		} else if (!athlete_type.equals(other.athlete_type))
 			return false;
-		if (_birthday == null) {
-			if (other._birthday != null)
+		if (birthday == null) {
+			if (other.birthday != null)
 				return false;
-		} else if (!_birthday.equals(other._birthday))
+		} else if (!birthday.equals(other.birthday))
 			return false;
-		if (_elite == null) {
-			if (other._elite != null)
+		if (elite == null) {
+			if (other.elite != null)
 				return false;
-		} else if (!_elite.equals(other._elite))
+		} else if (!elite.equals(other.elite))
 			return false;
-		if (_gender == null) {
-			if (other._gender != null)
+		if (gender == null) {
+			if (other.gender != null)
 				return false;
-		} else if (!_gender.equals(other._gender))
+		} else if (!gender.equals(other.gender))
 			return false;
-		if (_goal == null) {
-			if (other._goal != null)
+		if (goal == null) {
+			if (other.goal != null)
 				return false;
-		} else if (!_goal.equals(other._goal))
+		} else if (!goal.equals(other.goal))
 			return false;
-		if (_large_picture == null) {
-			if (other._large_picture != null)
+		if (large_picture == null) {
+			if (other.large_picture != null)
 				return false;
-		} else if (!_large_picture.equals(other._large_picture))
+		} else if (!large_picture.equals(other.large_picture))
 			return false;
-		if (_location == null) {
-			if (other._location != null)
+		if (location == null) {
+			if (other.location != null)
 				return false;
-		} else if (!_location.equals(other._location))
+		} else if (!location.equals(other.location))
 			return false;
-		if (_medium_picture == null) {
-			if (other._medium_picture != null)
+		if (medium_picture == null) {
+			if (other.medium_picture != null)
 				return false;
-		} else if (!_medium_picture.equals(other._medium_picture))
+		} else if (!medium_picture.equals(other.medium_picture))
 			return false;
-		if (_name == null) {
-			if (other._name != null)
+		if (name == null) {
+			if (other.name != null)
 				return false;
-		} else if (!_name.equals(other._name))
+		} else if (!name.equals(other.name))
 			return false;
-		if (_normal_picture == null) {
-			if (other._normal_picture != null)
+		if (normal_picture == null) {
+			if (other.normal_picture != null)
 				return false;
-		} else if (!_normal_picture.equals(other._normal_picture))
+		} else if (!normal_picture.equals(other.normal_picture))
 			return false;
-		if (_profile == null) {
-			if (other._profile != null)
+		if (profile == null) {
+			if (other.profile != null)
 				return false;
-		} else if (!_profile.equals(other._profile))
+		} else if (!profile.equals(other.profile))
 			return false;
-		if (_small_picture == null) {
-			if (other._small_picture != null)
+		if (small_picture == null) {
+			if (other.small_picture != null)
 				return false;
-		} else if (!_small_picture.equals(other._small_picture))
+		} else if (!small_picture.equals(other.small_picture))
 			return false;
 		return true;
 	}	

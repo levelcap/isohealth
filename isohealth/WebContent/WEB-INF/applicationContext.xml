@@ -64,9 +64,6 @@
 		</property>
 		<property name="defaultViews">
 			<list>
-				<bean class="com.isobar.isohealth.NoWrappingMappingJacksonJsonView">
-					<property name="objectMapper" ref="jsonObjectMapper" />
-				</bean>
 				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
 					<property name="marshaller">
 						<bean class="org.springframework.oxm.xstream.XStreamMarshaller"
