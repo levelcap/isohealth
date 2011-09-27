@@ -32,4 +32,32 @@ public class SettingsService {
 		conn.disconnect();
 		return settings;
 	}
+	
+	public static Settings updateProfile(Settings settings, String code) throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
+		User user = UserService.getUser(code);
+		String url = GraphConstants.REST_URL + user.getSettings();
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("PUT");
+		conn.setRequestProperty("Content-Type",
+				GraphConstants.MEDIA_SETTINGS);
+		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Content-Length", "nnn");
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
+		conn.setDoOutput(true);;
+
+		mapper.writeValue(conn.getOutputStream(), settings);
+		
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		settings = mapper.readValue(rd, Settings.class);
+		conn.disconnect();
+		return settings;
+	}		
 }

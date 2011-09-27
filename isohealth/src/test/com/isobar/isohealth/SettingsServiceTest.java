@@ -16,4 +16,16 @@ public class SettingsServiceTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
+	
+	public void testUpdateSettings() {
+		try {
+			Settings settings = SettingsService.getSettings(GraphConstants.AUTH_CODE);
+			System.out.println("Settings: " + settings.toString());
+			settings.setShare_map("Everyone");
+			settings = SettingsService.updateProfile(settings, GraphConstants.AUTH_CODE);
+			System.out.println("Updated Settings: " + settings.toString());			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}	
 }
