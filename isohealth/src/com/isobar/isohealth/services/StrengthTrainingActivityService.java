@@ -79,17 +79,22 @@ public class StrengthTrainingActivityService {
 		conn.setDoInput(true);
 		conn.setDoOutput(true);;
 
-//		String json = mapper.writeValueAsString(activity);
-//		System.out.println(json);
-//
-//		DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-//		wr.writeBytes(json);
-//		wr.flush();
-//		wr.close();
-
 		mapper.writeValue(conn.getOutputStream(), activity);
 		
-		if (!conn.getResponseMessage().equals("Created")) {
+		if (conn.getResponseCode() != 201) {
+			throw new IOException(conn.getResponseMessage());
+		}
+		conn.disconnect();
+	}
+	
+	public static void deleteStrengthTrainingActivity(String url, String code) throws Exception {
+		url = GraphConstants.REST_URL + url;
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("DELETE");
+		conn.setRequestProperty("Authorization", "Bearer " + code);
+		
+		if (conn.getResponseCode() != 204) {
 			throw new IOException(conn.getResponseMessage());
 		}
 		conn.disconnect();

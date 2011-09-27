@@ -53,7 +53,7 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 		  exercises[0].setSecondary_type("hammer");
 		  exercises[0].setRoutine("arms");
 		  exercises[0].setNotes("This is the exercise");
-		  Set[] sets = {new Set()};
+		  Set[] sets = {new Set(), new Set()};
 		  sets[0].setNotes("Good set");
 		  sets[0].setRepetitions(10);
 		  sets[0].setWeight(1.8);
@@ -68,4 +68,18 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 			e.printStackTrace();
 		}
 	}
+	
+	public void testDeleteStrengthTrainingActivity() {
+		try {
+			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
+			for (Item item : strengthTrainingActivityFeed.getItems()) {
+				StrengthTrainingActivity activity = StrengthTrainingActivityService.getStrengthTrainingActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				StrengthTrainingActivityService.deleteStrengthTrainingActivity(activity.getUri(), GraphConstants.AUTH_CODE);
+				break;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}	
 }
