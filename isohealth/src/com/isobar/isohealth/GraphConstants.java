@@ -22,6 +22,9 @@ public class GraphConstants {
 	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY_FEED = "application/vnd.com.runkeeper.StrengthTrainingActivityFeed+json";
 	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.StrengthTrainingActivity+json";
 	public static final String MEDIA_NEW_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.NewStrengthTrainingActivity+json";
+	public static final String MEDIA_BACKGROUND_ACTIVITY_FEED = "application/vnd.com.runkeeper.BackgroundActivityFeed+json";
+	public static final String MEDIA_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.BackgroundActivity+json";
+	public static final String MEDIA_NEW_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.NewBackgroundActivity+json";
 	
 	public GraphConstants() {
 		
