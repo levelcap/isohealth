@@ -9,7 +9,6 @@ import java.net.URL;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.isobar.isohealth.GraphConstants;
-import com.isobar.isohealth.models.NewStrengthTrainingActivity;
 import com.isobar.isohealth.models.Profile;
 import com.isobar.isohealth.models.User;
 
