@@ -7,8 +7,6 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class FitnessActivityFeed {
-	
-	@JsonSerialize(include = Inclusion.NON_NULL)
 	public static class Item {
 		private String type; //The type of activity, as one of the following values: "Running", "Cycling", "Mountain Biking", "Walking", "Hiking", "Downhill Skiing", "Cross-Country Skiing", "Snowboarding", "Skating", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
 		private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")

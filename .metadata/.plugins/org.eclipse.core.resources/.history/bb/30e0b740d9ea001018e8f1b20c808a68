@@ -1,9 +1,5 @@
 package com.isobar.isohealth.models;
 
-import org.codehaus.jackson.map.annotate.JsonSerialize;
-import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
-
-@JsonSerialize(include = Inclusion.NON_NULL)
 public class NewGeneralMeasurement {
 	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
 	
