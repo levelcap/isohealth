@@ -9,7 +9,6 @@ import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.BackgroundActivity;
 import com.isobar.isohealth.models.BackgroundActivityFeed;
 import com.isobar.isohealth.models.BackgroundActivityFeed.Item;
-import com.isobar.isohealth.models.NewBackgroundActivity;
 import com.isobar.isohealth.services.BackgroundActivityService;
 
 public class BackgroundActivityServiceTest extends TestCase {

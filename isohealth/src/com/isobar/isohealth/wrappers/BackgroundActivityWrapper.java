@@ -1,4 +1,4 @@
-package com.isobar.isohealth.services;
+package com.isobar.isohealth.wrappers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,19 +14,23 @@ import com.isobar.isohealth.models.BackgroundActivityFeed;
 import com.isobar.isohealth.models.NewBackgroundActivity;
 import com.isobar.isohealth.models.User;
 
-public class BackgroundActivityService {
+public class BackgroundActivityWrapper {
+	private String authToken;
 
-	public static BackgroundActivityFeed getBackgroundActivityFeed(String code)
-			throws Exception {
+	public BackgroundActivityWrapper(String authToken) {
+		this.authToken = authToken;
+	}
+
+	public BackgroundActivityFeed getBackgroundActivityFeed() throws Exception {
 		// User object contains URLs
-		User user = UserService.getUser(code);
+		User user = new UserWrapper(authToken).getUser();
 		ObjectMapper mapper = new ObjectMapper();
 		String url = GraphConstants.REST_URL + user.getBackground_activities();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
 				.openConnection();
 		conn.setRequestProperty("Accept",
 				GraphConstants.MEDIA_BACKGROUND_ACTIVITY_FEED);
-		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 
 		if (conn.getResponseCode() != 200) {
 			throw new IOException(conn.getResponseMessage());
@@ -40,15 +44,15 @@ public class BackgroundActivityService {
 		return backgroundActivityFeed;
 	}
 
-	public static BackgroundActivity getBackgroundActivity(String url,
-			String code) throws Exception {
+	public BackgroundActivity getBackgroundActivity(String url)
+			throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		url = GraphConstants.REST_URL + url;
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
 				.openConnection();
 		conn.setRequestProperty("Accept",
 				GraphConstants.MEDIA_BACKGROUND_ACTIVITY);
-		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 
 		if (conn.getResponseCode() != 200) {
 			throw new IOException(conn.getResponseMessage());
@@ -62,8 +66,8 @@ public class BackgroundActivityService {
 		return backgroundActivity;
 	}
 
-	public static BackgroundActivity updateBackgroundActivity(
-			BackgroundActivity activity, String code) throws Exception {
+	public BackgroundActivity updateBackgroundActivity(
+			BackgroundActivity activity) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		String url = GraphConstants.REST_URL + activity.getUri();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
@@ -71,14 +75,13 @@ public class BackgroundActivityService {
 		conn.setRequestMethod("PUT");
 		conn.setRequestProperty("Content-Type",
 				GraphConstants.MEDIA_BACKGROUND_ACTIVITY);
-		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
 		;
 
-		String activityString = mapper.writeValueAsString(activity);
 		mapper.writeValue(conn.getOutputStream(), activity);
 
 		if (conn.getResponseCode() != 200) {
@@ -92,17 +95,17 @@ public class BackgroundActivityService {
 		return activity;
 	}
 
-	public static void createBackgroundActivity(NewBackgroundActivity activity,
-			String code) throws Exception {
+	public void createBackgroundActivity(NewBackgroundActivity activity)
+			throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
-		User user = UserService.getUser(code);
+		User user = new UserWrapper(authToken).getUser();
 		String url = GraphConstants.REST_URL + user.getBackground_activities();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
 				.openConnection();
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type",
 				GraphConstants.MEDIA_NEW_BACKGROUND_ACTIVITY);
-		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
