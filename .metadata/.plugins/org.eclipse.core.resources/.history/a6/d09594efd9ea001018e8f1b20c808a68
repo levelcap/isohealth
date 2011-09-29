@@ -93,8 +93,7 @@ public class DiabetesMeasurementFeed {
 				+ Arrays.toString(items) + ", previous=" + previous + ", next="
 				+ next + "]";
 	}
-	
-	@JsonSerialize(include = Inclusion.NON_NULL)
+
 	public static class Item {
 		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
 		// One of the following values: fasting_plasma_glucose_test, random_plasma_glucose_test, oral_glucose_tolerance_test, hemoglobin_a1c, insulin, c_peptide, triglyceride.

@@ -78,7 +78,7 @@ public class StreetTeamMembershipFeed {
 				+ Arrays.toString(items) + ", next=" + next + "]";
 	}
 
-	@JsonSerialize(include = Inclusion.NON_NULL)
+
 	public static class Item {
 		private String name;    // The member's full name
 		private String profile; // The URL of the member's public, human-readable profile on the RunKeeper website

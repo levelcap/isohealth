@@ -10,7 +10,6 @@ public class GeneralMeasurementFeed {
 	private String previous; // The URI of the previous page of general measurements for the user (omitted for the earliest page)
 	private String next; // The URI of the next page of general measurements for the user (omitted for the most recent page)
 	
-	@JsonSerialize(include = Inclusion.NON_NULL)
 	public static class Item {
 		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
 		

@@ -2,10 +2,6 @@ package com.isobar.isohealth.models;
 
 import java.util.Arrays;
 
-import org.codehaus.jackson.map.annotate.JsonSerialize;
-import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
-
-@JsonSerialize(include = Inclusion.NON_NULL)
 public class SleepMeasurementFeed {
 	private Integer size; // The total number of sleep measurements across all pages
 	private Item[] items; // The user's sleep measurements, in reverse chronological order
@@ -93,7 +89,6 @@ public class SleepMeasurementFeed {
 				+ next + "]";
 	}
 
-	@JsonSerialize(include = Inclusion.NON_NULL)
 	public static class Item {
 		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
 		
