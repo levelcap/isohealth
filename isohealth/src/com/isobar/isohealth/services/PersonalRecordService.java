@@ -13,7 +13,7 @@ import com.isobar.isohealth.models.PersonalRecord;
 import com.isobar.isohealth.models.User;
 
 public class PersonalRecordService {
-	public static PersonalRecord getPersonalRecord(String code) throws Exception {
+	public static PersonalRecord[] getPersonalRecord(String code) throws Exception {
 		User user = UserService.getUser(code);
 		ObjectMapper mapper = new ObjectMapper(); 
 		String url = GraphConstants.REST_URL + user.getRecords();
@@ -27,11 +27,8 @@ public class PersonalRecordService {
 
 		BufferedReader rd = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
-		String line = "";
-		while ((line = rd.readLine()) != null) {
-            System.out.println(line);
-        }
-		PersonalRecord personalRecord = mapper.readValue(rd, PersonalRecord.class);
+
+		PersonalRecord[] personalRecord = mapper.readValue(rd, PersonalRecord[].class);
 		conn.disconnect();
 		return personalRecord;
 	}
