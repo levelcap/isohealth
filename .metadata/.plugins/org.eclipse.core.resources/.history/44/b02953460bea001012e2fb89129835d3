@@ -1,0 +1,168 @@
+package com.isobar.isohealth.models;
+
+import java.util.Arrays;
+
+public class DiabetesMeasurementFeed {
+	private Integer size;    // The total number of diabetes measurements across all pages
+	private Item[]	items;   // The user's diabetes measurements, in reverse chronological order
+	private String previous; // The URI of the previous page of diabetes measurements for the user (omitted for the earliest page)
+	private String next;     // The URI of the next page of diabetes measurements for the user (omitted for the most recent page)
+	
+	public DiabetesMeasurementFeed() {
+		super();
+	}
+	public DiabetesMeasurementFeed(Integer size, Item[] items, String previous,
+			String next) {
+		super();
+		this.size = size;
+		this.items = items;
+		this.previous = previous;
+		this.next = next;
+	}
+	public Integer getSize() {
+		return size;
+	}
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+	public Item[] getItems() {
+		return items;
+	}
+	public void setItems(Item[] items) {
+		this.items = items;
+	}
+	public String getPrevious() {
+		return previous;
+	}
+	public void setPrevious(String previous) {
+		this.previous = previous;
+	}
+	public String getNext() {
+		return next;
+	}
+	public void setNext(String next) {
+		this.next = next;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(items);
+		result = prime * result + ((next == null) ? 0 : next.hashCode());
+		result = prime * result
+				+ ((previous == null) ? 0 : previous.hashCode());
+		result = prime * result + ((size == null) ? 0 : size.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DiabetesMeasurementFeed other = (DiabetesMeasurementFeed) obj;
+		if (!Arrays.equals(items, other.items))
+			return false;
+		if (next == null) {
+			if (other.next != null)
+				return false;
+		} else if (!next.equals(other.next))
+			return false;
+		if (previous == null) {
+			if (other.previous != null)
+				return false;
+		} else if (!previous.equals(other.previous))
+			return false;
+		if (size == null) {
+			if (other.size != null)
+				return false;
+		} else if (!size.equals(other.size))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "DiabetesMeasurementFeed [size=" + size + ", items="
+				+ Arrays.toString(items) + ", previous=" + previous + ", next="
+				+ next + "]";
+	}
+
+	public static class Item {
+		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+		// One of the following values: fasting_plasma_glucose_test, random_plasma_glucose_test, oral_glucose_tolerance_test, hemoglobin_a1c, insulin, c_peptide, triglyceride.
+		Double fasting_plasma_glucose_test; // The value of the measured quantity
+		Double random_plasma_glucose_test; // The value of the measured quantity
+		Double oral_glucose_tolerance_test; // The value of the measured quantity
+		Double hemoglobin_a1c; // The value of the measured quantity
+		Double insulin; // The value of the measured quantity
+		Double c_peptide; // The value of the measured quantity
+		Double triglyceride; // The value of the measured quantity
+						  
+		private String uri; 	  // The URI of detailed information for the diabetes measurement
+		public String getTimestamp() {
+			return timestamp;
+		}
+		public void setTimestamp(String timestamp) {
+			this.timestamp = timestamp;
+		}
+		public String getUri() {
+			return uri;
+		}
+		public void setUri(String uri) {
+			this.uri = uri;
+		}
+		@Override
+		public String toString() {
+			return "Item [timestamp=" + timestamp + ", value=" + value
+					+ ", uri=" + uri + "]";
+		}
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result
+					+ ((timestamp == null) ? 0 : timestamp.hashCode());
+			result = prime * result + ((uri == null) ? 0 : uri.hashCode());
+			result = prime * result + ((value == null) ? 0 : value.hashCode());
+			return result;
+		}
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Item other = (Item) obj;
+			if (timestamp == null) {
+				if (other.timestamp != null)
+					return false;
+			} else if (!timestamp.equals(other.timestamp))
+				return false;
+			if (uri == null) {
+				if (other.uri != null)
+					return false;
+			} else if (!uri.equals(other.uri))
+				return false;
+			if (value == null) {
+				if (other.value != null)
+					return false;
+			} else if (!value.equals(other.value))
+				return false;
+			return true;
+		}
+		public Item(String timestamp, Double value, String uri) {
+			super();
+			this.timestamp = timestamp;
+			this.value = value;
+			this.uri = uri;
+		}
+		public Item() {
+			super();
+		}
+	}
+}

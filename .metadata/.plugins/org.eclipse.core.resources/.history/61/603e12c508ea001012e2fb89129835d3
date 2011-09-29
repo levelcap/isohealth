@@ -1,0 +1,5 @@
+package com.isobar.isohealth.services;
+
+public class DiabetesMeasurementService {
+
+}

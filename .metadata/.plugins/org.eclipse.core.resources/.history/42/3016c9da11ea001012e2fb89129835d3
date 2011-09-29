@@ -1,0 +1,19 @@
+package com.isobar.isohealth.models;
+
+public class NewGeneralMeasurement {
+	String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	// One of the following values: vitamin_d, hscrp, crp, tsh, uric_acid, systolic, diastolic, total_cholesterol, hdl, ldl
+	Double vitamin_d; // The value of the measured quantity
+	Double hscrp; // The value of the measured quantity
+	Double crp; // The value of the measured quantity
+	Double tsh; // The value of the measured quantity
+	Double uric_acid; // The value of the measured quantity
+	Double systolic; // The value of the measured quantity
+	Double diastolic; // The value of the measured quantity
+	Double total_cholesterol; // The value of the measured quantity
+	Double hdl; // The value of the measured quantity
+	Double ldl; // The value of the measured quantity
+
+	Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	Boolean post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+}

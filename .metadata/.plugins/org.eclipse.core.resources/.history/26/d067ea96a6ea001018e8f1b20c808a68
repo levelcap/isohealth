@@ -1,0 +1,17 @@
+package test.com.isobar.isohealth;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed;
+import com.isobar.isohealth.services.DiabetesMeasurementService;
+
+public class DiabetesMeasurementServiceTest {
+	
+	public void testGetBackgroundActivityFeed() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("DiabetesMeasurementService: " + diabetesMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

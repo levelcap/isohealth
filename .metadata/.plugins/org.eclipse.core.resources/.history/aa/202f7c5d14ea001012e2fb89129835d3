@@ -1,0 +1,8 @@
+package com.isobar.isohealth.models;
+
+public class NewWeightMeasurement {
+	timestamp	String	The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	One of the following values: weight, free_mass, mass_weight, fat_percent, bmi	Double	The value of the measured quantity
+	post_to_twitter	Boolean	Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	post_to_facebook	Boolean	Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+}

@@ -1,0 +1,8 @@
+package com.isobar.isohealth.models;
+
+public class NutritionFeed {
+	Integer size; // The total number of nutrition measurements across all pages
+	Item[] items; // The user's nutrition measurements, in reverse chronological order
+	String previous; // The URI of the previous page of nutrition measurements for the user (omitted for the earliest page)
+	String next; // The URI of the next page of nutrition measurements for the user (omitted for the most recent page)
+}

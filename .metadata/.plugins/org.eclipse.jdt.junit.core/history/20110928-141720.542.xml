@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="StreetTeamMembershipFeedServiceTest" project="isohealth" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="1.33">
+    <testcase name="testGetStreetTeamMembershipFeed" classname="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="0.947"/>
+    <testcase name="testReplyToInvite" classname="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="0.148"/>
+    <testcase name="testRemoveUser" classname="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="0.234"/>
+  </testsuite>
+</testrun>

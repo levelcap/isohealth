@@ -1,0 +1,8 @@
+package com.isobar.isohealth.models;
+
+public class GeneralMeasurementFeed {
+	size	Integer	The total number of general measurements across all pages
+	items	Item[]	The user's general measurements, in reverse chronological order
+	previous	String	The URI of the previous page of general measurements for the user (omitted for the earliest page)
+	next	String	The URI of the next page of general measurements for the user (omitted for the most recent page)
+}

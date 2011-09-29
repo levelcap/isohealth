@@ -1,0 +1,12 @@
+package com.isobar.isohealth.models;
+
+public class StreetTeamMembershipFeed {
+	Integer size; // The total number of members on the Street Team (i.e., across all pages)
+	Item[] items; // An array of up to 25 elements, with one element per member
+	String next;  // The URI for the next page of members (omitted from the last page)
+	
+	public static class Item {
+		String name; // The member's full name
+		String profile; // The URL of the member's public, human-readable profile on the RunKeeper website
+		String uri; // A URI for detailed information about the member, including membership status
+}

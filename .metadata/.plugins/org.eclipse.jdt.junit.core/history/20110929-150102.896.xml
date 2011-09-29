@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="ProfileServiceTest" project="isohealth" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.ProfileServiceTest" time="1.178">
+    <testcase name="testGetProfile" classname="test.com.isobar.isohealth.ProfileServiceTest" time="0.875"/>
+    <testcase name="testUpdateProfile" classname="test.com.isobar.isohealth.ProfileServiceTest" time="0.303"/>
+  </testsuite>
+</testrun>

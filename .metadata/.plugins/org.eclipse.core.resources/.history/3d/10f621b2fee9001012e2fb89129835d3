@@ -1,0 +1,6 @@
+package com.isobar.isohealth.models;
+
+public class PersonalRecords {
+	String activity_type; // The type of activity, as one of the following values: "Run", "Bike", "Mountain Bike", "Walk", "Hike", "Downhill Ski", "Cross-Country Ski", "Snowboard", "Skate", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
+	Stat[] stats; // The statistics for the activity type (empty if no records are available)
+}

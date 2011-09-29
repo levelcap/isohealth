@@ -1,0 +1,37 @@
+package com.isobar.isohealth;
+
+public class GraphConstants {
+	public static final String CLIENT_ID = "1f4fc840938f46278a9d019db93a8538";
+	public static final String CLIENT_SECRET = "ffbba1f04b75476cabfb4d87ef54e250";
+
+	public static final String AUTH_URL = "https://runkeeper.com/apps/authorize";
+	public static final String ACCESS_URL = "https://runkeeper.com/apps/token";
+	public static final String REDIRECT_URI = "http://localhost:8080/isohealth/index.html";
+	
+	public static final String REST_URL = "https://api.runkeeper.com";
+	
+	public static final String AUTH_CODE = "75fe669b6c1b4486ae35ffb15768ed43";
+	
+	//Media Types
+	public static final String MEDIA_USER = "application/vnd.com.runkeeper.User+json";
+	public static final String MEDIA_PROFILE = "application/vnd.com.runkeeper.Profile+json";
+	public static final String MEDIA_SETTINGS = "application/vnd.com.runkeeper.Settings+json";
+	public static final String MEDIA_FITNESS_ACTIVITY_FEED = "application/vnd.com.runkeeper.FitnessActivityFeed+json";
+	public static final String MEDIA_FITNESS_ACTIVITY = "application/vnd.com.runkeeper.FitnessActivity+json";
+	public static final String MEDIA_NEW_FITNESS_ACTIVITY = "application/vnd.com.runkeeper.NewFitnessActivity+json";
+	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY_FEED = "application/vnd.com.runkeeper.StrengthTrainingActivityFeed+json";
+	public static final String MEDIA_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.StrengthTrainingActivity+json";
+	public static final String MEDIA_NEW_STRENGTH_TRAINING_ACTIVITY = "application/vnd.com.runkeeper.NewStrengthTrainingActivity+json";
+	public static final String MEDIA_BACKGROUND_ACTIVITY_FEED = "application/vnd.com.runkeeper.BackgroundActivityFeed+json";
+	public static final String MEDIA_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.BackgroundActivity+json";
+	public static final String MEDIA_NEW_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.NewBackgroundActivity+json";
+	public static final String MEDIA_TEAM_FEED = "application/vnd.com.runkeeper.TeamFeed+json";
+	public static final String MEDIA_TEAM_INVITATION = "application/vnd.com.runkeeper.Invitation+json";
+	public static final String MEDIA_TEAM_INVITE_REPLY = "application/vnd.com.runkeeper.Reply+json";
+	public static final String MEDIA_TEAM_INVITE_RESPONSE = "application/vnd.com.runkeeper.Member+json";
+	public static final String MEDIA_RECORD = "application/vnd.com.runkeeper.Records+json"
+	
+	public GraphConstants() {
+		
+	}
+}

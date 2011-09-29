@@ -1,0 +1,12 @@
+package com.isobar.isohealth.models;
+
+public class PersonalRecords {
+	String activity_type; // The type of activity, as one of the following values: "Run", "Bike", "Mountain Bike", "Walk", "Hike", "Downhill Ski", "Cross-Country Ski", "Snowboard", "Skate", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
+	Stat[] stats; // The statistics for the activity type (empty if no records are available)
+	
+	public static class Stat {
+		stat_type	String	The type of statistic, as one of the following values: "BEST_ACTIVITY", "BEST_WEEK", "LAST_WEEK", "THIS_WEEK", "BEST_MONTH", "LAST_MONTH", "THIS_MONTH", "OVERALL"
+		value	Double	The record distance value
+		date	String	The date of the record (e.g., "Sat, 1 Jan 2011 00:00:00"; omitted if not available)
+	}
+}

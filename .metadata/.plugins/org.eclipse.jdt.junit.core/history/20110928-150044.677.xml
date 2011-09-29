@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="PersonalRecordServiceTest" project="isohealth" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.PersonalRecordServiceTest" time="0.967">
+    <testcase name="testGetPersonalRecords" classname="test.com.isobar.isohealth.PersonalRecordServiceTest" time="0.967"/>
+  </testsuite>
+</testrun>

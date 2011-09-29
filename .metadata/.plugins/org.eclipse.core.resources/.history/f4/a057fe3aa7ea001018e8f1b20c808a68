@@ -1,0 +1,41 @@
+package test.com.isobar.isohealth;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.BackgroundActivity;
+import com.isobar.isohealth.models.BackgroundActivityFeed;
+import com.isobar.isohealth.models.DiabetesMeasurement;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed.Item;
+import com.isobar.isohealth.services.BackgroundActivityService;
+import com.isobar.isohealth.services.DiabetesMeasurementService;
+
+public class DiabetesMeasurementServiceTest extends TestCase {
+	
+	public void testGetDiabetesMeasurementFeed() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("DiabetesMeasurementService: " + diabetesMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void testGetDiabetesMeasurement() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			List<DiabetesMeasurement> diabetesMeasurement =  new ArrayList<DiabetesMeasurement>();
+			for (Item item : diabetesMeasurementFeed.getItems()) {
+				BackgroundActivity activity = BackgroundActivityService.getBackgroundActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("BackgroundActivity: " + activity.toString());
+				diabetesMeasurement.add(activity);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

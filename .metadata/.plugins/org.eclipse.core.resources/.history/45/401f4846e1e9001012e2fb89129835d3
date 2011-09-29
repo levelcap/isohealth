@@ -1,0 +1,5 @@
+package com.isobar.isohealth.models;
+
+public class StreetTeamMember {
+
+}

@@ -1,0 +1,103 @@
+package com.isobar.isohealth.models;
+
+public class NewDiabetesMeasurement {
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	// One of the following values: fasting_plasma_glucose_test, random_plasma_glucose_test, oral_glucose_tolerance_test, hemoglobin_a1c, insulin, c_peptide, triglyceride.
+	 Double fasting_plasma_glucose_test; // The value of the measured quantity
+	 Double random_plasma_glucose_test; // The value of the measured quantity
+	 Double oral_glucose_tolerance_test; // The value of the measured quantity
+	 Double hemoglobin_a1c; // The value of the measured quantity
+	 Double insulin; // The value of the measured quantity
+	 Double c_peptide; // The value of the measured quantity
+	 Double triglyceride; // The value of the measured quantity
+						
+	private Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	private Boolean	post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+	public String getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+	public Double getValue() {
+		return value;
+	}
+	public void setValue(Double value) {
+		this.value = value;
+	}
+	public Boolean getPost_to_twitter() {
+		return post_to_twitter;
+	}
+	public void setPost_to_twitter(Boolean post_to_twitter) {
+		this.post_to_twitter = post_to_twitter;
+	}
+	public Boolean getPost_to_facebook() {
+		return post_to_facebook;
+	}
+	public void setPost_to_facebook(Boolean post_to_facebook) {
+		this.post_to_facebook = post_to_facebook;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime
+				* result
+				+ ((post_to_facebook == null) ? 0 : post_to_facebook.hashCode());
+		result = prime * result
+				+ ((post_to_twitter == null) ? 0 : post_to_twitter.hashCode());
+		result = prime * result
+				+ ((timestamp == null) ? 0 : timestamp.hashCode());
+		result = prime * result + ((value == null) ? 0 : value.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		NewDiabetesMeasurement other = (NewDiabetesMeasurement) obj;
+		if (post_to_facebook == null) {
+			if (other.post_to_facebook != null)
+				return false;
+		} else if (!post_to_facebook.equals(other.post_to_facebook))
+			return false;
+		if (post_to_twitter == null) {
+			if (other.post_to_twitter != null)
+				return false;
+		} else if (!post_to_twitter.equals(other.post_to_twitter))
+			return false;
+		if (timestamp == null) {
+			if (other.timestamp != null)
+				return false;
+		} else if (!timestamp.equals(other.timestamp))
+			return false;
+		if (value == null) {
+			if (other.value != null)
+				return false;
+		} else if (!value.equals(other.value))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "NewDiabetesMeasurement [timestamp=" + timestamp + ", value="
+				+ value + ", post_to_twitter=" + post_to_twitter
+				+ ", post_to_facebook=" + post_to_facebook + "]";
+	}
+	public NewDiabetesMeasurement(String timestamp, Double value,
+			Boolean post_to_twitter, Boolean post_to_facebook) {
+		super();
+		this.timestamp = timestamp;
+		this.value = value;
+		this.post_to_twitter = post_to_twitter;
+		this.post_to_facebook = post_to_facebook;
+	}
+	public NewDiabetesMeasurement() {
+		super();
+	}
+	
+}

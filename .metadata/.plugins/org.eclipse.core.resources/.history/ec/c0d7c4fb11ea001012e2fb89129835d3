@@ -1,0 +1,572 @@
+package com.isobar.isohealth.models;
+
+import java.util.Arrays;
+
+public class GeneralMeasurement {
+	String uri; // The URI for this measurement	N
+	Integer userID; // The unique ID for the user	N
+	String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")	N
+	
+	//One of the following values: vitamin_d, hscrp, crp, tsh, uric_acid, systolic, diastolic, resting_heartrate, total_cholesterol, hdl, ldl
+	Double vitamin_d; // The value of the measured quantity	Y
+	Double hscrp; // The value of the measured quantity	Y
+	Double crp; // The value of the measured quantity	Y
+	Double tsh; // The value of the measured quantity	Y
+	Double uric_acid; // The value of the measured quantity	Y
+	Double systolic; // The value of the measured quantity	Y
+	Double diastolic; // The value of the measured quantity	Y
+	Double resting_heartrate; // The value of the measured quantity	Y
+	Double total_cholesterol; // The value of the measured quantity	Y
+	Double hdl; // The value of the measured quantity	Y
+	Double ldl; // The value of the measured quantity	Y
+	
+	String previous; // The URI of the previous general measurement in chronological order for the user (omitted for the first general measurement)	N
+	String next; // The URI of the next general measurement in chronological order for the user (omitted for the most recent general measurement)	N
+	String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
+	String[] nearest_teammate_fitness_activities; // The URIs of the fitness activities closest in time to this activity for each street teammate (empty if no fitness activities have been recorded)	N
+	String nearest_strength_training_activity; // The URI of the strength training activity closest in time to this activity for the user (omitted if no strength training activities have been recorded)	N
+	String[] nearest_teammate_strength_training_activities; // The URIs of the strength training activities closest in time to this activity for each street teammate (empty if no strength training activities have been recorded)	N
+	String nearest_background_activity; // The URI of the background activity closest in time to this activity for the user (omitted if no background activities have been recorded)	N
+	String[] nearest_teammate_background_activities; // The URIs of the background activities closest in time to this activity for each street teammate (empty if no background activities have been recorded)	N
+	String nearest_sleep; // The URI of the sleep measurements closest in time to this activity for the user (omitted if no sleep measurements have been taken)	N
+	String[] nearest_teammate_sleep; // The URIs of the sleep measurements closest in time to this activity for each street teammate (empty if no sleep measurements have been taken)	N
+	String nearest_nutrition; // The URI of the nutrition measurement closest in time to this activity for the user (omitted if no nutrition measurements have been token)	N
+	String[] nearest_teammate_nutrition; // The URIs of the nutrition measurement closest in time to this activity for each street teammate (empty if no nutrition measurements have been token)	N
+	String nearest_weight; // The URI of the weight measurement closest in time to this activity for the user (omitted if no weight measurements have been token)	N
+	String[] nearest_teammate_weight; // The URIs of the weight measurements closest in time to this activity for each street teammate (empty if no weight measurements have been token)	N
+	String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
+	String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
+	String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	
+	
+	public GeneralMeasurement() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public GeneralMeasurement(String uri, Integer userID, String timestamp,
+			Double vitamin_d, Double hscrp, Double crp, Double tsh,
+			Double uric_acid, Double systolic, Double diastolic,
+			Double resting_heartrate, Double total_cholesterol, Double hdl,
+			Double ldl, String previous, String next,
+			String nearest_fitness_activity,
+			String[] nearest_teammate_fitness_activities,
+			String nearest_strength_training_activity,
+			String[] nearest_teammate_strength_training_activities,
+			String nearest_background_activity,
+			String[] nearest_teammate_background_activities,
+			String nearest_sleep, String[] nearest_teammate_sleep,
+			String nearest_nutrition, String[] nearest_teammate_nutrition,
+			String nearest_weight, String[] nearest_teammate_weight,
+			String[] nearest_teammate_general_measurements,
+			String nearest_diabetes, String[] nearest_teammate_diabetes) {
+		super();
+		this.uri = uri;
+		this.userID = userID;
+		this.timestamp = timestamp;
+		this.vitamin_d = vitamin_d;
+		this.hscrp = hscrp;
+		this.crp = crp;
+		this.tsh = tsh;
+		this.uric_acid = uric_acid;
+		this.systolic = systolic;
+		this.diastolic = diastolic;
+		this.resting_heartrate = resting_heartrate;
+		this.total_cholesterol = total_cholesterol;
+		this.hdl = hdl;
+		this.ldl = ldl;
+		this.previous = previous;
+		this.next = next;
+		this.nearest_fitness_activity = nearest_fitness_activity;
+		this.nearest_teammate_fitness_activities = nearest_teammate_fitness_activities;
+		this.nearest_strength_training_activity = nearest_strength_training_activity;
+		this.nearest_teammate_strength_training_activities = nearest_teammate_strength_training_activities;
+		this.nearest_background_activity = nearest_background_activity;
+		this.nearest_teammate_background_activities = nearest_teammate_background_activities;
+		this.nearest_sleep = nearest_sleep;
+		this.nearest_teammate_sleep = nearest_teammate_sleep;
+		this.nearest_nutrition = nearest_nutrition;
+		this.nearest_teammate_nutrition = nearest_teammate_nutrition;
+		this.nearest_weight = nearest_weight;
+		this.nearest_teammate_weight = nearest_teammate_weight;
+		this.nearest_teammate_general_measurements = nearest_teammate_general_measurements;
+		this.nearest_diabetes = nearest_diabetes;
+		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
+	}
+	@Override
+	public String toString() {
+		return "GeneralMeasurement [uri="
+				+ uri
+				+ ", userID="
+				+ userID
+				+ ", timestamp="
+				+ timestamp
+				+ ", vitamin_d="
+				+ vitamin_d
+				+ ", hscrp="
+				+ hscrp
+				+ ", crp="
+				+ crp
+				+ ", tsh="
+				+ tsh
+				+ ", uric_acid="
+				+ uric_acid
+				+ ", systolic="
+				+ systolic
+				+ ", diastolic="
+				+ diastolic
+				+ ", resting_heartrate="
+				+ resting_heartrate
+				+ ", total_cholesterol="
+				+ total_cholesterol
+				+ ", hdl="
+				+ hdl
+				+ ", ldl="
+				+ ldl
+				+ ", previous="
+				+ previous
+				+ ", next="
+				+ next
+				+ ", nearest_fitness_activity="
+				+ nearest_fitness_activity
+				+ ", nearest_teammate_fitness_activities="
+				+ Arrays.toString(nearest_teammate_fitness_activities)
+				+ ", nearest_strength_training_activity="
+				+ nearest_strength_training_activity
+				+ ", nearest_teammate_strength_training_activities="
+				+ Arrays.toString(nearest_teammate_strength_training_activities)
+				+ ", nearest_background_activity="
+				+ nearest_background_activity
+				+ ", nearest_teammate_background_activities="
+				+ Arrays.toString(nearest_teammate_background_activities)
+				+ ", nearest_sleep=" + nearest_sleep
+				+ ", nearest_teammate_sleep="
+				+ Arrays.toString(nearest_teammate_sleep)
+				+ ", nearest_nutrition=" + nearest_nutrition
+				+ ", nearest_teammate_nutrition="
+				+ Arrays.toString(nearest_teammate_nutrition)
+				+ ", nearest_weight=" + nearest_weight
+				+ ", nearest_teammate_weight="
+				+ Arrays.toString(nearest_teammate_weight)
+				+ ", nearest_teammate_general_measurements="
+				+ Arrays.toString(nearest_teammate_general_measurements)
+				+ ", nearest_diabetes=" + nearest_diabetes
+				+ ", nearest_teammate_diabetes="
+				+ Arrays.toString(nearest_teammate_diabetes) + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((crp == null) ? 0 : crp.hashCode());
+		result = prime * result
+				+ ((diastolic == null) ? 0 : diastolic.hashCode());
+		result = prime * result + ((hdl == null) ? 0 : hdl.hashCode());
+		result = prime * result + ((hscrp == null) ? 0 : hscrp.hashCode());
+		result = prime * result + ((ldl == null) ? 0 : ldl.hashCode());
+		result = prime
+				* result
+				+ ((nearest_background_activity == null) ? 0
+						: nearest_background_activity.hashCode());
+		result = prime
+				* result
+				+ ((nearest_diabetes == null) ? 0 : nearest_diabetes.hashCode());
+		result = prime
+				* result
+				+ ((nearest_fitness_activity == null) ? 0
+						: nearest_fitness_activity.hashCode());
+		result = prime
+				* result
+				+ ((nearest_nutrition == null) ? 0 : nearest_nutrition
+						.hashCode());
+		result = prime * result
+				+ ((nearest_sleep == null) ? 0 : nearest_sleep.hashCode());
+		result = prime
+				* result
+				+ ((nearest_strength_training_activity == null) ? 0
+						: nearest_strength_training_activity.hashCode());
+		result = prime * result
+				+ Arrays.hashCode(nearest_teammate_background_activities);
+		result = prime * result + Arrays.hashCode(nearest_teammate_diabetes);
+		result = prime * result
+				+ Arrays.hashCode(nearest_teammate_fitness_activities);
+		result = prime * result
+				+ Arrays.hashCode(nearest_teammate_general_measurements);
+		result = prime * result + Arrays.hashCode(nearest_teammate_nutrition);
+		result = prime * result + Arrays.hashCode(nearest_teammate_sleep);
+		result = prime
+				* result
+				+ Arrays.hashCode(nearest_teammate_strength_training_activities);
+		result = prime * result + Arrays.hashCode(nearest_teammate_weight);
+		result = prime * result
+				+ ((nearest_weight == null) ? 0 : nearest_weight.hashCode());
+		result = prime * result + ((next == null) ? 0 : next.hashCode());
+		result = prime * result
+				+ ((previous == null) ? 0 : previous.hashCode());
+		result = prime
+				* result
+				+ ((resting_heartrate == null) ? 0 : resting_heartrate
+						.hashCode());
+		result = prime * result
+				+ ((systolic == null) ? 0 : systolic.hashCode());
+		result = prime * result
+				+ ((timestamp == null) ? 0 : timestamp.hashCode());
+		result = prime
+				* result
+				+ ((total_cholesterol == null) ? 0 : total_cholesterol
+						.hashCode());
+		result = prime * result + ((tsh == null) ? 0 : tsh.hashCode());
+		result = prime * result + ((uri == null) ? 0 : uri.hashCode());
+		result = prime * result
+				+ ((uric_acid == null) ? 0 : uric_acid.hashCode());
+		result = prime * result + ((userID == null) ? 0 : userID.hashCode());
+		result = prime * result
+				+ ((vitamin_d == null) ? 0 : vitamin_d.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		GeneralMeasurement other = (GeneralMeasurement) obj;
+		if (crp == null) {
+			if (other.crp != null)
+				return false;
+		} else if (!crp.equals(other.crp))
+			return false;
+		if (diastolic == null) {
+			if (other.diastolic != null)
+				return false;
+		} else if (!diastolic.equals(other.diastolic))
+			return false;
+		if (hdl == null) {
+			if (other.hdl != null)
+				return false;
+		} else if (!hdl.equals(other.hdl))
+			return false;
+		if (hscrp == null) {
+			if (other.hscrp != null)
+				return false;
+		} else if (!hscrp.equals(other.hscrp))
+			return false;
+		if (ldl == null) {
+			if (other.ldl != null)
+				return false;
+		} else if (!ldl.equals(other.ldl))
+			return false;
+		if (nearest_background_activity == null) {
+			if (other.nearest_background_activity != null)
+				return false;
+		} else if (!nearest_background_activity
+				.equals(other.nearest_background_activity))
+			return false;
+		if (nearest_diabetes == null) {
+			if (other.nearest_diabetes != null)
+				return false;
+		} else if (!nearest_diabetes.equals(other.nearest_diabetes))
+			return false;
+		if (nearest_fitness_activity == null) {
+			if (other.nearest_fitness_activity != null)
+				return false;
+		} else if (!nearest_fitness_activity
+				.equals(other.nearest_fitness_activity))
+			return false;
+		if (nearest_nutrition == null) {
+			if (other.nearest_nutrition != null)
+				return false;
+		} else if (!nearest_nutrition.equals(other.nearest_nutrition))
+			return false;
+		if (nearest_sleep == null) {
+			if (other.nearest_sleep != null)
+				return false;
+		} else if (!nearest_sleep.equals(other.nearest_sleep))
+			return false;
+		if (nearest_strength_training_activity == null) {
+			if (other.nearest_strength_training_activity != null)
+				return false;
+		} else if (!nearest_strength_training_activity
+				.equals(other.nearest_strength_training_activity))
+			return false;
+		if (!Arrays.equals(nearest_teammate_background_activities,
+				other.nearest_teammate_background_activities))
+			return false;
+		if (!Arrays.equals(nearest_teammate_diabetes,
+				other.nearest_teammate_diabetes))
+			return false;
+		if (!Arrays.equals(nearest_teammate_fitness_activities,
+				other.nearest_teammate_fitness_activities))
+			return false;
+		if (!Arrays.equals(nearest_teammate_general_measurements,
+				other.nearest_teammate_general_measurements))
+			return false;
+		if (!Arrays.equals(nearest_teammate_nutrition,
+				other.nearest_teammate_nutrition))
+			return false;
+		if (!Arrays
+				.equals(nearest_teammate_sleep, other.nearest_teammate_sleep))
+			return false;
+		if (!Arrays.equals(nearest_teammate_strength_training_activities,
+				other.nearest_teammate_strength_training_activities))
+			return false;
+		if (!Arrays.equals(nearest_teammate_weight,
+				other.nearest_teammate_weight))
+			return false;
+		if (nearest_weight == null) {
+			if (other.nearest_weight != null)
+				return false;
+		} else if (!nearest_weight.equals(other.nearest_weight))
+			return false;
+		if (next == null) {
+			if (other.next != null)
+				return false;
+		} else if (!next.equals(other.next))
+			return false;
+		if (previous == null) {
+			if (other.previous != null)
+				return false;
+		} else if (!previous.equals(other.previous))
+			return false;
+		if (resting_heartrate == null) {
+			if (other.resting_heartrate != null)
+				return false;
+		} else if (!resting_heartrate.equals(other.resting_heartrate))
+			return false;
+		if (systolic == null) {
+			if (other.systolic != null)
+				return false;
+		} else if (!systolic.equals(other.systolic))
+			return false;
+		if (timestamp == null) {
+			if (other.timestamp != null)
+				return false;
+		} else if (!timestamp.equals(other.timestamp))
+			return false;
+		if (total_cholesterol == null) {
+			if (other.total_cholesterol != null)
+				return false;
+		} else if (!total_cholesterol.equals(other.total_cholesterol))
+			return false;
+		if (tsh == null) {
+			if (other.tsh != null)
+				return false;
+		} else if (!tsh.equals(other.tsh))
+			return false;
+		if (uri == null) {
+			if (other.uri != null)
+				return false;
+		} else if (!uri.equals(other.uri))
+			return false;
+		if (uric_acid == null) {
+			if (other.uric_acid != null)
+				return false;
+		} else if (!uric_acid.equals(other.uric_acid))
+			return false;
+		if (userID == null) {
+			if (other.userID != null)
+				return false;
+		} else if (!userID.equals(other.userID))
+			return false;
+		if (vitamin_d == null) {
+			if (other.vitamin_d != null)
+				return false;
+		} else if (!vitamin_d.equals(other.vitamin_d))
+			return false;
+		return true;
+	}
+	public String getUri() {
+		return uri;
+	}
+	public void setUri(String uri) {
+		this.uri = uri;
+	}
+	public Integer getUserID() {
+		return userID;
+	}
+	public void setUserID(Integer userID) {
+		this.userID = userID;
+	}
+	public String getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+	public Double getVitamin_d() {
+		return vitamin_d;
+	}
+	public void setVitamin_d(Double vitamin_d) {
+		this.vitamin_d = vitamin_d;
+	}
+	public Double getHscrp() {
+		return hscrp;
+	}
+	public void setHscrp(Double hscrp) {
+		this.hscrp = hscrp;
+	}
+	public Double getCrp() {
+		return crp;
+	}
+	public void setCrp(Double crp) {
+		this.crp = crp;
+	}
+	public Double getTsh() {
+		return tsh;
+	}
+	public void setTsh(Double tsh) {
+		this.tsh = tsh;
+	}
+	public Double getUric_acid() {
+		return uric_acid;
+	}
+	public void setUric_acid(Double uric_acid) {
+		this.uric_acid = uric_acid;
+	}
+	public Double getSystolic() {
+		return systolic;
+	}
+	public void setSystolic(Double systolic) {
+		this.systolic = systolic;
+	}
+	public Double getDiastolic() {
+		return diastolic;
+	}
+	public void setDiastolic(Double diastolic) {
+		this.diastolic = diastolic;
+	}
+	public Double getResting_heartrate() {
+		return resting_heartrate;
+	}
+	public void setResting_heartrate(Double resting_heartrate) {
+		this.resting_heartrate = resting_heartrate;
+	}
+	public Double getTotal_cholesterol() {
+		return total_cholesterol;
+	}
+	public void setTotal_cholesterol(Double total_cholesterol) {
+		this.total_cholesterol = total_cholesterol;
+	}
+	public Double getHdl() {
+		return hdl;
+	}
+	public void setHdl(Double hdl) {
+		this.hdl = hdl;
+	}
+	public Double getLdl() {
+		return ldl;
+	}
+	public void setLdl(Double ldl) {
+		this.ldl = ldl;
+	}
+	public String getPrevious() {
+		return previous;
+	}
+	public void setPrevious(String previous) {
+		this.previous = previous;
+	}
+	public String getNext() {
+		return next;
+	}
+	public void setNext(String next) {
+		this.next = next;
+	}
+	public String getNearest_fitness_activity() {
+		return nearest_fitness_activity;
+	}
+	public void setNearest_fitness_activity(String nearest_fitness_activity) {
+		this.nearest_fitness_activity = nearest_fitness_activity;
+	}
+	public String[] getNearest_teammate_fitness_activities() {
+		return nearest_teammate_fitness_activities;
+	}
+	public void setNearest_teammate_fitness_activities(
+			String[] nearest_teammate_fitness_activities) {
+		this.nearest_teammate_fitness_activities = nearest_teammate_fitness_activities;
+	}
+	public String getNearest_strength_training_activity() {
+		return nearest_strength_training_activity;
+	}
+	public void setNearest_strength_training_activity(
+			String nearest_strength_training_activity) {
+		this.nearest_strength_training_activity = nearest_strength_training_activity;
+	}
+	public String[] getNearest_teammate_strength_training_activities() {
+		return nearest_teammate_strength_training_activities;
+	}
+	public void setNearest_teammate_strength_training_activities(
+			String[] nearest_teammate_strength_training_activities) {
+		this.nearest_teammate_strength_training_activities = nearest_teammate_strength_training_activities;
+	}
+	public String getNearest_background_activity() {
+		return nearest_background_activity;
+	}
+	public void setNearest_background_activity(String nearest_background_activity) {
+		this.nearest_background_activity = nearest_background_activity;
+	}
+	public String[] getNearest_teammate_background_activities() {
+		return nearest_teammate_background_activities;
+	}
+	public void setNearest_teammate_background_activities(
+			String[] nearest_teammate_background_activities) {
+		this.nearest_teammate_background_activities = nearest_teammate_background_activities;
+	}
+	public String getNearest_sleep() {
+		return nearest_sleep;
+	}
+	public void setNearest_sleep(String nearest_sleep) {
+		this.nearest_sleep = nearest_sleep;
+	}
+	public String[] getNearest_teammate_sleep() {
+		return nearest_teammate_sleep;
+	}
+	public void setNearest_teammate_sleep(String[] nearest_teammate_sleep) {
+		this.nearest_teammate_sleep = nearest_teammate_sleep;
+	}
+	public String getNearest_nutrition() {
+		return nearest_nutrition;
+	}
+	public void setNearest_nutrition(String nearest_nutrition) {
+		this.nearest_nutrition = nearest_nutrition;
+	}
+	public String[] getNearest_teammate_nutrition() {
+		return nearest_teammate_nutrition;
+	}
+	public void setNearest_teammate_nutrition(String[] nearest_teammate_nutrition) {
+		this.nearest_teammate_nutrition = nearest_teammate_nutrition;
+	}
+	public String getNearest_weight() {
+		return nearest_weight;
+	}
+	public void setNearest_weight(String nearest_weight) {
+		this.nearest_weight = nearest_weight;
+	}
+	public String[] getNearest_teammate_weight() {
+		return nearest_teammate_weight;
+	}
+	public void setNearest_teammate_weight(String[] nearest_teammate_weight) {
+		this.nearest_teammate_weight = nearest_teammate_weight;
+	}
+	public String[] getNearest_teammate_general_measurements() {
+		return nearest_teammate_general_measurements;
+	}
+	public void setNearest_teammate_general_measurements(
+			String[] nearest_teammate_general_measurements) {
+		this.nearest_teammate_general_measurements = nearest_teammate_general_measurements;
+	}
+	public String getNearest_diabetes() {
+		return nearest_diabetes;
+	}
+	public void setNearest_diabetes(String nearest_diabetes) {
+		this.nearest_diabetes = nearest_diabetes;
+	}
+	public String[] getNearest_teammate_diabetes() {
+		return nearest_teammate_diabetes;
+	}
+	public void setNearest_teammate_diabetes(String[] nearest_teammate_diabetes) {
+		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
+	}
+
+	
+}

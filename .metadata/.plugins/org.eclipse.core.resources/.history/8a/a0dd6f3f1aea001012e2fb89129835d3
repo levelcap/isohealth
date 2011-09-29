@@ -1,0 +1,21 @@
+package com.isobar.isohealth.models;
+
+public class SleepMeasurementFeed {
+	private Integer size; // The total number of sleep measurements across all pages
+	private Item[] items; // The user's sleep measurements, in reverse chronological order
+	private String previous; // The URI of the previous page of sleep measurements for the user (omitted for the earliest page)
+	private String next; // The URI of the next page of sleep measurements for the user (omitted for the most recent page)
+	
+	public static class Item {
+		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+		//One of the following values: total_sleep, rem, deep, light, times_woken, awake
+		Double total_sleep; // The value of the measured quantity (durational measurements are given in minutes)
+		Double rem; // The value of the measured quantity (durational measurements are given in minutes)
+		Double deep; // The value of the measured quantity (durational measurements are given in minutes)
+		Double light; // The value of the measured quantity (durational measurements are given in minutes)
+		Double times_woken; // The value of the measured quantity (durational measurements are given in minutes)
+		Double awake; // The value of the measured quantity (durational measurements are given in minutes)
+		
+		private String uri; // The URI of detailed information for the sleep measurement
+	}
+}

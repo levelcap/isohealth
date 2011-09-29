@@ -1,0 +1,150 @@
+package com.isobar.isohealth.models;
+
+public class WeightMeasurementFeed {
+	private Integer size; // The total number of weight measurements across all pages
+	private Item[] items; // The user's weight measurements, in reverse chronological order
+	private String previous; // The URI of the previous page of weight measurements for the user (omitted for the earliest page)
+	private String next; // The URI of the next page of weight measurements for the user (omitted for the most recent page)
+	
+	public static class Item {
+		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+		
+		// One of the following values: weight, free_mass, mass_weight, fat_percent, bmi
+		private Double weight; // The value of the measured quantity (mass/weight is measured in kilograms)
+		private Double free_mass; // The value of the measured quantity (mass/weight is measured in kilograms)
+		private Double mass_weight; // The value of the measured quantity (mass/weight is measured in kilograms)
+		private Double fat_percent; // The value of the measured quantity (mass/weight is measured in kilograms)
+		private Double bmi; // The value of the measured quantity (mass/weight is measured in kilograms)
+		
+		private String uri; // The URI of detailed information for the weight measurement
+
+		public Item() {
+			super();
+			// TODO Auto-generated constructor stub
+		}
+		public Item(String timestamp, Double weight, Double free_mass,
+				Double mass_weight, Double fat_percent, Double bmi, String uri) {
+			super();
+			this.timestamp = timestamp;
+			this.weight = weight;
+			this.free_mass = free_mass;
+			this.mass_weight = mass_weight;
+			this.fat_percent = fat_percent;
+			this.bmi = bmi;
+			this.uri = uri;
+		}
+		public String getTimestamp() {
+			return timestamp;
+		}
+		public void setTimestamp(String timestamp) {
+			this.timestamp = timestamp;
+		}
+		public Double getWeight() {
+			return weight;
+		}
+		public void setWeight(Double weight) {
+			this.weight = weight;
+		}
+		public Double getFree_mass() {
+			return free_mass;
+		}
+		public void setFree_mass(Double free_mass) {
+			this.free_mass = free_mass;
+		}
+		public Double getMass_weight() {
+			return mass_weight;
+		}
+		public void setMass_weight(Double mass_weight) {
+			this.mass_weight = mass_weight;
+		}
+		public Double getFat_percent() {
+			return fat_percent;
+		}
+		public void setFat_percent(Double fat_percent) {
+			this.fat_percent = fat_percent;
+		}
+		public Double getBmi() {
+			return bmi;
+		}
+		public void setBmi(Double bmi) {
+			this.bmi = bmi;
+		}
+		public String getUri() {
+			return uri;
+		}
+		public void setUri(String uri) {
+			this.uri = uri;
+		}
+		@Override
+		public String toString() {
+			return "Item [timestamp=" + timestamp + ", weight=" + weight
+					+ ", free_mass=" + free_mass + ", mass_weight="
+					+ mass_weight + ", fat_percent=" + fat_percent + ", bmi="
+					+ bmi + ", uri=" + uri + "]";
+		}
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((bmi == null) ? 0 : bmi.hashCode());
+			result = prime * result
+					+ ((fat_percent == null) ? 0 : fat_percent.hashCode());
+			result = prime * result
+					+ ((free_mass == null) ? 0 : free_mass.hashCode());
+			result = prime * result
+					+ ((mass_weight == null) ? 0 : mass_weight.hashCode());
+			result = prime * result
+					+ ((timestamp == null) ? 0 : timestamp.hashCode());
+			result = prime * result + ((uri == null) ? 0 : uri.hashCode());
+			result = prime * result
+					+ ((weight == null) ? 0 : weight.hashCode());
+			return result;
+		}
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Item other = (Item) obj;
+			if (bmi == null) {
+				if (other.bmi != null)
+					return false;
+			} else if (!bmi.equals(other.bmi))
+				return false;
+			if (fat_percent == null) {
+				if (other.fat_percent != null)
+					return false;
+			} else if (!fat_percent.equals(other.fat_percent))
+				return false;
+			if (free_mass == null) {
+				if (other.free_mass != null)
+					return false;
+			} else if (!free_mass.equals(other.free_mass))
+				return false;
+			if (mass_weight == null) {
+				if (other.mass_weight != null)
+					return false;
+			} else if (!mass_weight.equals(other.mass_weight))
+				return false;
+			if (timestamp == null) {
+				if (other.timestamp != null)
+					return false;
+			} else if (!timestamp.equals(other.timestamp))
+				return false;
+			if (uri == null) {
+				if (other.uri != null)
+					return false;
+			} else if (!uri.equals(other.uri))
+				return false;
+			if (weight == null) {
+				if (other.weight != null)
+					return false;
+			} else if (!weight.equals(other.weight))
+				return false;
+			return true;
+		}
+	}
+}

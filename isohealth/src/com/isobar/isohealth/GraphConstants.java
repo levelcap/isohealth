@@ -25,6 +25,23 @@ public class GraphConstants {
 	public static final String MEDIA_BACKGROUND_ACTIVITY_FEED = "application/vnd.com.runkeeper.BackgroundActivityFeed+json";
 	public static final String MEDIA_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.BackgroundActivity+json";
 	public static final String MEDIA_NEW_BACKGROUND_ACTIVITY = "application/vnd.com.runkeeper.NewBackgroundActivity+json";
+	public static final String MEDIA_TEAM_FEED = "application/vnd.com.runkeeper.TeamFeed+json";
+	public static final String MEDIA_TEAM_INVITATION = "application/vnd.com.runkeeper.Invitation+json";
+	public static final String MEDIA_TEAM_INVITE_REPLY = "application/vnd.com.runkeeper.Reply+json";
+	public static final String MEDIA_TEAM_INVITE_RESPONSE = "application/vnd.com.runkeeper.Member+json";
+	public static final String MEDIA_RECORDS = "application/vnd.com.runkeeper.Records+json";
+	public static final String MEDIA_DIABETES_MEASUREMENT_FEED = "application/vnd.com.runkeeper.DiabetesMeasurementFeed+json";
+	public static final String MEDIA_DIABETES_MEASUREMENT = "application/vnd.com.runkeeper.DiabetesMeasurement+json";
+	public static final String MEDIA_NEW_DIABETES_MEASUREMENT = "application/vnd.com.runkeeper.NewDiabetesMeasurement+json";
+	public static final String MEDIA_GENERAL_MEASUREMENT_FEED = "application/vnd.com.runkeeper.GeneralMeasurementFeed+json";
+	public static final String MEDIA_GENERAL_MEASUREMENT = "application/vnd.com.runkeeper.GeneralMeasurement+json";
+	public static final String MEDIA_NUTRITION_MEASUREMENT = "application/vnd.com.runkeeper.Nutrition+json";
+	public static final String MEDIA_NUTRITION_MEASUREMENT_FEED = "application/vnd.com.runkeeper.NutritionFeed+json";
+	public static final String MEDIA_WEIGHT_MEASUREMENT_FEED = "application/vnd.com.runkeeper.WeightFeed+json";
+	public static final String MEDIA_WEIGHT_MEASUREMENT = "application/vnd.com.runkeeper.Weight+json";
+	public static final String MEDIA_SLEEP_MEASUREMENT_FEED = "application/vnd.com.runkeeper.SleepFeed+json";
+	public static final String MEDIA_SLEEP_MEASUREMENT = "application/vnd.com.runkeeper.Sleep+json";
+	public static final String MEDIA_NEW_SLEEP_MEASUREMENT = "application/vnd.com.runkeeper.NewSleep+json";
 	
 	public GraphConstants() {
 		

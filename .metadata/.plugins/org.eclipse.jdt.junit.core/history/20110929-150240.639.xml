@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="ServiceTests" project="isohealth" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.ServiceTests" time="7.454">
+    <testsuite name="test.com.isobar.isohealth.UserServiceTest" time="0.869">
+      <testcase name="testGetUser" classname="test.com.isobar.isohealth.UserServiceTest" time="0.869"/>
+    </testsuite>
+    <testsuite name="test.com.isobar.isohealth.SettingsServiceTest" time="0.595">
+      <testcase name="testGetSettings" classname="test.com.isobar.isohealth.SettingsServiceTest" time="0.165"/>
+      <testcase name="testUpdateSettings" classname="test.com.isobar.isohealth.SettingsServiceTest" time="0.43"/>
+    </testsuite>
+    <testsuite name="test.com.isobar.isohealth.ProfileServiceTest" time="0.453">
+      <testcase name="testGetProfile" classname="test.com.isobar.isohealth.ProfileServiceTest" time="0.163"/>
+      <testcase name="testUpdateProfile" classname="test.com.isobar.isohealth.ProfileServiceTest" time="0.29"/>
+    </testsuite>
+    <testsuite name="test.com.isobar.isohealth.FitnessActivityServiceTest" time="4.853">
+      <testcase name="testGetFitnessActivityFeed" classname="test.com.isobar.isohealth.FitnessActivityServiceTest" time="0.141"/>
+      <testcase name="testGetFitnessActivity" classname="test.com.isobar.isohealth.FitnessActivityServiceTest" time="0.132"/>
+      <testcase name="testCreateNewFitnessActivity" classname="test.com.isobar.isohealth.FitnessActivityServiceTest" time="1.388"/>
+      <testcase name="testUpdateFitnessActivity" classname="test.com.isobar.isohealth.FitnessActivityServiceTest" time="2.091"/>
+      <testcase name="testDeleteFitnessActivity" classname="test.com.isobar.isohealth.FitnessActivityServiceTest" time="1.101"/>
+    </testsuite>
+    <testsuite name="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.684">
+      <testcase name="testGetStrengthTrainingActivityFeed" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.138"/>
+      <testcase name="testGetStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.135"/>
+      <testcase name="testUpdateStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.13"/>
+      <testcase name="testCreateNewStrengthActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.15"/>
+      <testcase name="testDeleteStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.131"/>
+    </testsuite>
+  </testsuite>
+</testrun>

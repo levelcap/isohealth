@@ -1,0 +1,51 @@
+package test.com.isobar.isohealth;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.StreetTeamInvite;
+import com.isobar.isohealth.models.StreetTeamInviteReply;
+import com.isobar.isohealth.models.StreetTeamMember;
+import com.isobar.isohealth.models.StreetTeamMembershipFeed;
+import com.isobar.isohealth.services.StreetTeamMembershipFeedService;
+
+public class StreetTeamMembershipFeedServiceTest extends TestCase {
+	
+	public void testGetStreetTeamMembershipFeed() {
+		try {
+			StreetTeamMembershipFeed streetTeamMembershipFeed = StreetTeamMembershipFeedService.getStreetTeamMembershipFeed(GraphConstants.AUTH_CODE);
+			System.out.println("StreetTeamMembershipFeed: " + streetTeamMembershipFeed);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+//	public void testInviteUser() {
+//		try {
+//			StreetTeamInvite invitation = new StreetTeamInvite(6775085);
+//
+//			StreetTeamMembershipFeed streetTeamMembershipFeed = StreetTeamMembershipFeedService.inviteUser(GraphConstants.AUTH_CODE, invitation);
+//			System.out.println("StrengthTrainingActivityFeed: " + streetTeamMembershipFeed.toString());
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	
+	public void testReplyToInvite() {
+		try {
+			String teamId = "0987654321";
+			StreetTeamInviteReply streetTeamInviteReply = new StreetTeamInviteReply("accepted");
+			StreetTeamMember streetTeamMember = StreetTeamMembershipFeedService.replyToInvite(GraphConstants.AUTH_CODE, teamId, streetTeamInviteReply);
+			System.out.println("StreetTeamMember: "+ streetTeamMember);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testRemoveUser() {
+		try {
+			String teamId = "0987654321";
+			boolean response = StreetTeamMembershipFeedService.removeUser(GraphConstants.AUTH_CODE, teamId);
+		}
+	}
+}

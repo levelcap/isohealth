@@ -1,0 +1,285 @@
+package com.isobar.isohealth.models;
+
+import java.util.Arrays;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
+public class DiabetesMeasurementFeed {
+	private Integer size;    // The total number of diabetes measurements across all pages
+	private Item[]	items;   // The user's diabetes measurements, in reverse chronological order
+	private String previous; // The URI of the previous page of diabetes measurements for the user (omitted for the earliest page)
+	private String next;     // The URI of the next page of diabetes measurements for the user (omitted for the most recent page)
+	
+	public DiabetesMeasurementFeed() {
+		super();
+	}
+	public DiabetesMeasurementFeed(Integer size, Item[] items, String previous,
+			String next) {
+		super();
+		this.size = size;
+		this.items = items;
+		this.previous = previous;
+		this.next = next;
+	}
+	public Integer getSize() {
+		return size;
+	}
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+	public Item[] getItems() {
+		return items;
+	}
+	public void setItems(Item[] items) {
+		this.items = items;
+	}
+	public String getPrevious() {
+		return previous;
+	}
+	public void setPrevious(String previous) {
+		this.previous = previous;
+	}
+	public String getNext() {
+		return next;
+	}
+	public void setNext(String next) {
+		this.next = next;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(items);
+		result = prime * result + ((next == null) ? 0 : next.hashCode());
+		result = prime * result
+				+ ((previous == null) ? 0 : previous.hashCode());
+		result = prime * result + ((size == null) ? 0 : size.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DiabetesMeasurementFeed other = (DiabetesMeasurementFeed) obj;
+		if (!Arrays.equals(items, other.items))
+			return false;
+		if (next == null) {
+			if (other.next != null)
+				return false;
+		} else if (!next.equals(other.next))
+			return false;
+		if (previous == null) {
+			if (other.previous != null)
+				return false;
+		} else if (!previous.equals(other.previous))
+			return false;
+		if (size == null) {
+			if (other.size != null)
+				return false;
+		} else if (!size.equals(other.size))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "DiabetesMeasurementFeed [size=" + size + ", items="
+				+ Arrays.toString(items) + ", previous=" + previous + ", next="
+				+ next + "]";
+	}
+
+	public static class Item {
+		private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+		// One of the following values: fasting_plasma_glucose_test, random_plasma_glucose_test, oral_glucose_tolerance_test, hemoglobin_a1c, insulin, c_peptide, triglyceride.
+		private Double fasting_plasma_glucose_test; // The value of the measured quantity
+		private Double random_plasma_glucose_test; // The value of the measured quantity
+		private Double oral_glucose_tolerance_test; // The value of the measured quantity
+		private Double hemoglobin_a1c; // The value of the measured quantity
+		private Double insulin; // The value of the measured quantity
+		private Double c_peptide; // The value of the measured quantity
+		private Double triglyceride; // The value of the measured quantity
+		private String uri; // The URI of detailed information for the diabetes measurement
+		public String getTimestamp() {
+			return timestamp;
+		}
+		public void setTimestamp(String timestamp) {
+			this.timestamp = timestamp;
+		}
+		public String getUri() {
+			return uri;
+		}
+		public void setUri(String uri) {
+			this.uri = uri;
+		}
+		
+		public Double getFasting_plasma_glucose_test() {
+			return fasting_plasma_glucose_test;
+		}
+		public void setFasting_plasma_glucose_test(Double fasting_plasma_glucose_test) {
+			this.fasting_plasma_glucose_test = fasting_plasma_glucose_test;
+		}
+		public Double getRandom_plasma_glucose_test() {
+			return random_plasma_glucose_test;
+		}
+		public void setRandom_plasma_glucose_test(Double random_plasma_glucose_test) {
+			this.random_plasma_glucose_test = random_plasma_glucose_test;
+		}
+		public Double getOral_glucose_tolerance_test() {
+			return oral_glucose_tolerance_test;
+		}
+		public void setOral_glucose_tolerance_test(Double oral_glucose_tolerance_test) {
+			this.oral_glucose_tolerance_test = oral_glucose_tolerance_test;
+		}
+		public Double getHemoglobin_a1c() {
+			return hemoglobin_a1c;
+		}
+		public void setHemoglobin_a1c(Double hemoglobin_a1c) {
+			this.hemoglobin_a1c = hemoglobin_a1c;
+		}
+		public Double getInsulin() {
+			return insulin;
+		}
+		public void setInsulin(Double insulin) {
+			this.insulin = insulin;
+		}
+		public Double getC_peptide() {
+			return c_peptide;
+		}
+		public void setC_peptide(Double c_peptide) {
+			this.c_peptide = c_peptide;
+		}
+		public Double getTriglyceride() {
+			return triglyceride;
+		}
+		public void setTriglyceride(Double triglyceride) {
+			this.triglyceride = triglyceride;
+		}
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result
+					+ ((c_peptide == null) ? 0 : c_peptide.hashCode());
+			result = prime
+					* result
+					+ ((fasting_plasma_glucose_test == null) ? 0
+							: fasting_plasma_glucose_test.hashCode());
+			result = prime
+					* result
+					+ ((hemoglobin_a1c == null) ? 0 : hemoglobin_a1c.hashCode());
+			result = prime * result
+					+ ((insulin == null) ? 0 : insulin.hashCode());
+			result = prime
+					* result
+					+ ((oral_glucose_tolerance_test == null) ? 0
+							: oral_glucose_tolerance_test.hashCode());
+			result = prime
+					* result
+					+ ((random_plasma_glucose_test == null) ? 0
+							: random_plasma_glucose_test.hashCode());
+			result = prime * result
+					+ ((timestamp == null) ? 0 : timestamp.hashCode());
+			result = prime * result
+					+ ((triglyceride == null) ? 0 : triglyceride.hashCode());
+			result = prime * result + ((uri == null) ? 0 : uri.hashCode());
+			return result;
+		}
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Item other = (Item) obj;
+			if (c_peptide == null) {
+				if (other.c_peptide != null)
+					return false;
+			} else if (!c_peptide.equals(other.c_peptide))
+				return false;
+			if (fasting_plasma_glucose_test == null) {
+				if (other.fasting_plasma_glucose_test != null)
+					return false;
+			} else if (!fasting_plasma_glucose_test
+					.equals(other.fasting_plasma_glucose_test))
+				return false;
+			if (hemoglobin_a1c == null) {
+				if (other.hemoglobin_a1c != null)
+					return false;
+			} else if (!hemoglobin_a1c.equals(other.hemoglobin_a1c))
+				return false;
+			if (insulin == null) {
+				if (other.insulin != null)
+					return false;
+			} else if (!insulin.equals(other.insulin))
+				return false;
+			if (oral_glucose_tolerance_test == null) {
+				if (other.oral_glucose_tolerance_test != null)
+					return false;
+			} else if (!oral_glucose_tolerance_test
+					.equals(other.oral_glucose_tolerance_test))
+				return false;
+			if (random_plasma_glucose_test == null) {
+				if (other.random_plasma_glucose_test != null)
+					return false;
+			} else if (!random_plasma_glucose_test
+					.equals(other.random_plasma_glucose_test))
+				return false;
+			if (timestamp == null) {
+				if (other.timestamp != null)
+					return false;
+			} else if (!timestamp.equals(other.timestamp))
+				return false;
+			if (triglyceride == null) {
+				if (other.triglyceride != null)
+					return false;
+			} else if (!triglyceride.equals(other.triglyceride))
+				return false;
+			if (uri == null) {
+				if (other.uri != null)
+					return false;
+			} else if (!uri.equals(other.uri))
+				return false;
+			return true;
+		}
+		@Override
+		public String toString() {
+			return "Item [timestamp=" + timestamp
+					+ ", fasting_plasma_glucose_test="
+					+ fasting_plasma_glucose_test
+					+ ", random_plasma_glucose_test="
+					+ random_plasma_glucose_test
+					+ ", oral_glucose_tolerance_test="
+					+ oral_glucose_tolerance_test + ", hemoglobin_a1c="
+					+ hemoglobin_a1c + ", insulin=" + insulin + ", c_peptide="
+					+ c_peptide + ", triglyceride=" + triglyceride + ", uri="
+					+ uri + "]";
+		}
+		public Item(String timestamp, Double fasting_plasma_glucose_test,
+				Double random_plasma_glucose_test,
+				Double oral_glucose_tolerance_test, Double hemoglobin_a1c,
+				Double insulin, Double c_peptide, Double triglyceride,
+				String uri) {
+			super();
+			this.timestamp = timestamp;
+			this.fasting_plasma_glucose_test = fasting_plasma_glucose_test;
+			this.random_plasma_glucose_test = random_plasma_glucose_test;
+			this.oral_glucose_tolerance_test = oral_glucose_tolerance_test;
+			this.hemoglobin_a1c = hemoglobin_a1c;
+			this.insulin = insulin;
+			this.c_peptide = c_peptide;
+			this.triglyceride = triglyceride;
+			this.uri = uri;
+		}
+		public Item() {
+			super();
+		}
+	}
+}

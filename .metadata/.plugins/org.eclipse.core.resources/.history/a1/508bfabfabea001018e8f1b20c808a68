@@ -1,0 +1,41 @@
+package com.isobar.isohealth.models;
+
+import java.util.Arrays;
+
+public class DiabetesMeasurement {
+	private String uri; // The URI for this measurement	N
+	private Integer userID; // The unique ID for the user	N
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")	N
+	
+	// One of the following values: fasting_plasma_glucose_test, random_plasma_glucose_test, oral_glucose_tolerance_test, hemoglobin_a1c, insulin, c_peptide, triglyceride
+	private Double fasting_plasma_glucose_test; // The value of the measured quantity	Y
+	private Double random_plasma_glucose_test; // The value of the measured quantity	Y
+	private Double oral_glucose_tolerance_test; // The value of the measured quantity	Y
+	private Double hemoglobin_a1c; // The value of the measured quantity	Y
+	private Double insulin; // The value of the measured quantity	Y
+	private Double c_peptide; // The value of the measured quantity	Y
+	private Double triglyceride; // The value of the measured quantity	Y
+	
+	private String previous; // The URI of the previous diabetes measurement in chronological order for the user (omitted for the first diabetes measurement)	N
+	private String next; // The URI of the next diabetes measurement in chronological order for the user (omitted for the most recent diabetes measurement)	N
+	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
+	private String[] nearest_teammate_fitness_activities; // The URIs of the fitness activities closest in time to this activity for each street teammate (empty if no fitness activities have been recorded)	N
+	private String nearest_strength_training_activity; // The URI of the strength training activity closest in time to this activity for the user (omitted if no strength training activities have been recorded)	N
+	private String[] nearest_teammate_strength_training_activities; // The URIs of the strength training activities closest in time to this activity for each street teammate (empty if no strength training activities have been recorded)	N
+	private String nearest_background_activity; // The URI of the background activity closest in time to this activity for the user (omitted if no background activities have been recorded)	N
+	private String[] nearest_teammate_background_activities; // The URIs of the background activities closest in time to this activity for each street teammate (empty if no background activities have been recorded)	N
+	private String nearest_sleep; // The URI of the sleep measurements closest in time to this activity for the user (omitted if no sleep measurements have been taken)	N
+	private String[] nearest_teammate_sleep; // The URIs of the sleep measurements closest in time to this activity for each street teammate (empty if no sleep measurements have been taken)	N
+	private String nearest_nutrition; // The URI of the nutrition measurement closest in time to this activity for the user (omitted if no nutrition measurements have been token)	N
+	private String[] nearest_teammate_nutrition; // The URIs of the nutrition measurement closest in time to this activity for each street teammate (empty if no nutrition measurements have been token)	N
+	private String nearest_weight; // The URI of the weight measurement closest in time to this activity for the user (omitted if no weight measurements have been token)	N
+	private String[] nearest_teammate_weight; // The URIs of the weight measurements closest in time to this activity for each street teammate (empty if no weight measurements have been token)	N
+	private String nearest_general_measurement; // The URI of the general measurement measurement closest in time to this activity for the user (omitted if no general measurements have been token)	N
+	private String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
+	private String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
+	private String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	
+	public DiabetesMeasurement() {
+		super();
+	}
+}
