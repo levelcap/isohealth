@@ -9,7 +9,7 @@ import com.isobar.isohealth.services.PersonalRecordService;
 public class PersonalRecordServiceTest extends TestCase {
 	public void testGetPersonalRecords() {
 		try {
-			PersonalRecord personalRecord = PersonalRecordService.getPersonalRecord(GraphConstants.AUTH_CODE);
+			PersonalRecord[] personalRecord = PersonalRecordService.getPersonalRecord(GraphConstants.AUTH_CODE);
 			System.out.println("PersonalRecord: " + personalRecord);
 		} catch (Exception e) {
 			e.printStackTrace();
