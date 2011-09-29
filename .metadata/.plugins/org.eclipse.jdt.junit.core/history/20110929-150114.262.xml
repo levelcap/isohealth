@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="StrengthTrainingActivityServiceTest" project="isohealth" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="1.455">
+    <testcase name="testGetStrengthTrainingActivityFeed" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.841"/>
+    <testcase name="testGetStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.15"/>
+    <testcase name="testUpdateStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.138"/>
+    <testcase name="testCreateNewStrengthActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.178"/>
+    <testcase name="testDeleteStrengthTrainingActivity" classname="test.com.isobar.isohealth.StrengthTrainingActivityServiceTest" time="0.148"/>
+  </testsuite>
+</testrun>

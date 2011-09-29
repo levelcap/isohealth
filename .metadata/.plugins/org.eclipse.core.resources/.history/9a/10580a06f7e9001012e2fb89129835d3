@@ -1,0 +1,11 @@
+package com.isobar.isohealth.models;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
+public class StreetTeamMember {
+	String name;	// The member's full name
+	String profile; // The URL of the member's public, human-readable profile on the RunKeeper website
+	String status;  // One of the following values: "pending", "member"
+}

@@ -1,0 +1,23 @@
+package com.isobar.isohealth.models;
+
+public class NutritionMeasurementFeed {
+	Integer size; // The total number of nutrition measurements across all pages
+	Item[] items; // The user's nutrition measurements, in reverse chronological order
+	String previous; // The URI of the previous page of nutrition measurements for the user (omitted for the earliest page)
+	String next; // The URI of the next page of nutrition measurements for the user (omitted for the most recent page)
+	
+	public static class Item {
+		String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+		
+		//One of the following values: calories, carbohydrates, fat, fiber, protein, sodium, water
+		Double calories; // The value of the measured quantity
+		Double carbohydrates; // The value of the measured quantity
+		Double fat; // The value of the measured quantity
+		Double fiber; // The value of the measured quantity
+		Double protein; // The value of the measured quantity
+		Double sodium; // The value of the measured quantity
+		Double water; // The value of the measured quantity
+		
+		String uri; // The URI of detailed information for the nutrition measurement
+	}
+}

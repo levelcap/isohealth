@@ -1,0 +1,35 @@
+package com.isobar.isohealth.services;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed;
+import com.isobar.isohealth.models.FitnessActivityFeed;
+import com.isobar.isohealth.models.User;
+
+public class DiabetesMeasurementService {
+	public static DiabetesMeasurementFeed getDiabetesMeasurementFeed(String code) throws Exception {
+		User user = UserService.getUser(code);
+		ObjectMapper mapper = new ObjectMapper(); 
+		String url = GraphConstants.REST_URL + user.getDiabetes();
+		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
+		conn.setRequestProperty("Authorization", "Bearer " + code);
+		conn.setRequestProperty("Accept", GraphConstants.MEDIA_DIABETES_MEASUREMENT_FEED);
+
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		DiabetesMeasurementFeed diabetesMeasurementFeed = mapper.readValue(rd, DiabetesMeasurementFeed.class);
+		conn.disconnect();
+		return diabetesMeasurementFeed;
+	}
+}

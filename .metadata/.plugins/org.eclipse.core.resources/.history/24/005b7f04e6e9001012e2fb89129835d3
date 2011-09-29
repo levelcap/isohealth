@@ -1,0 +1,19 @@
+package test.com.isobar.isohealth;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.StrengthTrainingActivityFeed;
+import com.isobar.isohealth.services.StrengthTrainingActivityService;
+
+import junit.framework.TestCase;
+
+public class StreetTeamMembershipFeedServiceTest extends TestCase {
+	
+	public void testGetStreetTeamMembershipFeed() {
+		try {
+			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
+			System.out.println("StrengthTrainingActivityFeed: " + strengthTrainingActivityFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

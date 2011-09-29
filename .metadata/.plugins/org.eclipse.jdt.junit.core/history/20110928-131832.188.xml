@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="StreetTeamMembershipFeedServiceTest" project="isohealth" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="0.952">
+    <testcase name="testGetStreetTeamMembershipFeed" classname="test.com.isobar.isohealth.StreetTeamMembershipFeedServiceTest" time="0.951"/>
+  </testsuite>
+</testrun>

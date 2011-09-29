@@ -1,0 +1,7 @@
+package com.isobar.isohealth.models;
+
+public class StreetTeamMembershipFeed {
+	Integer size; // The total number of members on the Street Team (i.e., across all pages)
+	Item[] items; // An array of up to 25 elements, with one element per member
+	String next; // The URI for the next page of members (omitted from the last page)
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="BackgroundActivityServiceTest" project="isohealth" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.BackgroundActivityServiceTest" time="1.674">
+    <testcase name="testGetBackgroundActivityFeed" classname="test.com.isobar.isohealth.BackgroundActivityServiceTest" time="1.033"/>
+    <testcase name="testGetBackgroundActivity" classname="test.com.isobar.isohealth.BackgroundActivityServiceTest" time="0.311"/>
+    <testcase name="testUpdateBackgroundActivity" classname="test.com.isobar.isohealth.BackgroundActivityServiceTest" time="0.33"/>
+  </testsuite>
+</testrun>

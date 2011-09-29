@@ -1,0 +1,30 @@
+package test.com.isobar.isohealth;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.StreetTeamInvite;
+import com.isobar.isohealth.models.StreetTeamMembershipFeed;
+import com.isobar.isohealth.services.StreetTeamMembershipFeedService;
+
+public class StreetTeamMembershipFeedServiceTest extends TestCase {
+	
+	public void testGetStreetTeamMembershipFeed() {
+		try {
+			StreetTeamMembershipFeed streetTeamMembershipFeed = StreetTeamMembershipFeedService.getStreetTeamMembershipFeed(GraphConstants.AUTH_CODE);
+			System.out.println("StrengthTrainingActivityFeed: " + streetTeamMembershipFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void testInviteUser() {
+		try {
+			StreetTeamInvite invitation = new StreetTeamInvite(11090);
+
+			StreetTeamMembershipFeed streetTeamMembershipFeed = StreetTeamMembershipFeedService.inviteUser(GraphConstants.AUTH_CODE, invitation);
+			System.out.println("StrengthTrainingActivityFeed: " + streetTeamMembershipFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

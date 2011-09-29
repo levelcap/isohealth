@@ -1,0 +1,17 @@
+package test.com.isobar.isohealth;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.FitnessActivityFeed;
+import com.isobar.isohealth.models.PersonalRecord;
+import com.isobar.isohealth.services.FitnessActivityService;
+
+public class PersonalRecordServiceTest {
+	public void testGetPersonalRecords() {
+		try {
+			PersonalRecord personalRecord = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
+			System.out.println("FitnessActivityFeed: " + fitnessActivityFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

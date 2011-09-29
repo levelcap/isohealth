@@ -1,0 +1,74 @@
+package test.com.isobar.isohealth;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.DiabetesMeasurement;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed;
+import com.isobar.isohealth.models.FitnessActivity;
+import com.isobar.isohealth.models.FitnessActivityFeed;
+import com.isobar.isohealth.models.NewDiabetesMeasurement;
+import com.isobar.isohealth.models.NewFitnessActivity;
+import com.isobar.isohealth.models.WGS84;
+import com.isobar.isohealth.models.DiabetesMeasurementFeed.Item;
+import com.isobar.isohealth.services.DiabetesMeasurementService;
+import com.isobar.isohealth.services.FitnessActivityService;
+
+public class DiabetesMeasurementServiceTest extends TestCase {
+	
+	public void testGetDiabetesMeasurementFeed() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("DiabetesMeasurementService: " + diabetesMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void testGetDiabetesMeasurement() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			List<DiabetesMeasurement> diabetesMeasurement =  new ArrayList<DiabetesMeasurement>();
+			for (Item item : diabetesMeasurementFeed.getItems()) {
+				DiabetesMeasurement activity = DiabetesMeasurementService.getDiabetesMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("DiabetesMeasurement: " + activity.toString());
+				diabetesMeasurement.add(activity);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void testCreateDiabetesMeasurement() {
+		try {
+		  NewDiabetesMeasurement diabetesMeasurement = new NewDiabetesMeasurement();
+		  diabetesMeasurement.setInsulin(2.0);
+		  diabetesMeasurement.setTimestamp("Sat, 1 Jan 2011 00:00:00");
+		  
+		  DiabetesMeasurementService.createDiabetesMeasurement(diabetesMeasurement, GraphConstants.AUTH_CODE);
+		  
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void testUpdateDiabetesMeasurement() {
+		try {
+			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
+			for (Item item : diabetesMeasurementFeed.getItems()) {
+				DiabetesMeasurement diabetesMeasurement = FitnessActivityService.getFitnessActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("Activity: " + activity);
+				activity.setNotes("Updated notes");
+				activity = FitnessActivityService.updateFitnessActivity(activity, GraphConstants.AUTH_CODE);
+				System.out.println("Updated activity: " + activity);
+				break;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}		
+}

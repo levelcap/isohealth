@@ -1,0 +1,71 @@
+package com.isobar.isohealth;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HttpResponseCode {
+	public enum HttpStatusCode {
+		OK(                     200, "Success!"), 
+		NOT_MODIFIED(           304, "The requested resource has not been modified since the time included in the If-Modified-Since request header."),
+		BAD_REQUEST(            400, "The request could not be understood due to malformed syntax."),
+		UNAUTHORIZED(           401, "Authentication credentials were missing or incorrect."),
+		FORBIDDEN(              403, "The request is understood but it has been refused, either due to insufficient permission or to a rate limit violation."),
+		NOT_FOUND(              404, "The URI requested is invalid or the resource requested, such as a user, does not exist."),
+		METHOD_NOT_ALLOWED(     405, "The URI requested does not support the specific HTTP method used in the request."),
+		NOT_ACCEPTABLE(         406, "The URI requested does not support any of the MIME types given in the Accept header."),
+		UNSUPPORTED_MEDIA_TYPE( 415, "The URI requested cannot accept the MIME type given in the Content-Type header."),
+		INTERNAL_SERVER_ERROR(  500, "Something is broken. Please contact support so the RunKeeper team can investigate."),
+		BAD_GATEWAY(            502, "RunKeeper is down or being upgraded."),
+		SERVICE_UNAVAILABLE(    503, "The RunKeeper servers are up, but overloaded with requests. Try again later.");
+		
+		private HttpStatusCode(Integer statusCode, String description) {
+			this.statusCode = statusCode;
+			this.description = description;
+		}
+		private Integer statusCode;
+		private String description;
+		
+		public Integer getStatusCode() {
+			return statusCode;
+		}
+		public String getDescription() {
+			return description;
+		}
+		
+		private static final Map<Integer, HttpStatusCode> lookup = new HashMap<Integer, HttpStatusCode>();
+		
+		static {
+			for(HttpStatusCode e : HttpStatusCode.values()) {
+				lookup.put(e.getStatusCode(), e);
+			}
+		}
+		public static HttpStatusCode get(Integer statusCode) {
+			return lookup.get(statusCode);
+		}
+ 	}
+	
+	public HttpStatusCode status;
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null)
+			return false;
+		if(! obj.getClass().equals(Integer.class))
+			return false;
+		
+		HttpResponseCode other = (HttpResponseCode) obj;
+		if (status != other.status)
+			return false;
+		return true;
+	}
+	
+	
+}

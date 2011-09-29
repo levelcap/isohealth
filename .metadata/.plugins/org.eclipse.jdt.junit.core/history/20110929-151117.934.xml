@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="DiabetesMeasurementServiceTest" project="isohealth" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.isobar.isohealth.DiabetesMeasurementServiceTest" time="1.601">
+    <testcase name="testGetDiabetesMeasurementFeed" classname="test.com.isobar.isohealth.DiabetesMeasurementServiceTest" time="1.064"/>
+    <testcase name="testGetDiabetesMeasurement" classname="test.com.isobar.isohealth.DiabetesMeasurementServiceTest" time="0.149"/>
+    <testcase name="testCreateDiabetesMeasurement" classname="test.com.isobar.isohealth.DiabetesMeasurementServiceTest" time="0.147"/>
+    <testcase name="testUpdateDiabetesMeasurement" classname="test.com.isobar.isohealth.DiabetesMeasurementServiceTest" time="0.241"/>
+  </testsuite>
+</testrun>

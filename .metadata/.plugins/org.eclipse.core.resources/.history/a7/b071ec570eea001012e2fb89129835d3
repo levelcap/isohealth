@@ -1,0 +1,39 @@
+package com.isobar.isohealth.models;
+
+public class GeneralMeasurement {
+	String uri; // The URI for this measurement	N
+	Integer userID; // The unique ID for the user	N
+	String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")	N
+	
+	//One of the following values: vitamin_d, hscrp, crp, tsh, uric_acid, systolic, diastolic, resting_heartrate, total_cholesterol, hdl;Double ldl
+	Double vitamin_d; // The value of the measured quantity	Y
+	Double hscrp; // The value of the measured quantity	Y
+	Double crp; // The value of the measured quantity	Y
+	Double tsh; // The value of the measured quantity	Y
+	Double uric_acid; // The value of the measured quantity	Y
+	Double systolic; // The value of the measured quantity	Y
+	Double diastolic; // The value of the measured quantity	Y
+	Double resting_heartrate; // The value of the measured quantity	Y
+	Double total_cholesterol; // The value of the measured quantity	Y
+	Double hdl; // The value of the measured quantity	Y
+	Double ldl; // The value of the measured quantity	Y
+	
+	String previous; // The URI of the previous general measurement in chronological order for the user (omitted for the first general measurement)	N
+	String next; // The URI of the next general measurement in chronological order for the user (omitted for the most recent general measurement)	N
+	String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
+	String[] nearest_teammate_fitness_activities; // The URIs of the fitness activities closest in time to this activity for each street teammate (empty if no fitness activities have been recorded)	N
+	String nearest_strength_training_activity; // The URI of the strength training activity closest in time to this activity for the user (omitted if no strength training activities have been recorded)	N
+	String[] nearest_teammate_strength_training_activities; // The URIs of the strength training activities closest in time to this activity for each street teammate (empty if no strength training activities have been recorded)	N
+	String nearest_background_activity; // The URI of the background activity closest in time to this activity for the user (omitted if no background activities have been recorded)	N
+	String[] nearest_teammate_background_activities; // The URIs of the background activities closest in time to this activity for each street teammate (empty if no background activities have been recorded)	N
+	String nearest_sleep; // The URI of the sleep measurements closest in time to this activity for the user (omitted if no sleep measurements have been taken)	N
+	String[] nearest_teammate_sleep; // The URIs of the sleep measurements closest in time to this activity for each street teammate (empty if no sleep measurements have been taken)	N
+	String nearest_nutrition; // The URI of the nutrition measurement closest in time to this activity for the user (omitted if no nutrition measurements have been token)	N
+	String[] nearest_teammate_nutrition; // The URIs of the nutrition measurement closest in time to this activity for each street teammate (empty if no nutrition measurements have been token)	N
+	String nearest_weight; // The URI of the weight measurement closest in time to this activity for the user (omitted if no weight measurements have been token)	N
+	String[] nearest_teammate_weight; // The URIs of the weight measurements closest in time to this activity for each street teammate (empty if no weight measurements have been token)	N
+	String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
+	String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
+	String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+
+}

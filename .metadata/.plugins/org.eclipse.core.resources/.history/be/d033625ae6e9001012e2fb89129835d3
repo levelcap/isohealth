@@ -1,0 +1,5 @@
+package com.isobar.isohealth.models;
+
+public class StreetTeamInviteReply {
+	String reply; // One of the following values: "accepted", "declined", "ignored"
+}

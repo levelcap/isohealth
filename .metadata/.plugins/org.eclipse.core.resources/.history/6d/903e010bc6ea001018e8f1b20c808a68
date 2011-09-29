@@ -1,0 +1,72 @@
+package com.isobar.isohealth.models;
+
+public class SleepMeasurement {
+	private String uri; // The URI for this measurement	private N
+	private Integer userID;// The unique ID for the user	private N
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")	N
+
+	//	One of the following values: total_sleep, rem, deep, light, times_woken, awake	
+	private Double total_sleep; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	private Double rem; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	private Double deep; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	private Double light; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	private Double times_woken; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	private Double awake; // The value of the measured quantity (durational measurements are given in minutes)	Y
+	
+	private String previous; // The URI of the previous sleep measurement in chronological order for the user (omitted for the first sleep measurement)	N
+	private String next; // The URI of the next sleep measurement in chronological order for the user (omitted for the most recent sleep measurement)	N
+	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
+	private String[] nearest_teammate_fitness_activities; // The URIs of the fitness activities closest in time to this activity for each street teammate (empty if no fitness activities have been recorded)	N
+	private String nearest_background_activity; // The URI of the background activity closest in time to this activity for the user (omitted if no background activities have been recorded)	N
+	private String[] nearest_teammate_background_activities; // The URIs of the background activities closest in time to this activity for each street teammate (empty if no background activities have been recorded)	N
+	private String[] nearest_teammate_sleep; // The URIs of the sleep measurements closest in time to this activity for each street teammate (empty if no sleep measurements have been taken)	N
+	private String nearest_nutrition; // The URI of the nutrition measurement closest in time to this activity for the user (omitted if no nutrition measurements have been token)	N
+	private String[] nearest_teammate_nutrition; // The URIs of the nutrition measurement closest in time to this activity for each street teammate (empty if no nutrition measurements have been token)	N
+	private String nearest_weight; // The URI of the weight measurement closest in time to this activity for the user (omitted if no weight measurements have been token)	N
+	private String[] nearest_teammate_weight; // The URIs of the weight measurements closest in time to this activity for each street teammate (empty if no weight measurements have been token)	N
+	private String nearest_general_measurement; // The URI of the general measurement measurement closest in time to this activity for the user (omitted if no general measurements have been token)	N
+	private String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
+	private String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
+	private String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	public SleepMeasurement(String uri, Integer userID, String timestamp,
+			Double total_sleep, Double rem, Double deep, Double light,
+			Double times_woken, Double awake, String previous, String next,
+			String nearest_fitness_activity,
+			String[] nearest_teammate_fitness_activities,
+			String nearest_background_activity,
+			String[] nearest_teammate_background_activities,
+			String[] nearest_teammate_sleep, String nearest_nutrition,
+			String[] nearest_teammate_nutrition, String nearest_weight,
+			String[] nearest_teammate_weight,
+			String nearest_general_measurement,
+			String[] nearest_teammate_general_measurements,
+			String nearest_diabetes, String[] nearest_teammate_diabetes) {
+		super();
+		this.uri = uri;
+		this.userID = userID;
+		this.timestamp = timestamp;
+		this.total_sleep = total_sleep;
+		this.rem = rem;
+		this.deep = deep;
+		this.light = light;
+		this.times_woken = times_woken;
+		this.awake = awake;
+		this.previous = previous;
+		this.next = next;
+		this.nearest_fitness_activity = nearest_fitness_activity;
+		this.nearest_teammate_fitness_activities = nearest_teammate_fitness_activities;
+		this.nearest_background_activity = nearest_background_activity;
+		this.nearest_teammate_background_activities = nearest_teammate_background_activities;
+		this.nearest_teammate_sleep = nearest_teammate_sleep;
+		this.nearest_nutrition = nearest_nutrition;
+		this.nearest_teammate_nutrition = nearest_teammate_nutrition;
+		this.nearest_weight = nearest_weight;
+		this.nearest_teammate_weight = nearest_teammate_weight;
+		this.nearest_general_measurement = nearest_general_measurement;
+		this.nearest_teammate_general_measurements = nearest_teammate_general_measurements;
+		this.nearest_diabetes = nearest_diabetes;
+		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
+	}
+	
+	
+}

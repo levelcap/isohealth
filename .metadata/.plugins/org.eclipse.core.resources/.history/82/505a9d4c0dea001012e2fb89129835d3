@@ -1,0 +1,24 @@
+package com.isobar.isohealth.models;
+
+public class GeneralMeasurementFeed {
+	Integer size; // The total number of general measurements across all pages
+	Item[] items; // The user's general measurements, in reverse chronological order
+	String previous; // The URI of the previous page of general measurements for the user (omitted for the earliest page)
+	String next; // The URI of the next page of general measurements for the user (omitted for the most recent page)
+	
+	String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	//	One of the following values: vitamin_d, hscrp, crp, tsh, uric_acid, systolic, diastolic, resting_heartrate, total_cholesterol, hdl, ldl
+	Double vitamin_d;
+	Double hscrp;
+	Double crp;
+	Double tsh;
+	Double uric_acid;
+	Double systolic;
+	Double diastolic;
+	Double resting_heartrate;
+	Double total_cholesterol;
+	Double hdl;
+	Double ldl;
+	// The value of the measured quantity
+	String uri; // The URI of detailed information for the general measurement
+}

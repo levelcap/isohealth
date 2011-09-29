@@ -1,0 +1,17 @@
+package com.isobar.isohealth.models;
+
+public class NewNutritionMeasurement {
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	
+	// One of the following values: calories, carbohydrates (grams), fat (grams), fiber (grams), protein (grams), sodium (milligrams), water (fluid ounces)
+	private Double calories; // The value of the measured quantity
+	private Double carbohydrates; // The value of the measured quantity in grams
+	private Double fat; // The value of the measured quantity in grams
+	private Double fiber; // The value of the measured quantity in grams
+	private Double protein; // The value of the measured quantity in grams
+	private Double sodium; // The value of the measured quantity in milligrams
+	private Double water; // The value of the measured quantity in fluid ounces
+	
+	private Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	private Boolean post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+}

@@ -1,0 +1,11 @@
+package test.com.isobar.isohealth;
+
+import com.isobar.isohealth.HttpResponseCode.HttpStatusCode;
+
+import junit.framework.TestCase;
+
+public class HttpResponseCodeTest extends TestCase {
+	public void testResponseCode() {
+		System.out.println(HttpStatusCode.OK.equals(200));
+	}
+}

@@ -1,0 +1,16 @@
+package com.isobar.isohealth.models;
+
+public class NewWeightMeasurement {
+	
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	
+	// One of the following values: weight, free_mass, mass_weight, fat_percent, bmi
+	private Double weight; // The value of the measured quantity
+	private Double free_mass; // The value of the measured quantity
+	private Double mass_weight; // The value of the measured quantity
+	private Double fat_percent; // The value of the measured quantity
+	private Double bmi; // The value of the measured quantity
+	
+	private Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	private Boolean post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+}

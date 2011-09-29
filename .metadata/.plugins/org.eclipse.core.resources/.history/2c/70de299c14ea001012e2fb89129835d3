@@ -1,0 +1,164 @@
+package com.isobar.isohealth.models;
+
+public class NewWeightMeasurement {
+	
+	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+	
+	// One of the following values: weight, free_mass, mass_weight, fat_percent, bmi
+	private Double weight; // The value of the measured quantity
+	private Double free_mass; // The value of the measured quantity
+	private Double mass_weight; // The value of the measured quantity
+	private Double fat_percent; // The value of the measured quantity
+	private Double bmi; // The value of the measured quantity
+	
+	private Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	private Boolean post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+	
+	
+	public NewWeightMeasurement() {
+		super();
+	}
+	public NewWeightMeasurement(String timestamp, Double weight,
+			Double free_mass, Double mass_weight, Double fat_percent,
+			Double bmi, Boolean post_to_twitter, Boolean post_to_facebook) {
+		super();
+		this.timestamp = timestamp;
+		this.weight = weight;
+		this.free_mass = free_mass;
+		this.mass_weight = mass_weight;
+		this.fat_percent = fat_percent;
+		this.bmi = bmi;
+		this.post_to_twitter = post_to_twitter;
+		this.post_to_facebook = post_to_facebook;
+	}
+	public String getTimestamp() {
+		return timestamp;
+	}
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
+	}
+	public Double getWeight() {
+		return weight;
+	}
+	public void setWeight(Double weight) {
+		this.weight = weight;
+	}
+	public Double getFree_mass() {
+		return free_mass;
+	}
+	public void setFree_mass(Double free_mass) {
+		this.free_mass = free_mass;
+	}
+	public Double getMass_weight() {
+		return mass_weight;
+	}
+	public void setMass_weight(Double mass_weight) {
+		this.mass_weight = mass_weight;
+	}
+	public Double getFat_percent() {
+		return fat_percent;
+	}
+	public void setFat_percent(Double fat_percent) {
+		this.fat_percent = fat_percent;
+	}
+	public Double getBmi() {
+		return bmi;
+	}
+	public void setBmi(Double bmi) {
+		this.bmi = bmi;
+	}
+	public Boolean getPost_to_twitter() {
+		return post_to_twitter;
+	}
+	public void setPost_to_twitter(Boolean post_to_twitter) {
+		this.post_to_twitter = post_to_twitter;
+	}
+	public Boolean getPost_to_facebook() {
+		return post_to_facebook;
+	}
+	public void setPost_to_facebook(Boolean post_to_facebook) {
+		this.post_to_facebook = post_to_facebook;
+	}
+	@Override
+	public String toString() {
+		return "NewWeightMeasurement [timestamp=" + timestamp + ", weight="
+				+ weight + ", free_mass=" + free_mass + ", mass_weight="
+				+ mass_weight + ", fat_percent=" + fat_percent + ", bmi=" + bmi
+				+ ", post_to_twitter=" + post_to_twitter
+				+ ", post_to_facebook=" + post_to_facebook + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bmi == null) ? 0 : bmi.hashCode());
+		result = prime * result
+				+ ((fat_percent == null) ? 0 : fat_percent.hashCode());
+		result = prime * result
+				+ ((free_mass == null) ? 0 : free_mass.hashCode());
+		result = prime * result
+				+ ((mass_weight == null) ? 0 : mass_weight.hashCode());
+		result = prime
+				* result
+				+ ((post_to_facebook == null) ? 0 : post_to_facebook.hashCode());
+		result = prime * result
+				+ ((post_to_twitter == null) ? 0 : post_to_twitter.hashCode());
+		result = prime * result
+				+ ((timestamp == null) ? 0 : timestamp.hashCode());
+		result = prime * result + ((weight == null) ? 0 : weight.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		NewWeightMeasurement other = (NewWeightMeasurement) obj;
+		if (bmi == null) {
+			if (other.bmi != null)
+				return false;
+		} else if (!bmi.equals(other.bmi))
+			return false;
+		if (fat_percent == null) {
+			if (other.fat_percent != null)
+				return false;
+		} else if (!fat_percent.equals(other.fat_percent))
+			return false;
+		if (free_mass == null) {
+			if (other.free_mass != null)
+				return false;
+		} else if (!free_mass.equals(other.free_mass))
+			return false;
+		if (mass_weight == null) {
+			if (other.mass_weight != null)
+				return false;
+		} else if (!mass_weight.equals(other.mass_weight))
+			return false;
+		if (post_to_facebook == null) {
+			if (other.post_to_facebook != null)
+				return false;
+		} else if (!post_to_facebook.equals(other.post_to_facebook))
+			return false;
+		if (post_to_twitter == null) {
+			if (other.post_to_twitter != null)
+				return false;
+		} else if (!post_to_twitter.equals(other.post_to_twitter))
+			return false;
+		if (timestamp == null) {
+			if (other.timestamp != null)
+				return false;
+		} else if (!timestamp.equals(other.timestamp))
+			return false;
+		if (weight == null) {
+			if (other.weight != null)
+				return false;
+		} else if (!weight.equals(other.weight))
+			return false;
+		return true;
+	}
+	
+	
+}
