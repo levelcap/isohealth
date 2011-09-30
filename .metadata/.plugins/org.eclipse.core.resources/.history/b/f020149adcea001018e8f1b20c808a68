@@ -1,0 +1,18 @@
+package test.com.isobar.isohealth;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.PersonalRecord;
+import com.isobar.isohealth.services.PersonalRecordService;
+
+public class PersonalRecordServiceTest extends TestCase {
+	public void testGetPersonalRecords() {
+		try {
+			PersonalRecord[] personalRecord = PersonalRecordService.getPersonalRecord(GraphConstants.AUTH_CODE);
+			System.out.println("PersonalRecord: " + personalRecord);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

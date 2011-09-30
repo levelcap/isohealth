@@ -2,6 +2,10 @@ package com.isobar.isohealth.models;
 
 import java.util.Arrays;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
+
+@JsonSerialize(include = Inclusion.NON_NULL)
 public class WeightMeasurement {
 	private String uri; // The URI for this measurement	N
 	private Integer userID; // The unique ID for the user	N

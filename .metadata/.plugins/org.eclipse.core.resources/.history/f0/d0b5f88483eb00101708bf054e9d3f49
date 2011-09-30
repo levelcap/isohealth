@@ -1,0 +1,16 @@
+package test.com.isobar.isohealth;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.BackgroundActivityFeed;
+import com.isobar.isohealth.services.BackgroundActivityService;
+
+public class GeneralMeasurementServiceTest {
+	public void testGeneralMeasurementFeed() {
+		try {
+			BackgroundActivityFeed backgroundActivityFeed = BackgroundActivityService.getBackgroundActivityFeed(GraphConstants.AUTH_CODE);
+			System.out.println("BackgroundActivityFeed: " + backgroundActivityFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

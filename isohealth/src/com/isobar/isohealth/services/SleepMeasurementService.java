@@ -9,7 +9,7 @@ import java.net.URL;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import com.isobar.isohealth.GraphConstants;
-import com.isobar.isohealth.models.NewGeneralMeasurement;
+import com.isobar.isohealth.models.NewSleepMeasurement;
 import com.isobar.isohealth.models.SleepMeasurement;
 import com.isobar.isohealth.models.SleepMeasurementFeed;
 import com.isobar.isohealth.models.User;
@@ -79,8 +79,8 @@ public class SleepMeasurementService {
 		return sleepMeasurement;
 	}
 	
-	public static void createGeneralMeasurement(
-			NewGeneralMeasurement generalMeasurement, String code) throws Exception {
+	public static void createSleepMeasurement(
+			NewSleepMeasurement sleepMeasurement, String code) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		User user = UserService.getUser(code);
 		String url = GraphConstants.REST_URL
@@ -94,9 +94,9 @@ public class SleepMeasurementService {
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
-		conn.setDoOutput(true);;
+		conn.setDoOutput(true);
 
-		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
+		mapper.writeValue(conn.getOutputStream(), sleepMeasurement);
 		
 		if (conn.getResponseCode() != 204) {
 			throw new IOException(conn.getResponseMessage());

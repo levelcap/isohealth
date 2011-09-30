@@ -11,8 +11,8 @@
 </mapAttribute>
 <stringAttribute key="org.eclipse.jdt.junit.CONTAINER" value=""/>
 <booleanAttribute key="org.eclipse.jdt.junit.KEEPRUNNING_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.jdt.junit.TESTNAME" value=""/>
 <stringAttribute key="org.eclipse.jdt.junit.TEST_KIND" value="org.eclipse.jdt.junit.loader.junit3"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="test.com.isobar.isohealth.DiabetesMeasurementServiceTest"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="isohealth"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=""/>
 </launchConfiguration>

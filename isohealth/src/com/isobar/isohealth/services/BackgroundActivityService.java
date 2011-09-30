@@ -76,9 +76,9 @@ public class BackgroundActivityService {
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
-		;
 
-		String activityString = mapper.writeValueAsString(activity);
+//		String activityString = mapper.writeValueAsString(activity);
+//		System.out.println(activityString);
 		mapper.writeValue(conn.getOutputStream(), activity);
 
 		if (conn.getResponseCode() != 200) {

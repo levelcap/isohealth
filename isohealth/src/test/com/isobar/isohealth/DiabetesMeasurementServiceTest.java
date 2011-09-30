@@ -25,11 +25,11 @@ public class DiabetesMeasurementServiceTest extends TestCase {
 	public void testGetDiabetesMeasurement() {
 		try {
 			DiabetesMeasurementFeed diabetesMeasurementFeed = DiabetesMeasurementService.getDiabetesMeasurementFeed(GraphConstants.AUTH_CODE);
-			List<DiabetesMeasurement> diabetesMeasurement =  new ArrayList<DiabetesMeasurement>();
+			List<DiabetesMeasurement> diabetesMeasurementList =  new ArrayList<DiabetesMeasurement>();
 			for (Item item : diabetesMeasurementFeed.getItems()) {
-				DiabetesMeasurement activity = DiabetesMeasurementService.getDiabetesMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
-				System.out.println("DiabetesMeasurement: " + activity.toString());
-				diabetesMeasurement.add(activity);
+				DiabetesMeasurement diabetesMeasurement = DiabetesMeasurementService.getDiabetesMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("DiabetesMeasurement: " + diabetesMeasurement.toString());
+				diabetesMeasurementList.add(diabetesMeasurement);
 			}
 
 		} catch (Exception e) {

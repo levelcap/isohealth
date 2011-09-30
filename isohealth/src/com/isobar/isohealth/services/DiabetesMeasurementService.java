@@ -104,8 +104,7 @@ public class DiabetesMeasurementService {
 		System.out.println(mapper.writeValueAsString(diabetesMeasurement));
 		mapper.writeValue(conn.getOutputStream(), diabetesMeasurement);
 		
-		System.out.println(conn.getResponseCode());
-		if (conn.getResponseCode() != 204) {
+		if (conn.getResponseCode() != 201) {
 			throw new Exception(conn.getResponseMessage());
 		}
 		conn.disconnect();

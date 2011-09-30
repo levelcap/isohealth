@@ -1,0 +1,16 @@
+package com.isobar.isohealth.models;
+
+public class NewSleepMeasurement {
+	String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")
+//	One of the following values: total_sleep, rem, deep, light, times_woken, awake, zq	
+	Double total_sleep; // The value of the measured quantity
+	Double rem; // The value of the measured quantity
+	Double deep; // The value of the measured quantity
+	Double light; // The value of the measured quantity
+	Double times_woken; // The value of the measured quantity
+	Double awake; // The value of the measured quantity
+	Double zq; // The value of the measured quantity
+
+	Boolean post_to_twitter; // Whether to post this measurement to Twitter (optional; if omitted, the user's default setting will be used)
+	Boolean post_to_facebook; // Whether to post this measurement to Facebook (optional; if omitted, the user's default setting will be used)
+}

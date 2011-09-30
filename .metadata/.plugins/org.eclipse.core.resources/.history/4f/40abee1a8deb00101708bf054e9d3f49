@@ -1,0 +1,67 @@
+package test.com.isobar.isohealth;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.NewNutritionMeasurement;
+import com.isobar.isohealth.models.NutritionMeasurement;
+import com.isobar.isohealth.models.NutritionMeasurementFeed;
+import com.isobar.isohealth.models.SleepMeasurement;
+import com.isobar.isohealth.models.SleepMeasurementFeed;
+import com.isobar.isohealth.models.SleepMeasurementFeed.Item;
+import com.isobar.isohealth.services.NutritionMeasurementService;
+import com.isobar.isohealth.services.SleepMeasurementService;
+
+public class SleepMeasurementServiceTest {
+	public void testSleepMeasurementFeed() {
+		try {
+			SleepMeasurementFeed sleepMeasurementFeed = SleepMeasurementService.getSleepMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("SleepMeasurementFeed: " + sleepMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void testSleepMeasurement() {
+		try {
+			SleepMeasurementFeed sleepMeasurementFeed = SleepMeasurementService.getSleepMeasurementFeed(GraphConstants.AUTH_CODE);
+			List<SleepMeasurement> sleepMeasurementList =  new ArrayList<SleepMeasurement>();
+			for (Item item : sleepMeasurementFeed.getItems()) {
+				SleepMeasurement sleepMeasurement = SleepMeasurementService.getSleepMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("SleepMeasurement: " + sleepMeasurement.toString());
+				sleepMeasurementList.add(sleepMeasurement);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testUpdateSleepMeasurement() {
+		try {
+			SleepMeasurementFeed sleepMeasurementFeed = SleepMeasurementService.getSleepMeasurementFeed(GraphConstants.AUTH_CODE);
+			for (Item item : sleepMeasurementFeed.getItems()) {
+				SleepMeasurement sleepMeasurement = SleepMeasurementService.getSleepMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				sleepMeasurement.set
+				SleepMeasurement updatedSleepMeasurement = SleepMeasurementService.updateSleepMeasurement(sleepMeasurement, GraphConstants.AUTH_CODE);
+				System.out.println("Updated NutritionMeasurement: " + updatedNutritionMeasurement);
+				break;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}		
+	
+	public void testCreateNewNutritionMeasurement() {
+		try {
+		  NewNutritionMeasurement nutritionMeasurement = new NewNutritionMeasurement();
+		  nutritionMeasurement.setCarbohydrates(0.015);
+		  nutritionMeasurement.setTimestamp("Wed, 5 Jan 2011 07:03:00");
+		  
+		  NutritionMeasurementService.createNutritionMeasurement(nutritionMeasurement, GraphConstants.AUTH_CODE);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

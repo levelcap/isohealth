@@ -1,0 +1,72 @@
+package test.com.isobar.isohealth;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.GeneralMeasurement;
+import com.isobar.isohealth.models.GeneralMeasurementFeed;
+import com.isobar.isohealth.models.NewGeneralMeasurement;
+import com.isobar.isohealth.models.NewNutritionMeasurement;
+import com.isobar.isohealth.models.NutritionMeasurement;
+import com.isobar.isohealth.models.NutritionMeasurementFeed;
+import com.isobar.isohealth.models.NutritionMeasurementFeed.Item;
+import com.isobar.isohealth.services.GeneralMeasurementService;
+import com.isobar.isohealth.services.NutritionMeasurementService;
+
+public class NutritionMeasurementServiceTest {
+	public void testNutritionMeasurementFeed() {
+		try {
+			NutritionMeasurementFeed nutritionMeasurementFeed = NutritionMeasurementService.getNutritionMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("NutritionMeasurementFeed: " + nutritionMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void testNutritionMeasurement() {
+		try {
+			NutritionMeasurementFeed nutritionMeasurementFeed = NutritionMeasurementService.getNutritionMeasurementFeed(GraphConstants.AUTH_CODE);
+			List<NutritionMeasurement> nutritionMeasurementList =  new ArrayList<NutritionMeasurement>();
+			for (Item item : nutritionMeasurementFeed.getItems()) {
+				NutritionMeasurement nutritionMeasurement = NutritionMeasurementService.getNutritionMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("NutritionMeasurement: " + nutritionMeasurement.toString());
+				nutritionMeasurementList.add(nutritionMeasurement);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void testUpdateNutritionMeasurement() {
+		try {
+			NutritionMeasurementFeed nutritionMeasurementFeed = NutritionMeasurementService.getNutritionMeasurementFeed(GraphConstants.AUTH_CODE);
+			for (Item item : nutritionMeasurementFeed.getItems()) {
+				NutritionMeasurement nutritionMeasurement = NutritionMeasurementService.getNutritionMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("Original activity: " + nutritionMeasurement);
+				nutritionMeasurement.setCarbohydrates(0.02);
+				NutritionMeasurementService.updateNutritionMeasurement(nutritionMeasurement, GraphConstants.AUTH_CODE);
+				System.out.println("Updated GeneralMeasurement: " + nutritionMeasurement);
+				break;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}		
+	
+	public void testCreateNewNutritionMeasurement() {
+		try {
+		  NewNutritionMeasurement nutritionMeasurement = new NewNutritionMeasurement();
+		  
+		  generalMeasurement.setDiastolic(70.0);
+		  generalMeasurement.setTimestamp("Wed, 5 Jan 2011 07:03:00");
+		  
+		  GeneralMeasurementService.createGeneralMeasurement(generalMeasurement, GraphConstants.AUTH_CODE);
+		  
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

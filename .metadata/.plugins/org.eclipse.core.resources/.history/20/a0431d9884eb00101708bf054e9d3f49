@@ -1,0 +1,39 @@
+package test.com.isobar.isohealth;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.BackgroundActivity;
+import com.isobar.isohealth.models.BackgroundActivityFeed;
+import com.isobar.isohealth.models.GeneralMeasurement;
+import com.isobar.isohealth.models.GeneralMeasurementFeed;
+import com.isobar.isohealth.models.GeneralMeasurementFeed.Item;
+import com.isobar.isohealth.services.BackgroundActivityService;
+import com.isobar.isohealth.services.GeneralMeasurementService;
+
+public class GeneralMeasurementServiceTest {
+	public void testGeneralMeasurementFeed() {
+		try {
+			GeneralMeasurementFeed generalMeasurementFeed = GeneralMeasurementService.getGeneralMeasurementFeed(GraphConstants.AUTH_CODE);
+			System.out.println("BackgroundActivityFeed: " + generalMeasurementFeed.toString());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void testGeneralMeasurement() {
+		try {
+			GeneralMeasurementFeed generalMeasurementFeed = GeneralMeasurementService.getGeneralMeasurementFeed(GraphConstants.AUTH_CODE);
+			List<GeneralMeasurement> generalMeasurementList =  new ArrayList<GeneralMeasurement>();
+			for (Item item : generalMeasurementFeed.getItems()) {
+				GeneralMeasurement generalMeasurement = GeneralMeasurementService.getGeneralMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				System.out.println("GeneralMeasurement: " + generalMeasurement.toString());
+				generalMeasurementList.add(generalMeasurement);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
