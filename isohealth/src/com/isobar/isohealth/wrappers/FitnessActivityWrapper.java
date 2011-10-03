@@ -33,7 +33,6 @@ public class FitnessActivityWrapper {
 		if (conn.getResponseCode() != 200) {
 			throw new IOException(conn.getResponseMessage());
 		}
-
 		BufferedReader rd = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
 		FitnessActivityFeed fitnessActivityFeed = mapper.readValue(rd, FitnessActivityFeed.class);

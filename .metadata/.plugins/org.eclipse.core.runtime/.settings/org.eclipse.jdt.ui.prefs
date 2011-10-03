@@ -1,4 +1,4 @@
-#Wed Sep 28 10:47:38 EDT 2011
+#Mon Oct 03 13:22:50 EDT 2011
 content_assist_proposals_foreground=0,0,0
 spelling_locale_initialized=true
 org.eclipse.jdt.ui.text.templates_migrated=true
@@ -16,4 +16,5 @@ content_assist_proposals_background=255,255,255
 content_assist_number_of_computers=13
 useQuickDiffPrefPage=true
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.isobar.isohealth.models.GeneralMeasurementFeed"><rhs name\="com.isobar.isohealth.models.GeneralMeasurementFeed"/></lhs><lhs name\="com.isobar.isohealth.models.NewGeneralMeasurement"><rhs name\="com.isobar.isohealth.models.NewGeneralMeasurement"/></lhs><lhs name\="com.isobar.isohealth.services.RunkeeperService"><rhs name\="com.isobar.isohealth.services.RunkeeperService"/></lhs><lhs name\="com.isobar.isohealth.wrappers.DiabetesMeasurementWrapper"><rhs name\="com.isobar.isohealth.wrappers.DiabetesMeasurementWrapper"/></lhs><lhs name\="com.isobar.isohealth.wrappers.GeneralMeasurementWrapper"><rhs name\="com.isobar.isohealth.wrappers.GeneralMeasurementWrapper"/></lhs><lhs name\="com.isobar.isohealth.wrappers.NutritionMeasurementWrapper"><rhs name\="com.isobar.isohealth.wrappers.NutritionMeasurementWrapper"/></lhs><lhs name\="com.isobar.isohealth.wrappers.PersonalRecordWrapper"><rhs name\="com.isobar.isohealth.wrappers.PersonalRecordWrapper"/></lhs><lhs name\="com.isobar.isohealth.wrappers.SleepMeasurementWrapper"><rhs name\="com.isobar.isohealth.wrappers.SleepMeasurementWrapper"/></lhs><lhs name\="com.isobar.isohealth.wrappers.StreetTeamMembershipWrapper"><rhs name\="com.isobar.isohealth.wrappers.StreetTeamMembershipWrapper"/></lhs></history>
 org.eclipse.jdt.ui.text.code_templates_migrated=true

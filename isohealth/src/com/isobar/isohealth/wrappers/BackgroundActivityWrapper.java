@@ -66,8 +66,7 @@ public class BackgroundActivityWrapper {
 		return backgroundActivity;
 	}
 
-	public BackgroundActivity updateBackgroundActivity(
-			BackgroundActivity activity) throws Exception {
+	public BackgroundActivity updateBackgroundActivity(BackgroundActivity activity) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		String url = GraphConstants.REST_URL + activity.getUri();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)

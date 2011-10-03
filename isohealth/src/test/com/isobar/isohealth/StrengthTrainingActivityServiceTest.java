@@ -12,13 +12,26 @@ import com.isobar.isohealth.models.NewStrengthTrainingActivity;
 import com.isobar.isohealth.models.StrengthTrainingActivity;
 import com.isobar.isohealth.models.StrengthTrainingActivityFeed;
 import com.isobar.isohealth.models.StrengthTrainingActivityFeed.Item;
-import com.isobar.isohealth.services.StrengthTrainingActivityService;
+import com.isobar.isohealth.wrappers.RunkeeperService;
+import com.isobar.isohealth.wrappers.StrengthTrainingActivityWrapper;
 
 public class StrengthTrainingActivityServiceTest extends TestCase {
 
+	StrengthTrainingActivityWrapper strengthTrainingActivityWrapper;
+	StrengthTrainingActivityFeed strengthTrainingActivityFeed;
+	
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	strengthTrainingActivityWrapper = runkeeperService.strengthTrainingActivityWrapper;
+    	try {
+    		strengthTrainingActivityFeed = strengthTrainingActivityWrapper.getStrengthTrainingActivityFeed();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+	
 	public void testGetStrengthTrainingActivityFeed() {
 		try {
-			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
 			System.out.println("StrengthTrainingActivityFeed: " + strengthTrainingActivityFeed.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -27,14 +40,12 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 	
 	public void testGetStrengthTrainingActivity() {
 		try {
-			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
 			List<StrengthTrainingActivity> strengthTrainingActivities =  new ArrayList<StrengthTrainingActivity>();
 			for (Item item : strengthTrainingActivityFeed.getItems()) {
-				StrengthTrainingActivity activity = StrengthTrainingActivityService.getStrengthTrainingActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				StrengthTrainingActivity activity = strengthTrainingActivityWrapper.getStrengthTrainingActivity(item.getUri());
 				System.out.println("StrengthTrainingActivity: " + activity.toString());
 				strengthTrainingActivities.add(activity);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -42,16 +53,14 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 	
 	public void testUpdateStrengthTrainingActivity() {
 		try {
-			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
 			for (Item item : strengthTrainingActivityFeed.getItems()) {
-				StrengthTrainingActivity activity = StrengthTrainingActivityService.getStrengthTrainingActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				StrengthTrainingActivity activity = strengthTrainingActivityWrapper.getStrengthTrainingActivity(item.getUri());
 				System.out.println("Original activity: " + activity);
 				activity.setNotes("Updated Notes");
-				StrengthTrainingActivityService.updateStrengthTrainingActivity(activity, GraphConstants.AUTH_CODE);
+				strengthTrainingActivityWrapper.updateStrengthTrainingActivity(activity);
 				System.out.println("Updated activity: " + activity);
 				break;
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -79,7 +88,7 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 		  exercises[0].setSets(sets);
 		  activity.setExercises(exercises);
 		  
-		  StrengthTrainingActivityService.createStrengthTrainingActivity(activity, GraphConstants.AUTH_CODE);
+		  strengthTrainingActivityWrapper.createStrengthTrainingActivity(activity);
 		  
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -88,13 +97,11 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 	
 	public void testDeleteStrengthTrainingActivity() {
 		try {
-			StrengthTrainingActivityFeed strengthTrainingActivityFeed = StrengthTrainingActivityService.getStrengthTrainingActivityFeed(GraphConstants.AUTH_CODE);
 			for (Item item : strengthTrainingActivityFeed.getItems()) {
-				StrengthTrainingActivity activity = StrengthTrainingActivityService.getStrengthTrainingActivity(item.getUri(),GraphConstants.AUTH_CODE);
-				StrengthTrainingActivityService.deleteStrengthTrainingActivity(activity.getUri(), GraphConstants.AUTH_CODE);
+				StrengthTrainingActivity activity = strengthTrainingActivityWrapper.getStrengthTrainingActivity(item.getUri());
+				strengthTrainingActivityWrapper.deleteStrengthTrainingActivity(activity.getUri());
 				break;
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

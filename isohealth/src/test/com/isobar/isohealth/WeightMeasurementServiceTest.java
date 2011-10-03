@@ -3,17 +3,35 @@ package test.com.isobar.isohealth;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.TestCase;
+
 import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.NewWeightMeasurement;
 import com.isobar.isohealth.models.WeightMeasurement;
 import com.isobar.isohealth.models.WeightMeasurementFeed;
 import com.isobar.isohealth.models.WeightMeasurementFeed.Item;
-import com.isobar.isohealth.services.WeightMeasurementService;
+import com.isobar.isohealth.wrappers.RunkeeperService;
+import com.isobar.isohealth.wrappers.WeightManagementWrapper;
 
-public class WeightMeasurementServiceTest {
+public class WeightMeasurementServiceTest extends TestCase {
+	
+	WeightManagementWrapper weightMeasurementWrapper;
+	WeightMeasurementFeed weightMeasurementFeed;
+	
+	@Override
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	weightMeasurementWrapper = runkeeperService.weightManagementWrapper;
+    	try {
+    		weightMeasurementFeed = weightMeasurementWrapper.getWeightMeasurementFeed();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+	
 	public void testWeightMeasurementFeed() {
 		try {
-			WeightMeasurementFeed weightMeasurementFeed = WeightMeasurementService.getWeightMeasurementFeed(GraphConstants.AUTH_CODE);
+			WeightMeasurementFeed weightMeasurementFeed = weightMeasurementWrapper.getWeightMeasurementFeed();
 			System.out.println("WeightMeasurementFeed: " + weightMeasurementFeed.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -22,10 +40,9 @@ public class WeightMeasurementServiceTest {
 
 	public void testWeightMeasurement() {
 		try {
-			WeightMeasurementFeed weightMeasurementFeed = WeightMeasurementService.getWeightMeasurementFeed(GraphConstants.AUTH_CODE);
 			List<WeightMeasurement> weightMeasurementList =  new ArrayList<WeightMeasurement>();
 			for (Item item : weightMeasurementFeed.getItems()) {
-				WeightMeasurement weightMeasurement = WeightMeasurementService.getWeightMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				WeightMeasurement weightMeasurement = weightMeasurementWrapper.getWeightMeasurement(item.getUri());
 				System.out.println("SleepMeasurement: " + weightMeasurement.toString());
 				weightMeasurementList.add(weightMeasurement);
 			}
@@ -36,12 +53,11 @@ public class WeightMeasurementServiceTest {
 	
 	public void testUpdateWeightMeasurement() {
 		try {
-			WeightMeasurementFeed weightMeasurementFeed = WeightMeasurementService.getWeightMeasurementFeed(GraphConstants.AUTH_CODE);
 			for (Item item : weightMeasurementFeed.getItems()) {
-				WeightMeasurement weightMeasurement = WeightMeasurementService.getWeightMeasurement(item.getUri(),GraphConstants.AUTH_CODE);
+				WeightMeasurement weightMeasurement = weightMeasurementWrapper.getWeightMeasurement(item.getUri());
 				weightMeasurement.setWeight(80.0);
 				weightMeasurement.setTimestamp("Wed, 5 Jan 2011 07:03:00");
-				WeightMeasurement updatedWeightMeasurement = WeightMeasurementService.updateWeightMeasurement(weightMeasurement, GraphConstants.AUTH_CODE);
+				WeightMeasurement updatedWeightMeasurement = weightMeasurementWrapper.updateWeightMeasurement(weightMeasurement);
 				System.out.println("Updated SleepMeasurement: " + updatedWeightMeasurement);
 				break;
 			}
@@ -56,7 +72,7 @@ public class WeightMeasurementServiceTest {
 			weightMeasurement.setWeight(80.0);
 			weightMeasurement.setTimestamp("Wed, 5 Jan 2011 07:03:00");
 		  
-			WeightMeasurementService.createWeightMeasurement(weightMeasurement, GraphConstants.AUTH_CODE);
+			weightMeasurementWrapper.createWeightMeasurement(weightMeasurement);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

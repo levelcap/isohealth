@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="23" version="2.0">
+<workbenchAdvisor/>
+<window height="1028" maximized="true" width="1620" x="-18" y="34">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="106" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="32" y="22"/>
+<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="com_sysdeo_eclipse_tomcat_actionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1317398267421" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackgroundActivityWrapper.java" partName="BackgroundActivityWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/BackgroundActivityWrapper.java" title="BackgroundActivityWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/BackgroundActivityWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/BackgroundActivityWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2314" selectionTopPixel="768"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_RunkeeperServiceToDelete.java" partName="_RunkeeperServiceToDelete.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/services/_RunkeeperServiceToDelete.java" title="_RunkeeperServiceToDelete.java" tooltip="isohealth/src/com/isobar/isohealth/services/_RunkeeperServiceToDelete.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/services/_RunkeeperServiceToDelete.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="25" selectionOffset="468" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppTest.java" partName="AppTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/AppTest.java" title="AppTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/AppTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/AppTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ServiceTests.java" partName="ServiceTests.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/ServiceTests.java" title="ServiceTests.java" tooltip="isohealth/src/test/com/isobar/isohealth/ServiceTests.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/ServiceTests.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="224" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiabetesMeasurementWrapper.java" partName="DiabetesMeasurementWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/DiabetesMeasurementWrapper.java" title="DiabetesMeasurementWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/DiabetesMeasurementWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/DiabetesMeasurementWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1890" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiabetesMeasurementService.java" partName="DiabetesMeasurementService.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/services/DiabetesMeasurementService.java" title="DiabetesMeasurementService.java" tooltip="isohealth/src/com/isobar/isohealth/services/DiabetesMeasurementService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/services/DiabetesMeasurementService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="3564" selectionOffset="541" selectionTopPixel="790"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserWrapper.java" partName="UserWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/UserWrapper.java" title="UserWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/UserWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/UserWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1078" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProfileWrapper.java" partName="ProfileWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/ProfileWrapper.java" title="ProfileWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/ProfileWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/ProfileWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="922" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SleepMeasurementWrapper.java" partName="SleepMeasurementWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/SleepMeasurementWrapper.java" title="SleepMeasurementWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/SleepMeasurementWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/SleepMeasurementWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3680" selectionTopPixel="820"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GeneralMeasurementWrapper.java" partName="GeneralMeasurementWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/GeneralMeasurementWrapper.java" title="GeneralMeasurementWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/GeneralMeasurementWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/GeneralMeasurementWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3777" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NutritionMeasurementWrapper.java" partName="NutritionMeasurementWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/NutritionMeasurementWrapper.java" title="NutritionMeasurementWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/NutritionMeasurementWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/NutritionMeasurementWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3818" selectionTopPixel="804"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalRecordWrapper.java" partName="PersonalRecordWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/PersonalRecordWrapper.java" title="PersonalRecordWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/PersonalRecordWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/PersonalRecordWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="899" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreetTeamMembershipWrapper.java" partName="StreetTeamMembershipWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java" title="StreetTeamMembershipWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3988" selectionTopPixel="760"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunkeeperService.java" partName="RunkeeperService.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java" title="RunkeeperService.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1457" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="_HttpResponseCodeToDelete.java" partName="_HttpResponseCodeToDelete.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/_HttpResponseCodeToDelete.java" title="_HttpResponseCodeToDelete.java" tooltip="isohealth/src/com/isobar/isohealth/_HttpResponseCodeToDelete.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/_HttpResponseCodeToDelete.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GraphConstants.java" partName="GraphConstants.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/GraphConstants.java" title="GraphConstants.java" tooltip="isohealth/src/com/isobar/isohealth/GraphConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/GraphConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="App.java" partName="App.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/App.java" title="App.java" tooltip="isohealth/src/com/isobar/isohealth/App.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/App.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackgroundActivityServiceTest.java" partName="BackgroundActivityServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java" title="BackgroundActivityServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="832" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiabetesMeasurementServiceTest.java" partName="DiabetesMeasurementServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java" title="DiabetesMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="468" selectionOffset="590" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FitnessActivityServiceTest.java" partName="FitnessActivityServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java" title="FitnessActivityServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2749" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GeneralMeasurementServiceTest.java" partName="GeneralMeasurementServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java" title="GeneralMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="457" selectionOffset="587" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NutritionMeasurementServiceTest.java" partName="NutritionMeasurementServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java" title="NutritionMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="475" selectionOffset="548" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalRecordServiceTest.java" partName="PersonalRecordServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java" title="PersonalRecordServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="706" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SettingsWrapper.java" partName="SettingsWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/SettingsWrapper.java" title="SettingsWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/SettingsWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/SettingsWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="175"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StrengthTrainingActivityWrapper.java" partName="StrengthTrainingActivityWrapper.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java" title="StrengthTrainingActivityWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProfileServiceTest.java" partName="ProfileServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java" title="ProfileServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SettingsServiceTest.java" partName="SettingsServiceTest.java" path="/Users/dfernandes/Developer/prototypes/java/isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java" title="SettingsServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="283" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="181" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="355"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1317398267421">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.maven.ide.eclipse.MavenModuleFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="com_sysdeo_eclipse_tomcat_actionSet"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.actions.maven"/>
+<alwaysOnActionSet id="org.maven.ide.eclipse.help.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.adt.project.NewProjectWizard"/>
+<new_wizard_action id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.PixelPerfectPespective"/>
+<perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.21006836" ratioLeft="338" ratioRight="1271" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.74963397" ratioLeft="512" ratioRight="171" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.7493438" ratioLeft="571" ratioRight="191" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/DiabetesMeasurementWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/FitnessActivityWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/ProfileWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/com/isobar/isohealth/wrappers/UserWrapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/ServiceTests.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java"/>
+</editors>
+<item historyLabel="StreetTeamMembershipWrapper.java" index="1">
+<position info="not_deleted" x="3988" y="0"/>
+</item>
+<item historyLabel="StrengthTrainingActivityWrapper.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="UserWrapper.java" index="11">
+<position info="not_deleted" x="1078" y="0"/>
+</item>
+<item historyLabel="RunkeeperService.java" index="2">
+<position info="not_deleted" x="1457" y="0"/>
+</item>
+<item historyLabel="BackgroundActivityServiceTest.java" index="3">
+<position info="not_deleted" x="2737" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementServiceTest.java" index="4">
+<position info="not_deleted" x="2664" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementWrapper.java" index="0">
+<position info="not_deleted" x="1890" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementServiceTest.java" index="4">
+<position info="not_deleted" x="992" y="0"/>
+</item>
+<item historyLabel="BackgroundActivityServiceTest.java" index="3">
+<position info="not_deleted" x="2875" y="0"/>
+</item>
+<item historyLabel="FitnessActivityServiceTest.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="BackgroundActivityServiceTest.java" index="3">
+<position info="not_deleted" x="527" y="100"/>
+</item>
+<item historyLabel="FitnessActivityServiceTest.java" index="5">
+<position info="not_deleted" x="1042" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementServiceTest.java" index="4">
+<position info="not_deleted" x="992" y="0"/>
+</item>
+<item historyLabel="FitnessActivityServiceTest.java" index="5">
+<position info="not_deleted" x="1042" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementServiceTest.java" index="4">
+<position info="not_deleted" x="590" y="468"/>
+</item>
+<item historyLabel="FitnessActivityServiceTest.java" index="5">
+<position info="not_deleted" x="939" y="0"/>
+</item>
+<item historyLabel="FitnessActivityWrapper.java" index="8">
+<position info="not_deleted" x="201" y="4"/>
+</item>
+<item historyLabel="FitnessActivityServiceTest.java" index="5">
+<position info="not_deleted" x="2749" y="0"/>
+</item>
+<item historyLabel="GeneralMeasurementServiceTest.java" index="6">
+<position info="not_deleted" x="1044" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementWrapper.java" index="0">
+<position info="not_deleted" x="1890" y="0"/>
+</item>
+<item historyLabel="DiabetesMeasurementServiceTest.java" index="4">
+<position info="not_deleted" x="590" y="468"/>
+</item>
+<item historyLabel="GeneralMeasurementServiceTest.java" index="6">
+<position info="not_deleted" x="3013" y="0"/>
+</item>
+<item historyLabel="NutritionMeasurementServiceTest.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GeneralMeasurementServiceTest.java" index="6">
+<position info="not_deleted" x="587" y="457"/>
+</item>
+<item historyLabel="NutritionMeasurementServiceTest.java" index="7">
+<position info="not_deleted" x="3093" y="0"/>
+</item>
+<item historyLabel="PersonalRecordServiceTest.java" index="12">
+<position info="not_deleted" x="827" y="0"/>
+</item>
+<item historyLabel="NutritionMeasurementServiceTest.java" index="7">
+<position info="not_deleted" x="548" y="475"/>
+</item>
+<item historyLabel="PersonalRecordServiceTest.java" index="12">
+<position info="not_deleted" x="706" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="BackgroundActivityServiceTest.java" index="3">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="GeneralMeasurementServiceTest.java" index="6">
+<position info="not_deleted" x="587" y="457"/>
+</item>
+<item historyLabel="NutritionMeasurementServiceTest.java" index="7">
+<position info="not_deleted" x="548" y="475"/>
+</item>
+<item historyLabel="PersonalRecordServiceTest.java" index="12">
+<position info="not_deleted" x="706" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position/>
+</item>
+<item historyLabel="ProfileWrapper.java" index="9">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position info="not_deleted" x="306" y="14"/>
+</item>
+<item historyLabel="ProfileWrapper.java" index="9">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position/>
+</item>
+<item historyLabel="ProfileWrapper.java" index="9">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position/>
+</item>
+<item historyLabel="ProfileWrapper.java" index="9">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="ProfileWrapper.java" index="9">
+<position info="not_deleted" x="922" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PersonalRecordServiceTest.java" index="12">
+<position info="not_deleted" x="706" y="0"/>
+</item>
+<item historyLabel="ProfileServiceTest.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ServiceTests.java" index="14">
+<position info="not_deleted" x="224" y="0"/>
+</item>
+<item historyLabel="SettingsServiceTest.java" index="15">
+<position info="not_deleted" x="283" y="0"/>
+</item>
+<item historyLabel="BackgroundActivityServiceTest.java" index="3">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item active="true" historyLabel="SettingsServiceTest.java" index="15">
+<position info="not_deleted" x="283" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SettingsServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/SettingsServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProfileServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/ProfileServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StrengthTrainingActivityWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/wrappers/StrengthTrainingActivityWrapper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SettingsWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/SettingsWrapper.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/wrappers/SettingsWrapper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalRecordServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/PersonalRecordServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NutritionMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/NutritionMeasurementServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GeneralMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/GeneralMeasurementServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FitnessActivityServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/FitnessActivityServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DiabetesMeasurementServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/DiabetesMeasurementServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackgroundActivityServiceTest.java" tooltip="isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java">
+<persistable path="/isohealth/src/test/com/isobar/isohealth/BackgroundActivityServiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="App.java" tooltip="isohealth/src/com/isobar/isohealth/App.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/App.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GraphConstants.java" tooltip="isohealth/src/com/isobar/isohealth/GraphConstants.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/GraphConstants.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HttpResponseCode.java" tooltip="isohealth/src/com/isobar/isohealth/HttpResponseCode.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/HttpResponseCode.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RunkeeperService.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/wrappers/RunkeeperService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreetTeamMembershipWrapper.java" tooltip="isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java">
+<persistable path="/isohealth/src/com/isobar/isohealth/wrappers/StreetTeamMembershipWrapper.java"/>
+</file>
+</mruList>
+</workbench>

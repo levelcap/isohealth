@@ -7,13 +7,26 @@ import com.isobar.isohealth.models.StreetTeamInvite;
 import com.isobar.isohealth.models.StreetTeamInviteReply;
 import com.isobar.isohealth.models.StreetTeamMember;
 import com.isobar.isohealth.models.StreetTeamMembershipFeed;
-import com.isobar.isohealth.services.StreetTeamMembershipService;
+import com.isobar.isohealth.wrappers.RunkeeperService;
+import com.isobar.isohealth.wrappers.StreetTeamMembershipWrapper;
 
 public class StreetTeamMembershipServiceTest extends TestCase {
+
+	StreetTeamMembershipWrapper streetTeamMembershipWrapper;
+	StreetTeamMembershipFeed streetTeamMembershipFeed;
+	
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	streetTeamMembershipWrapper = runkeeperService.streetTeamMembershipWrapper;
+    	try {
+    		streetTeamMembershipFeed = streetTeamMembershipWrapper.getStreetTeamMembershipFeed();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
 	
 	public void testGetStreetTeamMembershipFeed() {
 		try {
-			StreetTeamMembershipFeed streetTeamMembershipFeed = StreetTeamMembershipService.getStreetTeamMembershipFeed(GraphConstants.AUTH_CODE);
 			System.out.println("StreetTeamMembershipFeed: " + streetTeamMembershipFeed);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -24,7 +37,7 @@ public class StreetTeamMembershipServiceTest extends TestCase {
 		try {
 			StreetTeamInvite invitation = new StreetTeamInvite(4558292);
 
-			StreetTeamMembershipService.inviteUser(GraphConstants.AUTH_CODE, invitation);
+			streetTeamMembershipWrapper.inviteUser(invitation);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -34,7 +47,7 @@ public class StreetTeamMembershipServiceTest extends TestCase {
 		try {
 			String teamId = "0987654321";
 			StreetTeamInviteReply streetTeamInviteReply = new StreetTeamInviteReply("accepted");
-			StreetTeamMember streetTeamMember = StreetTeamMembershipService.replyToInvite(GraphConstants.AUTH_CODE, teamId, streetTeamInviteReply);
+			StreetTeamMember streetTeamMember = streetTeamMembershipWrapper.replyToInvite(teamId, streetTeamInviteReply);
 			System.out.println("ReplyToInvite: "+ streetTeamMember);
 		}
 		catch (Exception e) {
@@ -45,7 +58,7 @@ public class StreetTeamMembershipServiceTest extends TestCase {
 	public void testRemoveUser() {
 		try {
 			String teamId = "0987654321";
-			boolean response = StreetTeamMembershipService.removeUser(GraphConstants.AUTH_CODE, teamId);
+			boolean response = streetTeamMembershipWrapper.removeUser(teamId);
 			System.out.println("RemoveUser: "+ response);
 		}
 		catch (Exception e) {

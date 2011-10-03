@@ -1,0 +1,114 @@
+package com.isobar.isohealth.wrappers;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.codehaus.jackson.map.ObjectMapper;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.NewWeightMeasurement;
+import com.isobar.isohealth.models.User;
+import com.isobar.isohealth.models.WeightMeasurement;
+import com.isobar.isohealth.models.WeightMeasurementFeed;
+import com.isobar.isohealth.services.UserService;
+
+public class WeightManagementWrapper {
+	private String authToken;
+	
+	public WeightManagementWrapper(String authToken) {
+		super();
+		this.authToken = authToken;
+	}
+
+	public WeightMeasurementFeed getWeightMeasurementFeed() throws Exception {
+		User user = UserService.getUser(authToken);
+		ObjectMapper mapper = new ObjectMapper(); 
+		String url = GraphConstants.REST_URL + user.getWeight();
+		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
+		conn.setRequestProperty("Accept", GraphConstants.MEDIA_WEIGHT_MEASUREMENT_FEED);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
+
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		WeightMeasurementFeed weightMeasurementFeed = mapper.readValue(rd, WeightMeasurementFeed.class);
+		conn.disconnect();
+		return weightMeasurementFeed;
+	}
+
+	public WeightMeasurement getWeightMeasurement(String url) throws Exception {
+		ObjectMapper mapper = new ObjectMapper(); 
+		url = GraphConstants.REST_URL + url;
+		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
+		conn.setRequestProperty("Accept", GraphConstants.MEDIA_WEIGHT_MEASUREMENT);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
+
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		WeightMeasurement weightMeasurement = mapper.readValue(rd, WeightMeasurement.class);
+		conn.disconnect();
+		return weightMeasurement;
+	}	
+
+	public WeightMeasurement updateWeightMeasurement(WeightMeasurement weightMeasurement) throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
+		String url = GraphConstants.REST_URL + weightMeasurement.getUri();
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("PUT");
+		conn.setRequestProperty("Content-Type",
+				GraphConstants.MEDIA_WEIGHT_MEASUREMENT);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
+		conn.setRequestProperty("Content-Length", "nnn");
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
+		conn.setDoOutput(true);
+
+		mapper.writeValue(conn.getOutputStream(), weightMeasurement);
+		
+		if (conn.getResponseCode() != 200) {
+			throw new IOException(conn.getResponseMessage());
+		}
+
+		BufferedReader rd = new BufferedReader(new InputStreamReader(
+				conn.getInputStream()));
+		weightMeasurement = mapper.readValue(rd, WeightMeasurement.class);
+		conn.disconnect();
+		return weightMeasurement;
+	}
+	
+	public void createWeightMeasurement(
+			NewWeightMeasurement weightMeasurement) throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
+		User user = UserService.getUser(authToken);
+		String url = GraphConstants.REST_URL
+				+ user.getWeight();
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestMethod("POST");
+		conn.setRequestProperty("Content-Type",
+				GraphConstants.MEDIA_WEIGHT_MEASUREMENT);
+		conn.setRequestProperty("Authorization", "Bearer " + authToken);
+		conn.setRequestProperty("Content-Length", "nnn");
+		conn.setUseCaches(false);
+		conn.setDoInput(true);
+		conn.setDoOutput(true);
+
+		mapper.writeValue(conn.getOutputStream(), weightMeasurement);
+		
+		if (conn.getResponseCode() != 204) {
+			throw new IOException(conn.getResponseMessage());
+		}
+		conn.disconnect();
+	}
+}

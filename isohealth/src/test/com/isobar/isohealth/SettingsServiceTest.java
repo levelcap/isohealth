@@ -4,13 +4,21 @@ import junit.framework.TestCase;
 
 import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.Settings;
-import com.isobar.isohealth.services.SettingsService;
+import com.isobar.isohealth.wrappers.RunkeeperService;
+import com.isobar.isohealth.wrappers.SettingsWrapper;
 
 public class SettingsServiceTest extends TestCase {
 
+	SettingsWrapper settingsWrapper;
+	
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	settingsWrapper = runkeeperService.settingsWrapper;
+    }
+
 	public void testGetSettings() {
 		try {
-			Settings settings = SettingsService.getSettings(GraphConstants.AUTH_CODE);
+			Settings settings = settingsWrapper.getSettings();
 			System.out.println("Settings: " + settings.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -19,10 +27,10 @@ public class SettingsServiceTest extends TestCase {
 	
 	public void testUpdateSettings() {
 		try {
-			Settings settings = SettingsService.getSettings(GraphConstants.AUTH_CODE);
+			Settings settings = settingsWrapper.getSettings();
 			System.out.println("Settings: " + settings.toString());
 			settings.setShare_map("Everyone");
-			settings = SettingsService.updateProfile(settings, GraphConstants.AUTH_CODE);
+			settings = settingsWrapper.updateProfile(settings);
 			System.out.println("Updated Settings: " + settings.toString());			
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -8,16 +8,30 @@ import junit.framework.TestCase;
 import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.FitnessActivity;
 import com.isobar.isohealth.models.FitnessActivityFeed;
-import com.isobar.isohealth.models.WGS84;
 import com.isobar.isohealth.models.FitnessActivityFeed.Item;
 import com.isobar.isohealth.models.NewFitnessActivity;
-import com.isobar.isohealth.services.FitnessActivityService;
+import com.isobar.isohealth.models.WGS84;
+import com.isobar.isohealth.wrappers.FitnessActivityWrapper;
+import com.isobar.isohealth.wrappers.RunkeeperService;
 
 public class FitnessActivityServiceTest extends TestCase {
 
+	FitnessActivityWrapper fitnessActivityWrapper;
+	FitnessActivityFeed fitnessActivityFeed;
+	
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	fitnessActivityWrapper = runkeeperService.fitnessActivityWrapper;
+    	try {
+    		fitnessActivityFeed = fitnessActivityWrapper.getFitnessActivityFeed();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+	
 	public void testGetFitnessActivityFeed() {
 		try {
-			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
+//			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
 			System.out.println("FitnessActivityFeed: " + fitnessActivityFeed.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -26,14 +40,13 @@ public class FitnessActivityServiceTest extends TestCase {
 	
 	public void testGetFitnessActivity() {
 		try {
-			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
+//			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
 			List<FitnessActivity> fitnessActivities =  new ArrayList<FitnessActivity>();
 			for (Item item : fitnessActivityFeed.getItems()) {
-				FitnessActivity activity = FitnessActivityService.getFitnessActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				FitnessActivity activity = fitnessActivityWrapper.getFitnessActivity(item.getUri());
 				System.out.println("FitnessActivity: " + activity.toString());
 				fitnessActivities.add(activity);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -60,8 +73,7 @@ public class FitnessActivityServiceTest extends TestCase {
 		  activity.setPost_to_facebook(false);
 		  activity.setPost_to_twitter(false);	  
 		  
-		  FitnessActivityService.createFitnessActivity(activity, GraphConstants.AUTH_CODE);
-		  
+		  fitnessActivityWrapper.createFitnessActivity(activity);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -69,16 +81,15 @@ public class FitnessActivityServiceTest extends TestCase {
 
 	public void testUpdateFitnessActivity() {
 		try {
-			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
+//			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
 			for (Item item : fitnessActivityFeed.getItems()) {
-				FitnessActivity activity = FitnessActivityService.getFitnessActivity(item.getUri(),GraphConstants.AUTH_CODE);
+				FitnessActivity activity = fitnessActivityWrapper.getFitnessActivity(item.getUri());
 				System.out.println("Activity: " + activity);
 				activity.setNotes("Updated notes");
-				activity = FitnessActivityService.updateFitnessActivity(activity, GraphConstants.AUTH_CODE);
+				activity = fitnessActivityWrapper.updateFitnessActivity(activity);
 				System.out.println("Updated activity: " + activity);
 				break;
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -86,13 +97,12 @@ public class FitnessActivityServiceTest extends TestCase {
 	
 	public void testDeleteFitnessActivity() {
 		try {
-			FitnessActivityFeed fitnessActivityFeed = FitnessActivityService.getFitnessActivityFeed(GraphConstants.AUTH_CODE);
+			FitnessActivityFeed fitnessActivityFeed = fitnessActivityWrapper.getFitnessActivityFeed();
 			for (Item item : fitnessActivityFeed.getItems()) {
-				FitnessActivity activity = FitnessActivityService.getFitnessActivity(item.getUri(),GraphConstants.AUTH_CODE);
-				FitnessActivityService.deleteFitnessActivity(activity.getUri(), GraphConstants.AUTH_CODE);
+				FitnessActivity activity = fitnessActivityWrapper.getFitnessActivity(item.getUri());
+				fitnessActivityWrapper.deleteFitnessActivity(activity.getUri());
 				break;
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

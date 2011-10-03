@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.GeneralMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.GeneralMeasurementFeed.Item"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NewGeneralMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.GeneralMeasurementService"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NutritionMeasurementFeed.Item"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NewNutritionMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.NutritionMeasurementService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NutritionMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.SleepMeasurementFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.SleepMeasurementFeed.Item"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.SleepMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.SleepMeasurementService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NewSleepMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.WeightMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.WeightMeasurementFeed.Item"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.WeightMeasurementFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NewWeightMeasurement"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.WeightMeasurementService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.BackgroundActivityFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.RunkeeperService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.GraphConstants"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.services.UserService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.SleepMeasurementWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.StreetTeamMembershipWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.RunkeeperService"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.DiabetesMeasurementWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.BackgroundActivityWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.FitnessActivityFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.FitnessActivityWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.GeneralMeasurementWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.GeneralMeasurementFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.NutritionMeasurementWrapper"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.models.NutritionMeasurementFeed"/>
+<fullyQualifiedTypeName name="com.isobar.isohealth.wrappers.PersonalRecordWrapper"/>
+</qualifiedTypeNameHistroy>

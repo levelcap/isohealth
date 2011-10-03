@@ -1,0 +1,36 @@
+package test.com.isobar.isohealth;
+
+import junit.framework.TestCase;
+
+import com.isobar.isohealth.GraphConstants;
+import com.isobar.isohealth.models.NutritionMeasurementFeed;
+import com.isobar.isohealth.models.PersonalRecord;
+import com.isobar.isohealth.services.PersonalRecordService;
+import com.isobar.isohealth.wrappers.NutritionMeasurementWrapper;
+import com.isobar.isohealth.wrappers.PersonalRecordWrapper;
+import com.isobar.isohealth.wrappers.RunkeeperService;
+
+public class PersonalRecordServiceTest extends TestCase {
+	
+	PersonalRecordWrapper personalRecordWrapper;
+	NutritionMeasurementFeed nutritionMeasurementFeed;
+	
+	protected void setUp() {
+    	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
+    	nutritionMeasurementWrapper = runkeeperService.nutritionMeasurementWrapper;
+    	try {
+    		nutritionMeasurementFeed = nutritionMeasurementWrapper.getNutritionMeasurementFeed();
+    	} catch (Exception e) {
+    		e.printStackTrace();
+		}
+    }
+	
+	public void testGetPersonalRecords() {
+		try {
+			PersonalRecord[] personalRecord = PersonalRecordService.getPersonalRecord(GraphConstants.AUTH_CODE);
+			System.out.println("PersonalRecord: " + personalRecord);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
