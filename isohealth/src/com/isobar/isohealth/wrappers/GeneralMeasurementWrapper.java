@@ -97,13 +97,15 @@ public class GeneralMeasurementWrapper {
 				.openConnection();
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type",
-				GraphConstants.MEDIA_GENERAL_MEASUREMENT);
+				GraphConstants.MEDIA_NEW_GENERAL_MEASUREMENT);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
-		conn.setDoOutput(true);;
-
+		conn.setDoOutput(true);
+		
+		String blah = mapper.writeValueAsString(generalMeasurement);
+		
 		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
 		
 		if (conn.getResponseCode() != 204) {

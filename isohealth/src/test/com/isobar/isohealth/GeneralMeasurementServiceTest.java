@@ -71,8 +71,10 @@ public class GeneralMeasurementServiceTest extends TestCase {
 		try {
 		  NewGeneralMeasurement generalMeasurement = new NewGeneralMeasurement();
 		  
-		  generalMeasurement.setDiastolic(70.0);
+		  generalMeasurement.setSystolic(70.0);
 		  generalMeasurement.setTimestamp("Wed, 5 Jan 2011 07:03:00");
+		  generalMeasurement.setPost_to_facebook(false);
+		  generalMeasurement.setPost_to_twitter(false);
 		  
 		  generalMeasurementWrapper.createGeneralMeasurement(generalMeasurement);
 		} catch (Exception e) {
