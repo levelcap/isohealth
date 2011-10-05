@@ -39,6 +39,7 @@ public class GraphConstants {
 	public static final String MEDIA_NUTRITION_MEASUREMENT_FEED = "application/vnd.com.runkeeper.NutritionFeed+json";
 	public static final String MEDIA_WEIGHT_MEASUREMENT_FEED = "application/vnd.com.runkeeper.WeightFeed+json";
 	public static final String MEDIA_WEIGHT_MEASUREMENT = "application/vnd.com.runkeeper.Weight+json";
+	public static final String MEDIA_NEW_WEIGHT_MEASUREMENT = "application/vnd.com.runkeeper.NewWeight+json";
 	public static final String MEDIA_SLEEP_MEASUREMENT_FEED = "application/vnd.com.runkeeper.SleepFeed+json";
 	public static final String MEDIA_SLEEP_MEASUREMENT = "application/vnd.com.runkeeper.Sleep+json";
 	public static final String MEDIA_NEW_SLEEP_MEASUREMENT = "application/vnd.com.runkeeper.NewSleep+json";

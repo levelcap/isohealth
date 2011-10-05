@@ -14,6 +14,7 @@ public class UserServiceTest extends TestCase {
     	RunkeeperService runkeeperService = new RunkeeperService(GraphConstants.AUTH_CODE);
     	userWrapper = runkeeperService.userWrapper;
     }
+	
 	public void testGetUser() {
 		try {
 			User user = userWrapper.getUser();

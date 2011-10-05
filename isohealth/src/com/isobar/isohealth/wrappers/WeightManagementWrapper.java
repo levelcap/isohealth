@@ -97,7 +97,7 @@ public class WeightManagementWrapper {
 				.openConnection();
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type",
-				GraphConstants.MEDIA_WEIGHT_MEASUREMENT);
+				GraphConstants.MEDIA_NEW_WEIGHT_MEASUREMENT);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
@@ -106,7 +106,7 @@ public class WeightManagementWrapper {
 
 		mapper.writeValue(conn.getOutputStream(), weightMeasurement);
 		
-		if (conn.getResponseCode() != 204) {
+		if (conn.getResponseCode() != 201) {
 			throw new IOException(conn.getResponseMessage());
 		}
 		conn.disconnect();
