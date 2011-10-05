@@ -3,6 +3,8 @@ package test.com.isobar.isohealth;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.TestCase;
+
 import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.NewNutritionMeasurement;
 import com.isobar.isohealth.models.NutritionMeasurement;
@@ -11,7 +13,7 @@ import com.isobar.isohealth.models.NutritionMeasurementFeed.Item;
 import com.isobar.isohealth.wrappers.NutritionMeasurementWrapper;
 import com.isobar.isohealth.wrappers.RunkeeperService;
 
-public class NutritionMeasurementServiceTest {
+public class NutritionMeasurementServiceTest extends TestCase {
 	
 	NutritionMeasurementWrapper nutritionMeasurementWrapper;
 	NutritionMeasurementFeed nutritionMeasurementFeed;

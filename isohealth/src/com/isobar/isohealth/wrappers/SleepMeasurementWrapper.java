@@ -97,7 +97,7 @@ public class SleepMeasurementWrapper {
 				.openConnection();
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type",
-				GraphConstants.MEDIA_SLEEP_MEASUREMENT);
+				GraphConstants.MEDIA_NEW_SLEEP_MEASUREMENT);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
@@ -106,7 +106,7 @@ public class SleepMeasurementWrapper {
 
 		mapper.writeValue(conn.getOutputStream(), sleepMeasurement);
 		
-		if (conn.getResponseCode() != 204) {
+		if (conn.getResponseCode() != 201) {
 			throw new IOException(conn.getResponseMessage());
 		}
 		conn.disconnect();

@@ -2,6 +2,7 @@ package test.com.isobar.isohealth;
 
 import java.util.ArrayList;
 import java.util.List;
+import junit.framework.TestCase;
 
 import com.isobar.isohealth.GraphConstants;
 import com.isobar.isohealth.models.NewSleepMeasurement;
@@ -11,7 +12,7 @@ import com.isobar.isohealth.models.SleepMeasurementFeed.Item;
 import com.isobar.isohealth.wrappers.RunkeeperService;
 import com.isobar.isohealth.wrappers.SleepMeasurementWrapper;
 
-public class SleepMeasurementServiceTest {
+public class SleepMeasurementServiceTest extends TestCase {
 
 	SleepMeasurementWrapper sleepMeasurementWrapper;
 	SleepMeasurementFeed sleepMeasurementFeed;

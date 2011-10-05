@@ -13,7 +13,6 @@ import com.isobar.isohealth.models.NewWeightMeasurement;
 import com.isobar.isohealth.models.User;
 import com.isobar.isohealth.models.WeightMeasurement;
 import com.isobar.isohealth.models.WeightMeasurementFeed;
-import com.isobar.isohealth.services.UserService;
 
 public class WeightManagementWrapper {
 	private String authToken;
@@ -24,7 +23,7 @@ public class WeightManagementWrapper {
 	}
 
 	public WeightMeasurementFeed getWeightMeasurementFeed() throws Exception {
-		User user = UserService.getUser(authToken);
+		User user = new UserWrapper(authToken).getUser();
 		ObjectMapper mapper = new ObjectMapper(); 
 		String url = GraphConstants.REST_URL + user.getWeight();
 		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
@@ -90,7 +89,7 @@ public class WeightManagementWrapper {
 	public void createWeightMeasurement(
 			NewWeightMeasurement weightMeasurement) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
-		User user = UserService.getUser(authToken);
+		User user = new UserWrapper(authToken).getUser();
 		String url = GraphConstants.REST_URL
 				+ user.getWeight();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)

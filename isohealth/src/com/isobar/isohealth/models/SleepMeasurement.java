@@ -34,6 +34,8 @@ public class SleepMeasurement {
 	private String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
 	private String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
 	private String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	private String nearest_strength_training_activity;
+	private String[] nearest_teammate_strength_training_activities;
 	
 	public SleepMeasurement(String uri, Integer userID, String timestamp,
 			Double total_sleep, Double rem, Double deep, Double light,
@@ -223,6 +225,20 @@ public class SleepMeasurement {
 	}
 	public void setNearest_teammate_diabetes(String[] nearest_teammate_diabetes) {
 		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
+	}
+	public void setNearest_strength_training_activity(
+			String nearest_strength_training_activity) {
+		this.nearest_strength_training_activity = nearest_strength_training_activity;
+	}
+	public String getNearest_strength_training_activity() {
+		return nearest_strength_training_activity;
+	}
+	private void setNearest_teammate_strength_training_activities(
+			String[] nearest_teammate_strength_training_activities) {
+		this.nearest_teammate_strength_training_activities = nearest_teammate_strength_training_activities;
+	}
+	private String[] getNearest_teammate_strength_training_activities() {
+		return nearest_teammate_strength_training_activities;
 	}
 	@Override
 	public String toString() {

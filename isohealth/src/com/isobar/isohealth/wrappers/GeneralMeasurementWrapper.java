@@ -2,7 +2,11 @@ package com.isobar.isohealth.wrappers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -15,9 +19,9 @@ import com.isobar.isohealth.models.NewGeneralMeasurement;
 import com.isobar.isohealth.models.User;
 
 public class GeneralMeasurementWrapper {
-	
+
 	private String authToken;
-	
+
 	public GeneralMeasurementWrapper(String authToken) {
 		super();
 		this.authToken = authToken;
@@ -25,10 +29,12 @@ public class GeneralMeasurementWrapper {
 
 	public GeneralMeasurementFeed getGeneralMeasurementFeed() throws Exception {
 		User user = new UserWrapper(authToken).getUser();
-		ObjectMapper mapper = new ObjectMapper(); 
+		ObjectMapper mapper = new ObjectMapper();
 		String url = GraphConstants.REST_URL + user.getGeneral_measurements();
-		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
-		conn.setRequestProperty("Accept", GraphConstants.MEDIA_GENERAL_MEASUREMENT_FEED);
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestProperty("Accept",
+				GraphConstants.MEDIA_GENERAL_MEASUREMENT_FEED);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 
 		if (conn.getResponseCode() != 200) {
@@ -37,16 +43,20 @@ public class GeneralMeasurementWrapper {
 
 		BufferedReader rd = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
-		GeneralMeasurementFeed generalMeasurementFeed = mapper.readValue(rd, GeneralMeasurementFeed.class);
+		GeneralMeasurementFeed generalMeasurementFeed = mapper.readValue(rd,
+				GeneralMeasurementFeed.class);
 		conn.disconnect();
 		return generalMeasurementFeed;
 	}
 
-	public GeneralMeasurement getGeneralMeasurement(String url) throws Exception {
-		ObjectMapper mapper = new ObjectMapper(); 
+	public GeneralMeasurement getGeneralMeasurement(String url)
+			throws Exception {
+		ObjectMapper mapper = new ObjectMapper();
 		url = GraphConstants.REST_URL + url;
-		HttpURLConnection conn  = (HttpURLConnection) new URL(url).openConnection();
-		conn.setRequestProperty("Accept", GraphConstants.MEDIA_GENERAL_MEASUREMENT);
+		HttpURLConnection conn = (HttpURLConnection) new URL(url)
+				.openConnection();
+		conn.setRequestProperty("Accept",
+				GraphConstants.MEDIA_GENERAL_MEASUREMENT);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 
 		if (conn.getResponseCode() != 200) {
@@ -55,12 +65,14 @@ public class GeneralMeasurementWrapper {
 
 		BufferedReader rd = new BufferedReader(new InputStreamReader(
 				conn.getInputStream()));
-		GeneralMeasurement generalMeasurement = mapper.readValue(rd, GeneralMeasurement.class);
+		GeneralMeasurement generalMeasurement = mapper.readValue(rd,
+				GeneralMeasurement.class);
 		conn.disconnect();
 		return generalMeasurement;
-	}	
+	}
 
-	public GeneralMeasurement updateGeneralMeasurement(GeneralMeasurement generalMeasurement) throws Exception {
+	public GeneralMeasurement updateGeneralMeasurement(
+			GeneralMeasurement generalMeasurement) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		String url = GraphConstants.REST_URL + generalMeasurement.getUri();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
@@ -72,10 +84,11 @@ public class GeneralMeasurementWrapper {
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
-		conn.setDoOutput(true);;
+		conn.setDoOutput(true);
+		;
 
 		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
-		
+
 		if (conn.getResponseCode() != 200) {
 			throw new IOException(conn.getResponseMessage());
 		}
@@ -86,13 +99,12 @@ public class GeneralMeasurementWrapper {
 		conn.disconnect();
 		return generalMeasurement;
 	}
-	
+
 	public void createGeneralMeasurement(
 			NewGeneralMeasurement generalMeasurement) throws Exception {
 		ObjectMapper mapper = new ObjectMapper();
 		User user = new UserWrapper(authToken).getUser();
-		String url = GraphConstants.REST_URL
-				+ user.getGeneral_measurements();
+		String url = GraphConstants.REST_URL + user.getGeneral_measurements();
 		HttpURLConnection conn = (HttpURLConnection) new URL(url)
 				.openConnection();
 		conn.setRequestMethod("POST");
@@ -103,13 +115,27 @@ public class GeneralMeasurementWrapper {
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
-		
-		String blah = mapper.writeValueAsString(generalMeasurement);
-		
+
 		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
-		
+
 		if (conn.getResponseCode() != 204) {
-			throw new IOException(conn.getResponseMessage());
+			System.out.println("Error: " + conn.getResponseMessage());
+			InputStream es = conn.getErrorStream();
+			Writer writer = new StringWriter();
+
+			char[] buffer = new char[1024];
+			try {
+				Reader reader = new BufferedReader(new InputStreamReader(es,
+						"UTF-8"));
+				int n;
+				while ((n = reader.read(buffer)) != -1) {
+					writer.write(buffer, 0, n);
+				}
+			} finally {
+				es.close();
+			}
+			System.out.println("Error Stream says: " + writer.toString());
+
 		}
 		conn.disconnect();
 	}

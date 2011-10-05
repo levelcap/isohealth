@@ -96,7 +96,7 @@ public class NutritionMeasurementWrapper {
 				.openConnection();
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type",
-				GraphConstants.MEDIA_NUTRITION_MEASUREMENT);
+				GraphConstants.MEDIA_NEW_NUTRITION_MEASUREMENT);
 		conn.setRequestProperty("Authorization", "Bearer " + authToken);
 		conn.setRequestProperty("Content-Length", "nnn");
 		conn.setUseCaches(false);
@@ -105,7 +105,7 @@ public class NutritionMeasurementWrapper {
 
 		mapper.writeValue(conn.getOutputStream(), nutritionMeasurement);
 		
-		if (conn.getResponseCode() != 204) {
+		if (conn.getResponseCode() != 201) {
 			throw new IOException(conn.getResponseMessage());
 		}
 		conn.disconnect();
