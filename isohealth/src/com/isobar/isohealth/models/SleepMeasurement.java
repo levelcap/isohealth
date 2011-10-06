@@ -233,11 +233,11 @@ public class SleepMeasurement {
 	public String getNearest_strength_training_activity() {
 		return nearest_strength_training_activity;
 	}
-	private void setNearest_teammate_strength_training_activities(
+	public void setNearest_teammate_strength_training_activities(
 			String[] nearest_teammate_strength_training_activities) {
 		this.nearest_teammate_strength_training_activities = nearest_teammate_strength_training_activities;
 	}
-	private String[] getNearest_teammate_strength_training_activities() {
+	public String[] getNearest_teammate_strength_training_activities() {
 		return nearest_teammate_strength_training_activities;
 	}
 	@Override
