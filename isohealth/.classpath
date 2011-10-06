@@ -38,7 +38,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/oauth2-common-0.1.jar">
+	<classpathentry kind="lib" path="lib/oauth2-common-0.1.jar" sourcepath="/Users/dfernandes/.m2/repository/net/smartam/leeloo/oauth2-common/0.1/oauth2-common-0.1-sources.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

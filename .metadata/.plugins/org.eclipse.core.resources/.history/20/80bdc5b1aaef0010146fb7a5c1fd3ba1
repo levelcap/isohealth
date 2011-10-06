@@ -1,0 +1,66 @@
+package com.isobar.isohealth;
+
+import net.smartam.leeloo.client.OAuthClient;
+import net.smartam.leeloo.client.URLConnectionClient;
+import net.smartam.leeloo.client.request.OAuthClientRequest;
+import net.smartam.leeloo.client.response.OAuthJSONAccessTokenResponse;
+import net.smartam.leeloo.common.message.types.GrantType;
+
+public class OAuthInit {
+OAuthClientRequest request;
+	
+	public OAuthInit() {
+		try {
+			request = OAuthClientRequest
+				.authorizationLocation(GraphConstants.AUTH_URL)
+				.setClientId(GraphConstants.CLIENT_ID)
+				.setRedirectURI(GraphConstants.REDIRECT_URI)
+				.buildQueryMessage();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public String authorizationUrl() {
+		String url = "";
+		try {
+			url = request.getLocationUri() + "&response_type=code";
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return url;
+	}
+	
+	public String getAccessToken(String code) {
+		String accessToken = "";
+		try {
+		request = OAuthClientRequest
+				.tokenLocation(
+						GraphConstants.ACCESS_URL)
+				.setGrantType(GrantType.AUTHORIZATION_CODE)
+				.setClientId(GraphConstants.CLIENT_ID)
+				.setClientSecret(GraphConstants.CLIENT_SECRET)
+				.setRedirectURI(GraphConstants.REDIRECT_URI)
+				.setCode(code).buildBodyMessage();
+
+		// create OAuth client that uses custom http client under the hood
+		OAuthClient oAuthClient = new OAuthClient(new URLConnectionClient());
+		
+		OAuthJSONAccessTokenResponse response = oAuthClient.accessToken(request);
+		
+        accessToken = response.getAccessToken();
+        String expiresIn = response.getExpiresIn();
+        
+        System.out.println("Access Token: " + accessToken + " will expire in " + expiresIn);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return accessToken;
+	}
+	
+	public static void main(String[] args) {
+		OAuthInit oauthInit = new OAuthInit(String clientId, String clientSecretId, String redirectUri);
+		oauthInit.authorizationUrl();
+	}
+}

@@ -13,6 +13,7 @@ import net.smartam.leeloo.common.message.types.GrantType;
  * 
  */
 public class App {
+	
 	public static void main(String[] args) {
 		try {
 			OAuthClientRequest request = OAuthClientRequest
