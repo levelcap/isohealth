@@ -20,6 +20,7 @@ public class NutritionMeasurement {
 	private Double sodium; // The value of the measured quantity	Y
 	private Double water; // The value of the measured quantity	Y
 
+	private String source;
 	private String previous; // The URI of the previous nutrition measurement in chronological order for the user (omitted for the first nutrition measurement)	N
 	private String next; // The URI of the next nutrition measurement in chronological order for the user (omitted for the most recent nutrition measurement)	N
 	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
@@ -37,9 +38,14 @@ public class NutritionMeasurement {
 	private String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
 	private String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
 	private String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	
+	public NutritionMeasurement() {
+		super();
+	}
+	
 	public NutritionMeasurement(String uri, Integer userID, String timestamp,
 			Double calories, Double carbohydrates, Double fat, Double fiber,
-			Double protein, Double sodium, Double water, String previous,
+			Double protein, Double sodium, Double water, String source, String previous,
 			String next, String nearest_fitness_activity,
 			String[] nearest_teammate_fitness_activities,
 			String nearest_strength_training_activity,
@@ -63,6 +69,7 @@ public class NutritionMeasurement {
 		this.protein = protein;
 		this.sodium = sodium;
 		this.water = water;
+		this.source = source;
 		this.previous = previous;
 		this.next = next;
 		this.nearest_fitness_activity = nearest_fitness_activity;
@@ -81,9 +88,7 @@ public class NutritionMeasurement {
 		this.nearest_diabetes = nearest_diabetes;
 		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
 	}
-	public NutritionMeasurement() {
-		super();
-	}
+
 	@Override
 	public String toString() {
 		return "NutritionMeasurement [uri="
@@ -106,6 +111,8 @@ public class NutritionMeasurement {
 				+ sodium
 				+ ", water="
 				+ water
+				+ ", source="
+				+ source				
 				+ ", previous="
 				+ previous
 				+ ", next="

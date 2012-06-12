@@ -7,39 +7,134 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class SleepMeasurement {
-	private String uri; // The URI for this measurement	private N
-	private Integer userID;// The unique ID for the user	private N
-	private String timestamp; // The time at which the measurement was taken (e.g., "Sat, 1 Jan 2011 00:00:00")	N
+	private String uri; // The URI for this measurement private N
+	private Integer userID;// The unique ID for the user private N
+	private String timestamp; // The time at which the measurement was taken
+								// (e.g., "Sat, 1 Jan 2011 00:00:00") N
 
-	//	One of the following values: total_sleep, rem, deep, light, times_woken, awake	
-	private Double total_sleep; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	private Double rem; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	private Double deep; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	private Double light; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	private Double times_woken; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	private Double awake; // The value of the measured quantity (durational measurements are given in minutes)	Y
-	
-	private String previous; // The URI of the previous sleep measurement in chronological order for the user (omitted for the first sleep measurement)	N
-	private String next; // The URI of the next sleep measurement in chronological order for the user (omitted for the most recent sleep measurement)	N
-	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
-	private String[] nearest_teammate_fitness_activities; // The URIs of the fitness activities closest in time to this activity for each street teammate (empty if no fitness activities have been recorded)	N
-	private String nearest_background_activity; // The URI of the background activity closest in time to this activity for the user (omitted if no background activities have been recorded)	N
-	private String[] nearest_teammate_background_activities; // The URIs of the background activities closest in time to this activity for each street teammate (empty if no background activities have been recorded)	N
-	private String[] nearest_teammate_sleep; // The URIs of the sleep measurements closest in time to this activity for each street teammate (empty if no sleep measurements have been taken)	N
-	private String nearest_nutrition; // The URI of the nutrition measurement closest in time to this activity for the user (omitted if no nutrition measurements have been token)	N
-	private String[] nearest_teammate_nutrition; // The URIs of the nutrition measurement closest in time to this activity for each street teammate (empty if no nutrition measurements have been token)	N
-	private String nearest_weight; // The URI of the weight measurement closest in time to this activity for the user (omitted if no weight measurements have been token)	N
-	private String[] nearest_teammate_weight; // The URIs of the weight measurements closest in time to this activity for each street teammate (empty if no weight measurements have been token)	N
-	private String nearest_general_measurement; // The URI of the general measurement measurement closest in time to this activity for the user (omitted if no general measurements have been token)	N
-	private String[] nearest_teammate_general_measurements; // The URIs of the general measurements closest in time to this activity for each street teammate (empty if no general measurements have been token)	N
-	private String nearest_diabetes; // The URI of the diabetes measurement closest in time to this activity for the user (omitted if no diabetes measurements have been token)	N
-	private String[] nearest_teammate_diabetes; // The URIs of the diabetes measurements closest in time to this activity for each street teammate (empty if no diabetes measurements have been token)	N
+	// One of the following values: total_sleep, rem, deep, light, times_woken,
+	// awake
+	private Double total_sleep; // The value of the measured quantity
+								// (durational measurements are given in
+								// minutes) Y
+	private Double rem; // The value of the measured quantity (durational
+						// measurements are given in minutes) Y
+	private Double deep; // The value of the measured quantity (durational
+							// measurements are given in minutes) Y
+	private Double light; // The value of the measured quantity (durational
+							// measurements are given in minutes) Y
+	private Double times_woken; // The value of the measured quantity
+								// (durational measurements are given in
+								// minutes) Y
+	private Double awake; // The value of the measured quantity (durational
+							// measurements are given in minutes) Y
+
+	private String source;
+	private String previous; // The URI of the previous sleep measurement in
+								// chronological order for the user (omitted for
+								// the first sleep measurement) N
+	private String next; // The URI of the next sleep measurement in
+							// chronological order for the user (omitted for the
+							// most recent sleep measurement) N
+	private String nearest_fitness_activity; // The URI of the fitness activity
+												// closest in time to this
+												// activity for the user
+												// (omitted if no fitness
+												// activities have been
+												// recorded) N
+	private String[] nearest_teammate_fitness_activities; // The URIs of the
+															// fitness
+															// activities
+															// closest in time
+															// to this activity
+															// for each street
+															// teammate (empty
+															// if no fitness
+															// activities have
+															// been recorded) N
+	private String nearest_background_activity; // The URI of the background
+												// activity closest in time to
+												// this activity for the user
+												// (omitted if no background
+												// activities have been
+												// recorded) N
+	private String[] nearest_teammate_background_activities; // The URIs of the
+																// background
+																// activities
+																// closest in
+																// time to this
+																// activity for
+																// each street
+																// teammate
+																// (empty if no
+																// background
+																// activities
+																// have been
+																// recorded) N
+	private String[] nearest_teammate_sleep; // The URIs of the sleep
+												// measurements closest in time
+												// to this activity for each
+												// street teammate (empty if no
+												// sleep measurements have been
+												// taken) N
+	private String nearest_nutrition; // The URI of the nutrition measurement
+										// closest in time to this activity for
+										// the user (omitted if no nutrition
+										// measurements have been token) N
+	private String[] nearest_teammate_nutrition; // The URIs of the nutrition
+													// measurement closest in
+													// time to this activity for
+													// each street teammate
+													// (empty if no nutrition
+													// measurements have been
+													// token) N
+	private String nearest_weight; // The URI of the weight measurement closest
+									// in time to this activity for the user
+									// (omitted if no weight measurements have
+									// been token) N
+	private String[] nearest_teammate_weight; // The URIs of the weight
+												// measurements closest in time
+												// to this activity for each
+												// street teammate (empty if no
+												// weight measurements have been
+												// token) N
+	private String nearest_general_measurement; // The URI of the general
+												// measurement measurement
+												// closest in time to this
+												// activity for the user
+												// (omitted if no general
+												// measurements have been token)
+												// N
+	private String[] nearest_teammate_general_measurements; // The URIs of the
+															// general
+															// measurements
+															// closest in time
+															// to this activity
+															// for each street
+															// teammate (empty
+															// if no general
+															// measurements have
+															// been token) N
+	private String nearest_diabetes; // The URI of the diabetes measurement
+										// closest in time to this activity for
+										// the user (omitted if no diabetes
+										// measurements have been token) N
+	private String[] nearest_teammate_diabetes; // The URIs of the diabetes
+												// measurements closest in time
+												// to this activity for each
+												// street teammate (empty if no
+												// diabetes measurements have
+												// been token) N
 	private String nearest_strength_training_activity;
 	private String[] nearest_teammate_strength_training_activities;
+
+	public SleepMeasurement() {
+		super();
+	}
 	
 	public SleepMeasurement(String uri, Integer userID, String timestamp,
 			Double total_sleep, Double rem, Double deep, Double light,
-			Double times_woken, Double awake, String previous, String next,
+			Double times_woken, Double awake, String source, String previous, String next,
 			String nearest_fitness_activity,
 			String[] nearest_teammate_fitness_activities,
 			String nearest_background_activity,
@@ -60,6 +155,7 @@ public class SleepMeasurement {
 		this.light = light;
 		this.times_woken = times_woken;
 		this.awake = awake;
+		this.source = source;
 		this.previous = previous;
 		this.next = next;
 		this.nearest_fitness_activity = nearest_fitness_activity;
@@ -76,178 +172,232 @@ public class SleepMeasurement {
 		this.nearest_diabetes = nearest_diabetes;
 		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
 	}
-	public SleepMeasurement() {
-		super();
-	}
+
 	public String getUri() {
 		return uri;
 	}
+
 	public void setUri(String uri) {
 		this.uri = uri;
 	}
+
 	public Integer getUserID() {
 		return userID;
 	}
+
 	public void setUserID(Integer userID) {
 		this.userID = userID;
 	}
+
 	public String getTimestamp() {
 		return timestamp;
 	}
+
 	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
+
 	public Double getTotal_sleep() {
 		return total_sleep;
 	}
+
 	public void setTotal_sleep(Double total_sleep) {
 		this.total_sleep = total_sleep;
 	}
+
 	public Double getRem() {
 		return rem;
 	}
+
 	public void setRem(Double rem) {
 		this.rem = rem;
 	}
+
 	public Double getDeep() {
 		return deep;
 	}
+
 	public void setDeep(Double deep) {
 		this.deep = deep;
 	}
+
 	public Double getLight() {
 		return light;
 	}
+
 	public void setLight(Double light) {
 		this.light = light;
 	}
+
 	public Double getTimes_woken() {
 		return times_woken;
 	}
+
 	public void setTimes_woken(Double times_woken) {
 		this.times_woken = times_woken;
 	}
+
 	public Double getAwake() {
 		return awake;
 	}
+
 	public void setAwake(Double awake) {
 		this.awake = awake;
 	}
+
 	public String getPrevious() {
 		return previous;
 	}
+
 	public void setPrevious(String previous) {
 		this.previous = previous;
 	}
+
 	public String getNext() {
 		return next;
 	}
+
 	public void setNext(String next) {
 		this.next = next;
 	}
+
 	public String getNearest_fitness_activity() {
 		return nearest_fitness_activity;
 	}
+
 	public void setNearest_fitness_activity(String nearest_fitness_activity) {
 		this.nearest_fitness_activity = nearest_fitness_activity;
 	}
+
 	public String[] getNearest_teammate_fitness_activities() {
 		return nearest_teammate_fitness_activities;
 	}
+
 	public void setNearest_teammate_fitness_activities(
 			String[] nearest_teammate_fitness_activities) {
 		this.nearest_teammate_fitness_activities = nearest_teammate_fitness_activities;
 	}
+
 	public String getNearest_background_activity() {
 		return nearest_background_activity;
 	}
-	public void setNearest_background_activity(String nearest_background_activity) {
+
+	public void setNearest_background_activity(
+			String nearest_background_activity) {
 		this.nearest_background_activity = nearest_background_activity;
 	}
+
 	public String[] getNearest_teammate_background_activities() {
 		return nearest_teammate_background_activities;
 	}
+
 	public void setNearest_teammate_background_activities(
 			String[] nearest_teammate_background_activities) {
 		this.nearest_teammate_background_activities = nearest_teammate_background_activities;
 	}
+
 	public String[] getNearest_teammate_sleep() {
 		return nearest_teammate_sleep;
 	}
+
 	public void setNearest_teammate_sleep(String[] nearest_teammate_sleep) {
 		this.nearest_teammate_sleep = nearest_teammate_sleep;
 	}
+
 	public String getNearest_nutrition() {
 		return nearest_nutrition;
 	}
+
 	public void setNearest_nutrition(String nearest_nutrition) {
 		this.nearest_nutrition = nearest_nutrition;
 	}
+
 	public String[] getNearest_teammate_nutrition() {
 		return nearest_teammate_nutrition;
 	}
-	public void setNearest_teammate_nutrition(String[] nearest_teammate_nutrition) {
+
+	public void setNearest_teammate_nutrition(
+			String[] nearest_teammate_nutrition) {
 		this.nearest_teammate_nutrition = nearest_teammate_nutrition;
 	}
+
 	public String getNearest_weight() {
 		return nearest_weight;
 	}
+
 	public void setNearest_weight(String nearest_weight) {
 		this.nearest_weight = nearest_weight;
 	}
+
 	public String[] getNearest_teammate_weight() {
 		return nearest_teammate_weight;
 	}
+
 	public void setNearest_teammate_weight(String[] nearest_teammate_weight) {
 		this.nearest_teammate_weight = nearest_teammate_weight;
 	}
+
 	public String getNearest_general_measurement() {
 		return nearest_general_measurement;
 	}
-	public void setNearest_general_measurement(String nearest_general_measurement) {
+
+	public void setNearest_general_measurement(
+			String nearest_general_measurement) {
 		this.nearest_general_measurement = nearest_general_measurement;
 	}
+
 	public String[] getNearest_teammate_general_measurements() {
 		return nearest_teammate_general_measurements;
 	}
+
 	public void setNearest_teammate_general_measurements(
 			String[] nearest_teammate_general_measurements) {
 		this.nearest_teammate_general_measurements = nearest_teammate_general_measurements;
 	}
+
 	public String getNearest_diabetes() {
 		return nearest_diabetes;
 	}
+
 	public void setNearest_diabetes(String nearest_diabetes) {
 		this.nearest_diabetes = nearest_diabetes;
 	}
+
 	public String[] getNearest_teammate_diabetes() {
 		return nearest_teammate_diabetes;
 	}
+
 	public void setNearest_teammate_diabetes(String[] nearest_teammate_diabetes) {
 		this.nearest_teammate_diabetes = nearest_teammate_diabetes;
 	}
+
 	public void setNearest_strength_training_activity(
 			String nearest_strength_training_activity) {
 		this.nearest_strength_training_activity = nearest_strength_training_activity;
 	}
+
 	public String getNearest_strength_training_activity() {
 		return nearest_strength_training_activity;
 	}
+
 	public void setNearest_teammate_strength_training_activities(
 			String[] nearest_teammate_strength_training_activities) {
 		this.nearest_teammate_strength_training_activities = nearest_teammate_strength_training_activities;
 	}
+
 	public String[] getNearest_teammate_strength_training_activities() {
 		return nearest_teammate_strength_training_activities;
 	}
+
 	@Override
 	public String toString() {
 		return "SleepMeasurement [uri=" + uri + ", userID=" + userID
 				+ ", timestamp=" + timestamp + ", total_sleep=" + total_sleep
 				+ ", rem=" + rem + ", deep=" + deep + ", light=" + light
 				+ ", times_woken=" + times_woken + ", awake=" + awake
-				+ ", previous=" + previous + ", next=" + next
-				+ ", nearest_fitness_activity=" + nearest_fitness_activity
+				+ ", source=" + source + ", previous=" + previous + ", next="
+				+ next + ", nearest_fitness_activity="
+				+ nearest_fitness_activity
 				+ ", nearest_teammate_fitness_activities="
 				+ Arrays.toString(nearest_teammate_fitness_activities)
 				+ ", nearest_background_activity="
@@ -270,6 +420,7 @@ public class SleepMeasurement {
 				+ ", nearest_teammate_diabetes="
 				+ Arrays.toString(nearest_teammate_diabetes) + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -322,6 +473,7 @@ public class SleepMeasurement {
 		result = prime * result + ((userID == null) ? 0 : userID.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -11,7 +11,8 @@ public class BackgroundActivity {
 	private Integer userID; //The unique ID for the user
 	private String timestamp; //The timestamp (e.g., "Sat, 1 Jan 2011 00:00:00")
 	private Double calories_burned;
-	private Double steps; 	
+	private Double steps; 
+	private String source;
 	private String previous; //The URI of the previous activity for the user (omitted for the oldest activity)
 	private String next;; //The URI of the next activity for the user (omitted for the most-recent activity)
 	private String nearest_fitness_activity; //The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)
@@ -59,6 +60,12 @@ public class BackgroundActivity {
 	}
 	public void setSteps(Double steps) {
 		this.steps = steps;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
 	}
 	public String getPrevious() {
 		return previous;
@@ -180,6 +187,8 @@ public class BackgroundActivity {
 				+ calories_burned
 				+ ", steps="
 				+ steps
+				+ ", source="
+				+ source
 				+ ", previous="
 				+ previous
 				+ ", next="

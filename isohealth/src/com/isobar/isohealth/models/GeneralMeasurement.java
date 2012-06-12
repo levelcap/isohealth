@@ -24,6 +24,7 @@ public class GeneralMeasurement {
 	private Double hdl; // The value of the measured quantity	Y
 	private Double ldl; // The value of the measured quantity	Y
 	
+	private String source;
 	private String previous; // The URI of the previous general measurement in chronological order for the user (omitted for the first general measurement)	N
 	private String next; // The URI of the next general measurement in chronological order for the user (omitted for the most recent general measurement)	N
 	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
@@ -49,7 +50,7 @@ public class GeneralMeasurement {
 			Double vitamin_d, Double hscrp, Double crp, Double tsh,
 			Double uric_acid, Double systolic, Double diastolic,
 			Double resting_heartrate, Double total_cholesterol, Double hdl,
-			Double ldl, String previous, String next,
+			Double ldl, String source, String previous, String next,
 			String nearest_fitness_activity,
 			String[] nearest_teammate_fitness_activities,
 			String nearest_strength_training_activity,
@@ -76,6 +77,7 @@ public class GeneralMeasurement {
 		this.total_cholesterol = total_cholesterol;
 		this.hdl = hdl;
 		this.ldl = ldl;
+		this.source = source;
 		this.previous = previous;
 		this.next = next;
 		this.nearest_fitness_activity = nearest_fitness_activity;
@@ -124,6 +126,8 @@ public class GeneralMeasurement {
 				+ hdl
 				+ ", ldl="
 				+ ldl
+				+ ", source="
+				+ source				
 				+ ", previous="
 				+ previous
 				+ ", next="
@@ -461,6 +465,12 @@ public class GeneralMeasurement {
 	}
 	public void setLdl(Double ldl) {
 		this.ldl = ldl;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
 	}
 	public String getPrevious() {
 		return previous;

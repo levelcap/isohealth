@@ -20,6 +20,7 @@ public class DiabetesMeasurement {
 	private Double c_peptide; // The value of the measured quantity	Y
 	private Double triglyceride; // The value of the measured quantity	Y
 	
+	private String source;
 	private String previous; // The URI of the previous diabetes measurement in chronological order for the user (omitted for the first diabetes measurement)	N
 	private String next; // The URI of the next diabetes measurement in chronological order for the user (omitted for the most recent diabetes measurement)	N
 	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
@@ -101,6 +102,12 @@ public class DiabetesMeasurement {
 		this.triglyceride = triglyceride;
 	}
 
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
 	public String getPrevious() {
 		return previous;
 	}
@@ -254,7 +261,7 @@ public class DiabetesMeasurement {
 			Double fasting_plasma_glucose_test,
 			Double random_plasma_glucose_test,
 			Double oral_glucose_tolerance_test, Double hemoglobin_a1c,
-			Double insulin, Double c_peptide, Double triglyceride,
+			Double insulin, Double c_peptide, Double triglyceride, String source,
 			String previous, String next, String nearest_fitness_activity,
 			String[] nearest_teammate_fitness_activities,
 			String nearest_strength_training_activity,
@@ -278,6 +285,7 @@ public class DiabetesMeasurement {
 		this.insulin = insulin;
 		this.c_peptide = c_peptide;
 		this.triglyceride = triglyceride;
+		this.source = source;
 		this.previous = previous;
 		this.next = next;
 		this.nearest_fitness_activity = nearest_fitness_activity;
@@ -323,6 +331,8 @@ public class DiabetesMeasurement {
 				+ c_peptide
 				+ ", triglyceride="
 				+ triglyceride
+				+ ", source="
+				+ source
 				+ ", previous="
 				+ previous
 				+ ", next="

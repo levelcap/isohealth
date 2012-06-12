@@ -2,11 +2,7 @@ package com.isobar.isohealth.wrappers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -85,7 +81,6 @@ public class GeneralMeasurementWrapper {
 		conn.setUseCaches(false);
 		conn.setDoInput(true);
 		conn.setDoOutput(true);
-		;
 
 		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
 
@@ -117,25 +112,9 @@ public class GeneralMeasurementWrapper {
 		conn.setDoOutput(true);
 
 		mapper.writeValue(conn.getOutputStream(), generalMeasurement);
-
-		if (conn.getResponseCode() != 204) {
-			System.out.println("Error: " + conn.getResponseMessage());
-			InputStream es = conn.getErrorStream();
-			Writer writer = new StringWriter();
-
-			char[] buffer = new char[1024];
-			try {
-				Reader reader = new BufferedReader(new InputStreamReader(es,
-						"UTF-8"));
-				int n;
-				while ((n = reader.read(buffer)) != -1) {
-					writer.write(buffer, 0, n);
-				}
-			} finally {
-				es.close();
-			}
-			System.out.println("Error Stream says: " + writer.toString());
-
+		
+		if (conn.getResponseCode() != 201) {
+			throw new IOException(conn.getResponseMessage());
 		}
 		conn.disconnect();
 	}

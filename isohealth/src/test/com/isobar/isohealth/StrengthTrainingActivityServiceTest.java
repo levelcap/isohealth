@@ -45,6 +45,7 @@ public class StrengthTrainingActivityServiceTest extends TestCase {
 				StrengthTrainingActivity activity = strengthTrainingActivityWrapper.getStrengthTrainingActivity(item.getUri());
 				System.out.println("StrengthTrainingActivity: " + activity.toString());
 				strengthTrainingActivities.add(activity);
+				break;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

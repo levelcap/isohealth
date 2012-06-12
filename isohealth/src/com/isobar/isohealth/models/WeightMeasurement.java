@@ -18,6 +18,7 @@ public class WeightMeasurement {
 	private Double fat_percent; // The value of the measured quantity (mass/weight is measured in kilograms)	Y
 	private Double bmi; // The value of the measured quantity (mass/weight is measured in kilograms)	Y
 	
+	private String source;
 	private String previous; // The URI of the previous weight measurement in chronological order for the user (omitted for the first weight measurement)	N
 	private String next; // The URI of the next weight measurement in chronological order for the user (omitted for the most recent weight measurement)	N
 	private String nearest_fitness_activity; // The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)	N
@@ -41,7 +42,7 @@ public class WeightMeasurement {
 	}
 	public WeightMeasurement(String uri, Integer userID, String timestamp,
 			Double weight, Double free_mass, Double mass_weight,
-			Double fat_percent, Double bmi, String previous, String next,
+			Double fat_percent, Double bmi, String source, String previous, String next,
 			String nearest_fitness_activity,
 			String[] nearest_teammate_fitness_activities,
 			String nearest_strength_training_activity,
@@ -63,6 +64,7 @@ public class WeightMeasurement {
 		this.mass_weight = mass_weight;
 		this.fat_percent = fat_percent;
 		this.bmi = bmi;
+		this.source = source;
 		this.previous = previous;
 		this.next = next;
 		this.nearest_fitness_activity = nearest_fitness_activity;
@@ -128,6 +130,12 @@ public class WeightMeasurement {
 	}
 	public void setBmi(Double bmi) {
 		this.bmi = bmi;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
 	}
 	public String getPrevious() {
 		return previous;

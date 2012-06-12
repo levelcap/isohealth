@@ -12,6 +12,7 @@ public class StrengthTrainingActivity {
 	private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 	private String notes; //Any notes that the user has associated with the activity (max. 1024 characters; optional)
 	private Exercise[] exercises; //Exercise[] 	The exercises performed during this strength training activity
+	private String source;
 	private String previous; //The URI of the previous activity in the user's fitness feed (omitted for the oldest activity)
 	private String next; //The URI of the next activity in the user's fitness feed (omitted for the most-recent activity)
 	private String nearest_fitness_activity; //The URI of the fitness activity closest in time to this activity for the user (omitted if no fitness activities have been recorded)
@@ -178,6 +179,8 @@ public class StrengthTrainingActivity {
 				+ notes
 				+ ", exercises="
 				+ Arrays.toString(exercises)
+				+ ", source="
+				+ source				
 				+ ", previous="
 				+ previous
 				+ ", next="
