@@ -60,6 +60,12 @@ public class StrengthTrainingActivity {
 	public void setExercises(Exercise[] exercises) {
 		this.exercises = exercises;
 	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
+	}
 	public String getPrevious() {
 		return previous;
 	}

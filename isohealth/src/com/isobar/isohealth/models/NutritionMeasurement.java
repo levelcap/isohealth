@@ -397,6 +397,14 @@ public class NutritionMeasurement {
 	public void setWater(Double water) {
 		this.water = water;
 	}
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
 	public String getPrevious() {
 		return previous;
 	}
