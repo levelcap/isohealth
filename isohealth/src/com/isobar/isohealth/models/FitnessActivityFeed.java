@@ -14,7 +14,7 @@ public class FitnessActivityFeed {
 		private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 		private Double total_distance; //The total distance for the activity, in meters
 		private Double duration; //The duration of the activity, in seconds
-		private String uri; //The URI of the detailed information for the past activity
+		private String uri; //The URI of the detailed information for the past activity 		
 		
 		public String getType() {
 			return type;

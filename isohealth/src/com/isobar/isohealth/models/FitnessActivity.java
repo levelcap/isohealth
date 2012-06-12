@@ -195,6 +195,7 @@ public class FitnessActivity {
 	private String uri; //The URI for this activity
 	private Integer userID; //The unique ID of the user for the activity
 	private String type; //The type of activity, as one of the following values: "Running", "Cycling", "Mountain Biking", "Walking", "Hiking", "Downhill Skiing", "Cross-Country Skiing", "Snowboarding", "Skating", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
+	private String equipment; //The equipment used to complete this activity, as one of the following values: None, Treadmill, Stationary Bike, Elliptical, Row Machine. (Optional; if not specified, None is assumed.) 
 	private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 	private Double total_distance; //The total distance traveled, in meters
 	private Distance[] distance; //The sequence of time-stamped distance measurements (empty if not available)
@@ -207,6 +208,7 @@ public class FitnessActivity {
 	private String notes; //Any notes that the user has associated with the activity
 	private WGS84[] path; //The sequence of geographical points along the route (empty for stationary activities)
 	private Image[] images; //The sequence of images along the route (empty if not available)
+	private String source; //The name of the application that last modified this activity
 	private String activity; //The URL of the user's public, human-readable page for this activity
 	private String previous; //The URI of the previous activity in the user's fitness feed (omitted for the oldest activity)
 	private String next; //The URI of the next activity in the user's fitness feed (omitted for the most-recent activity)
@@ -242,6 +244,12 @@ public class FitnessActivity {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getEquipment() {
+		return equipment;
+	}
+	public void setEquipment(String equipment) {
+		this.equipment = equipment;
 	}
 	public String getStart_time() {
 		return start_time;
@@ -314,6 +322,12 @@ public class FitnessActivity {
 	}
 	public void setImages(Image[] images) {
 		this.images = images;
+	}
+	public String getSource() {
+		return source;
+	}
+	public void setSource(String source) {
+		this.source = source;
 	}
 	public String getActivity() {
 		return activity;
@@ -436,6 +450,8 @@ public class FitnessActivity {
 				+ userID
 				+ ", type="
 				+ type
+				+ ", equipment="
+				+ equipment
 				+ ", start_time="
 				+ start_time
 				+ ", total_distance="
@@ -462,6 +478,8 @@ public class FitnessActivity {
 				+ Arrays.toString(images)
 				+ ", activity="
 				+ activity
+				+ ", source="
+				+ source
 				+ ", previous="
 				+ previous
 				+ ", next="
