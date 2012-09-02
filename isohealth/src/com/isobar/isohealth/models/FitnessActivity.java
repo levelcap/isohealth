@@ -195,6 +195,7 @@ public class FitnessActivity {
 	private String uri; //The URI for this activity
 	private Integer userID; //The unique ID of the user for the activity
 	private String type; //The type of activity, as one of the following values: "Running", "Cycling", "Mountain Biking", "Walking", "Hiking", "Downhill Skiing", "Cross-Country Skiing", "Snowboarding", "Skating", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
+	private String secondary_type;  // The secondary type of the activity, as a free-form string (max. 64 characters). This field is used only if the type field is Other."
 	private String equipment; //The equipment used to complete this activity, as one of the following values: None, Treadmill, Stationary Bike, Elliptical, Row Machine. (Optional; if not specified, None is assumed.) 
 	private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 	private Double total_distance; //The total distance traveled, in meters
@@ -244,6 +245,12 @@ public class FitnessActivity {
 	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getSecondary_type() {
+		return secondary_type;
+	}
+	public void setSecondary_type(String secondary_type) {
+		this.secondary_type = secondary_type;
 	}
 	public String getEquipment() {
 		return equipment;
