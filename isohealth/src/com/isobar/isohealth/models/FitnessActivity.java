@@ -209,6 +209,7 @@ public class FitnessActivity {
 	private WGS84[] path; //The sequence of geographical points along the route (empty for stationary activities)
 	private Image[] images; //The sequence of images along the route (empty if not available)
 	private String source; //The name of the application that last modified this activity
+	private String comments; // The URI of the comment thread for this activity
 	private String activity; //The URL of the user's public, human-readable page for this activity
 	private String previous; //The URI of the previous activity in the user's fitness feed (omitted for the oldest activity)
 	private String next; //The URI of the next activity in the user's fitness feed (omitted for the most-recent activity)
@@ -328,6 +329,12 @@ public class FitnessActivity {
 	}
 	public void setSource(String source) {
 		this.source = source;
+	}
+	public String getComments() {
+		return comments;
+	}
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
 	public String getActivity() {
 		return activity;
