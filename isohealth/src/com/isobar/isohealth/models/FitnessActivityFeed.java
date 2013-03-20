@@ -7,13 +7,16 @@ import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
 @JsonSerialize(include = Inclusion.NON_NULL)
 public class FitnessActivityFeed {
-	
-	@JsonSerialize(include = Inclusion.NON_NULL)
+
+    @JsonSerialize(include = Inclusion.NON_NULL)
 	public static class Item {
 		private String type; //The type of activity, as one of the following values: "Running", "Cycling", "Mountain Biking", "Walking", "Hiking", "Downhill Skiing", "Cross-Country Skiing", "Snowboarding", "Skating", "Swimming", "Wheelchair", "Rowing", "Elliptical", "Other"
 		private String start_time; //The starting time for the activity (e.g., "Sat, 1 Jan 2011 00:00:00")
 		private Double total_distance; //The total distance for the activity, in meters
 		private Double duration; //The duration of the activity, in seconds
+                private String source; // The name of the application that last modified this activity
+                private String entry_mode; // The mode by which this activity was originally entered, as one of the following values: API, Web
+                private Boolean has_path; // Whether a path exists for this activity
 		private String uri; //The URI of the detailed information for the past activity 		
 		
 		public String getType() {
@@ -40,7 +43,25 @@ public class FitnessActivityFeed {
 		public void setDuration(Double duration) {
 			this.duration = duration;
 		}
-		public String getUri() {
+                public String getSource() {
+                    return source;
+                }
+                public void setSource(String source) {
+                    this.source = source;
+                }
+                public String getEntry_mode() {
+                    return entry_mode;
+                }
+                public void setEntry_mode(String entry_mode) {
+                    this.entry_mode = entry_mode;
+                }
+                public Boolean getHas_path() {
+                    return has_path;
+                }
+                public void setHas_path(Boolean has_path) {
+                    this.has_path = has_path;
+                }
+                public String getUri() {
 			return uri;
 		}
 		public void setUri(String uri) {
